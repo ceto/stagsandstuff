@@ -1,5 +1,9 @@
 <?php if ( is_singular('activity') ) : ?>
-  <?php $reference_ID = $post->ID; ?>
+
+  <?php
+    wp_reset_query();
+    $reference_ID = $post->ID; 
+  ?>
   <aside class="related-activities">
     <ul class="nav nav-tabs">
       <li class="active"><a href="#egyes" data-toggle="tab"><?php _e('Activities in the same category','root') ?></a></li>

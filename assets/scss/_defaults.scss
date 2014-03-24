@@ -26,34 +26,34 @@ p {
 
 
 h1 {
-  text-transform: uppercase;
+  text-transform: none;
   //font-family:$sc-sans;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1.25em;
   line-height: 1.125em;
   margin-top:2em;
-  //font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 h2 {
-  text-transform: uppercase;
+  text-transform: none;
   //font-family:$sc-sans;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1.125em;
   line-height: 1.125em;
   margin-top:2em;
-  //font-variant: small-caps;
+  font-variant: small-caps;
 
 }
 
 h3 {
-  text-transform: uppercase;
+  text-transform: none;
   //font-family:$sc-sans;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1em;
   line-height: 1.125em;
   margin-top:2em;
-  //font-variant: small-caps;
+  font-variant: small-caps;
 
 }
 
@@ -121,7 +121,7 @@ img {
   .single-activity &, .single & {
     padding:0;
   }
-  .tax-activity-category & {
+  .tax-activity-category &, .tax-package-category & {
     margin-top:-3.875em;
   }
   .page & {
@@ -135,15 +135,19 @@ img {
 .btn, .button{
   border:0;
   display: inline-block;
-  background-color: $gray;
-  border:1px solid $gray; 
+  
+  background-color: lighten($red,10%);
+  background-image: linear-gradient(to bottom, lighten($red,10%) 0, lighten($red,10%) 50%, $red 50%);
+  border:none;   
   text-align: center;
   color:#fff;
   text-transform: uppercase;
-  font-weight: 300;
+  font-style: italic;
+  font-weight: 700;
   font-size: 1.25em;
   line-height: 1em;
   padding:0.5em 2em 0.5em;
+  border-radius: 4px;
   small {
     display:block;
     font-size: 0.75em;
@@ -152,8 +156,8 @@ img {
   }
 
   &:hover, &:focus {
-    background-color: $gray-dark;
-    border:1px solid $gray; 
+    background-color: $red;
+    background-image: linear-gradient(to bottom, $red 0, $red 100%, $red 100%);
     text-decoration: none;
   }
 }
@@ -204,4 +208,23 @@ blockquote{
     background-position: left center;
   }
 
+}
+
+.tag-list {
+  a{
+    border-radius: 4px;
+    background-color: $gray;
+    color:#fff;
+    display: inline-block;
+    font-family: $script;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 400;
+    padding:0.5em 1em;
+    margin:0 0.5em 0.5em 0;
+    &:hover, &:focus {
+      background-color: $gray-dark;
+      text-decoration: none;
+    }
+  }
 }

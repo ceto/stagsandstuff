@@ -4,7 +4,6 @@
     <span class="hero-text">
         <?php bloginfo('description' ); ?>
     </span>
-    <a href="?product-category=cementlap" class="btn btn-light-line">Lapok megtekintése</a>
   </div>
 </section>
 <?php elseif ( ( is_singular('post') &&  (get_post_format( $post->ID ) != 'gallery') )   ) :?>
@@ -55,7 +54,7 @@
       </h1>
     </div-->
   </section> 
-<?php elseif ( ( is_page() || is_singular('activity') || is_archive('activity-category')  )   ) :?>
+<?php elseif ( ( is_page() || is_singular('activity') || is_singular('package') || is_archive('activity-category')  )   ) :?>
   <?php
     $copt=get_option('cementlap_option_name');
 
@@ -100,8 +99,12 @@
       <h1 class="hero-text">
         <?php if (!is_archive()): ?>
           <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
-        <?php else :?>
-          Activities in Budapest<small>Browse recommended activities</small>
+        <?php else: ?>
+              <?php if (is_tax('activity-category')): ?>
+                Activities in Budapest<small>Browse recommended activities</small>
+              <?php elseif (is_tax('package-category')): ?>
+                Program Packages in Budapest<small>Browse our packages</small>
+              <?php endif; ?>
         <?php endif; ?>
       </h1>
     </div>

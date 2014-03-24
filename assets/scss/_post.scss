@@ -18,18 +18,13 @@
 
 .post-desc {
   @include clearfix();
-  position: absolute;
-  top:50%;
-  left:0;right:0;
   padding:0 1em;
-  transform:translateY(-50%);
   text-align: center;
-
-
 }
 
 .post-title {
-  font-weight: 100;
+  font-weight: 900;
+  font-style:italic;
   font-size: 1.75em;
   line-height: 1.125em;
   text-transform:uppercase;

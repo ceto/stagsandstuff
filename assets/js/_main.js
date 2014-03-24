@@ -164,11 +164,11 @@ jQuery(document).ready(function($) {
 
 /********** Product Control scripts *********/
 $(window).load(function(){
-  var $container = $('.main .activity-list'),
+  var $container = $('.main .ize-list'),
     filters = {};
 
   $container.isotope({
-    itemSelector : '.activity-mini',
+    itemSelector : '.ize-mini',
     animationOptions: {
       duration: 750,
       easing: 'linear',

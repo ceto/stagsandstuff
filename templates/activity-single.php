@@ -8,8 +8,8 @@
   $termes = join(" ", $termik );
 ?>
   <ul class="nav nav-tabs light numbered">
-    <li class="active"><a href="#actpanel" data-toggle="tab"><?php _e('What ot except','root') ?></a></li>
-    <li><a href="#packpanel" data-toggle="tab"><?php _e('Pre made','root'); ?> <strong><?php the_title() ?></strong> <?php _e('paclkages','root'); ?></a></li>
+    <li class="active"><a href="#actpanel" data-toggle="tab"><?php _e('What to except','root') ?></a></li>
+    <li><a href="#packpanel" data-toggle="tab"><?php _e('Pre made packages for','root'); ?> <strong><?php the_title() ?></strong></a></li>
   </ul>
   <div class="tab-content light">
     <div class="tab-pane active fade in" id="actpanel">
@@ -37,9 +37,29 @@
         </article>
     </div><!-- /.tab-pane -->
     <div class="tab-pane fade" id="packpanel">
+      <div class="pack-lead">
+        <h2>Activity is available in package only</h2>
+        <p>Ide kellene egy ütős felszólítás leaddel. Miszerint az aktivitás a csomagban elérhető, és a kedves delikvens válassza ki a számára legmegfelelőbb csomagot a lenti listából</p>
+      </div>
       <section class="containing-packages">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate obcaecati qui delectus excepturi vel quod et nostrum possimus.</p>
-        <p>Tempora, quod, commodi ad doloremque quasi quibusdam nostrum placeat recusandae totam harum!</p>
+        <?php 
+          $the_package=new WP_Query( array(
+            'post_type' => array('package' ),
+            'meta_key' => '_meta_actlist',
+            //'orderby' => '_meta_value_num',
+            //'order' => 'ASC',
+            'meta_query' => array(
+               array(
+                   'key' => '_meta_actlist',
+                   'value' => array(get_the_id()),
+                   'compare' => 'IN',
+               )
+            )
+          ));
+        ?>
+        <?php while ( $the_package->have_posts() ) : $the_package->the_post(); ?>
+          <?php get_template_part('templates/item','package' ); ?>
+        <?php endwhile; ?>
       </section>
     </div><!-- /.tab-pane -->
   </div><!-- /.tab-content-->

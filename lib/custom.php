@@ -223,8 +223,8 @@ add_action( 'init', 'create_package' );
 */
 add_filter( 'cmb_meta_boxes', 'cmb_package' );
 function cmb_package( array $meta_boxes ) {
-  $prefix = '_meta_';
 
+  $prefix = '_meta_';
   $meta_boxes[] = array(
     'id'         => 'pmeta',
     'title'      => 'Additional package details',
@@ -240,11 +240,11 @@ function cmb_package( array $meta_boxes ) {
         'type' => 'text',
       ),
       array(
-        'name' => __( 'Some meta name', 'root' ),
-        'desc' => __( 'description of this meta', 'root' ),
-        'id'   => $prefix . 'cucu',
-        'type' => 'text_medium',
-        // 'repeatable' => true,
+        'name' => 'Activities in the package',
+        'desc' => 'Select activities',
+        'id' => $prefix . 'actlist',
+        'type' => 'multicheck',
+        'options' => ss_all_activity()
       ),
       array(
         'name' => __( 'Fullscreen banner wallpaper', 'root' ),
@@ -587,6 +587,21 @@ class CementlapSettingsPage
 
 if( is_admin() ) $cementlap_settings_page = new CementlapSettingsPage();
 
+
+function ss_all_activity(){
+  $the_query=new WP_Query( array(
+    'post_type' => array('activity' ),
+    'orderby' => 'title',
+    'posts_per_page' => -1
+  ));
+  $actlist=array();
+  while ( $the_query->have_posts() ) {
+    $the_query->the_post();
+    $actlist[get_the_id()]=get_the_title();
+  }
+  return $actlist;
+
+}
 
 
 function ss_modify_num_activity($query)
