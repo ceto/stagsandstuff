@@ -1,0 +1,86 @@
+.content-info {
+  clear:both;
+  @include clearfix();
+
+ a{
+  color:$gray;
+  &:hover, &:focus{
+      colro:$gray-light;
+  }
+ }
+}
+
+.footer-sidebar {
+  @include clearfix();
+  max-width: $s5;
+  margin: auto;
+  padding:2em 0;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  font-weight: 300;
+  color:$gray;
+  @include breakpoint($s3){
+    padding:2em 0;
+  }
+
+  .widget{
+    @include clearfix();
+    padding:1em 1em;
+    @include breakpoint($s1){
+      padding:2em 1em;
+      width:33.333%;
+      float:left;
+    }
+    @include breakpoint($s2){
+      padding:2em 2em 2em 2em;
+      width:22.222%;
+      float:left;
+    }
+    @include breakpoint($s3){
+      padding:3em 3em 3em 3em;
+    }
+    h3 {
+      margin:1em 0 1.5em;
+      font-size: 1.25em;
+      line-height: 1em;
+      font-weight: 400;
+      text-transform: none;
+      font-variant:small-caps;
+
+      @include breakpoint($s1){
+        margin-top:0;  
+      }
+    }
+    p{
+      margin-top: 0;
+    }
+  }
+
+  .widget {
+    ul {
+      margin:0;
+      padding:0;
+      li {
+        list-style: none;
+        margin:0;
+        padding:0.5em 0;
+        a {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  
+}
+
+.footer-copy{
+  font-size: 0.666em;
+  line-height: 1.25em;
+  font-weight: 300;
+  padding:1.25em;
+  position: relative;
+  background-color:$gray-superlight;
+  @include breakpoint($s3){
+    padding:1.25em 3em;
+  }
+}

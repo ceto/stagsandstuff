@@ -1,0 +1,207 @@
+/* apply a natural box layout model to all elements */
+* {box-sizing: border-box;}
+
+html, body {
+  font: normal 16px/24px $sans-serif;
+  text-rendering: optimizeLegibility;
+  color: $gray-dark;
+  background-color: $white;
+  height: 100%;
+  
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+p {
+  hyphens: auto;
+  font-feature-settings: "liga", "dlig", "onum";
+}
+
+
+h1 {
+  text-transform: uppercase;
+  //font-family:$sc-sans;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1.125em;
+  margin-top:2em;
+  //font-variant: small-caps;
+}
+
+h2 {
+  text-transform: uppercase;
+  //font-family:$sc-sans;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.125em;
+  margin-top:2em;
+  //font-variant: small-caps;
+
+}
+
+h3 {
+  text-transform: uppercase;
+  //font-family:$sc-sans;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.125em;
+  margin-top:2em;
+  //font-variant: small-caps;
+
+}
+
+ul, ol {
+  padding:0 0 0 3em;
+  li {
+    margin:0.75em 0;
+  }
+}
+html[data-useragent*='Chrome'][data-platform*='Mac'] p {
+  font-feature-settings: normal;
+}
+
+
+img {
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+  vertical-align: middle;
+}
+.wp-caption {
+  max-width: 100%;
+  
+  .caption{
+    font-size: 0.75em;
+    line-height: 1.125em;
+    font-style: italic;
+    text-align: center;
+    margin:10px auto 0;
+    color:$gray-light;
+  }
+  img {
+    &.kicsit-tulfut{
+      @include breakpoint($s3){
+        max-width: 140%;
+        margin-left: -20%;
+      }
+    }
+    &.tulfut{
+      @include breakpoint($s3){
+        max-width: 160%;
+        margin-left: -30%;
+      }
+    }
+
+  }
+}
+
+.document{
+  @include clearfix();
+  max-width: $s5;
+  margin:0 auto;
+  .single-product &, .single-format-gallery &{
+    max-width: 100%;
+  }
+}
+.main {
+  @include clearfix();
+  //overflow:hidden;
+  padding:1em;
+  font-size:1em;
+  line-height: 1.4em;
+  @include breakpoint($s3){
+    padding: 1em 2em;
+  }
+  .single-activity &, .single & {
+    padding:0;
+  }
+  .tax-activity-category & {
+    margin-top:-3.875em;
+  }
+  .page & {
+    @include breakpoint($s2){
+      padding: 1em 1em;
+    }
+  }
+}
+
+
+.btn, .button{
+  border:0;
+  display: inline-block;
+  background-color: $gray;
+  border:1px solid $gray; 
+  text-align: center;
+  color:#fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.25em;
+  line-height: 1em;
+  padding:0.5em 2em 0.5em;
+  small {
+    display:block;
+    font-size: 0.75em;
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  &:hover, &:focus {
+    background-color: $gray-dark;
+    border:1px solid $gray; 
+    text-decoration: none;
+  }
+}
+.btn-light-line {
+  @extend .btn;
+  background-color: transparent;
+  border-color:rgba($white,0.5);
+  color:$white;
+  font-size: 0.875em;
+  line-height: 1em;
+  &:hover, &:focus {
+    background-color: transparent;
+    border-color:#fff;
+    color:#fff;
+  }
+}
+
+blockquote{
+  @include clearfix();
+  position: relative;
+  font-size: 1.75em;
+  line-height: 1.25em;
+  font-weight: 100;
+  text-transform: uppercase;
+  background-color: $gray-superlight;
+  color:$gray;
+  padding:0.75em 0.75em 0.75em 2.75em;
+  margin:1em 0;
+  @include breakpoint($s2) {
+
+  }
+
+  > * {
+    margin:0;
+  }
+
+  &:before {
+    position: absolute;
+    display: block;
+    content:'';
+    left:0;top:0;
+    height:100%;
+    width:2em;
+
+    background-color: $gray-dark;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+}
