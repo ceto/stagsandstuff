@@ -19,7 +19,7 @@ Template Name: Package Category List
   $copt=get_option('cementlap_option_name');
 ?>
 
-<ul class="nav nav-tabs light filtro filt-item" ata-filter-group="package-category">
+<ul class="nav nav-tabs filtro filt-item" ata-filter-group="package-category">
   <li id="filter-<?php echo $term->slug; ?>" class="active">
     <a href="#" data-filter-value="*" class="filt-item-input" id="<?php echo $term->slug; ?>" class="selected">
         All

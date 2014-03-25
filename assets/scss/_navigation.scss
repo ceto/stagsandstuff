@@ -7,10 +7,10 @@
   background-color: $gray-dark;
   @include breakpoint($s2) {
     background-color: $white;
-    //background-image: url(../img/bphero.jpg);
+    background-image: url(../img/csajos_hero.jpg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center 62%;
+    background-size: cover;
+    background-position: center center;
     min-height:250px;
     margin:0 auto;
   }
@@ -31,7 +31,7 @@
   width:286px;
   max-width: calc(100% - 75px);
   height:108px;
-  margin:30px auto;
+  margin:100px auto 140px;
   background-image:url('../img/logo_pink.png');
   background-repeat:no-repeat;
   background-position: left center;

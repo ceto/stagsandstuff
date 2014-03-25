@@ -105,8 +105,11 @@ img {
   @include clearfix();
   max-width: $s5;
   margin:0 auto;
-  .single-product &, .single-format-gallery &{
+  .single-activity &, .single-package &{
     max-width: 100%;
+  }
+  .tax-activity-category &, .tax-package-category & {
+    background-color:$gray-superlight;
   }
 }
 .main {

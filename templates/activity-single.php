@@ -7,11 +7,11 @@
   foreach ( $termlist as $term ) { $termik[] = $term->slug; }
   $termes = join(" ", $termik );
 ?>
-  <ul class="nav nav-tabs light numbered">
+  <ul class="nav nav-tabs numbered">
     <li class="active"><a href="#actpanel" data-toggle="tab"><?php _e('What to except','root') ?></a></li>
     <li><a href="#packpanel" data-toggle="tab"><?php _e('Pre made packages for','root'); ?> <strong><?php the_title() ?></strong></a></li>
   </ul>
-  <div class="tab-content light">
+  <div class="tab-content">
     <div class="tab-pane active fade in" id="actpanel">
       <article id="activity-<?php echo $post->ID  ?>" <?php post_class($termes); ?> >
         <div class="activity-content">

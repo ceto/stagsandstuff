@@ -119,18 +119,16 @@
 .package-item{
   @include clearfix();
   max-width: $s3;
-  margin:0 auto;
-  background-color: $gray-superlight;
+  margin:2em auto;
+
   &:hover, &:focus {
   }
   .package-thumb {
     text-align: center;
-    padding: 2em;
-
-
+    padding:0 1em;
     a {
       display: inline-block;
-      background-color: $pink;
+      background-color: #fff;
       border-radius:20px;
       padding:10px;
       &:hover, &:focus {
@@ -144,32 +142,24 @@
     @include breakpoint($s2){
       float:left;
       width:40%;
+      //position: relative;
+      margin-top: -4.5em;
+      //transform:translateY(-4em) rotateX(15);
     }
 
   }
-  .package-details{
-    padding:1em;
-
+  .package-head{
+    background-color: $gray-dark;
     @include breakpoint($s2){
-      float:right;
-      width:60%;
+      padding-left: 40%;
+
     }
 
-  }
-  .package-footer{
-    padding:1em 1em 1em 1em;
-    @include breakpoint($s2){
-      float:right;
-      clear:right;
-      width:60%;
-    }
   }
 
   .package-title{
-    background-color:#fff;
-    margin:1em -0.5em 0.5em -1.5em;
     padding:0;
-    color:$white;
+    margin:0;
     text-align: left;
     font-size: 2em;
     line-height: 1em;
@@ -186,15 +176,20 @@
       line-height: 1em;
     }
     a{
-      color:$gray;
+      color:$white;
       display: block;
-      padding:0.25em 1em 0.25em 1.5em;
+      padding:0.5em;
       &:hover, &:focus {
-         background-color:$gray;
-        color:#fff;
+        color:$cyan;
         text-decoration: none;
       }
     }
+  }
+
+  .allother {
+    @include clearfix();
+    background-color: #fff;
+    padding:1em;
   }
 
   .package-desc{
@@ -204,8 +199,17 @@
       margin:0;
     }
   }
+  .package-footer{
+    margin-top:1em;
+    @include breakpoint($s2){
+    }
+  }
+
+
+
+
   .package-tags{
-    float:left;
+    
   }
   .package-detbtn{
     float:right;

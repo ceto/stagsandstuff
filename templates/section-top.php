@@ -62,6 +62,7 @@
     // $imcismall = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'wallsmall' ); 
     // $imcimedium = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'wallmedium' ); 
     // $imcigreat = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'wallgreat' ); 
+    
     if (get_post_meta( $post->ID, '_meta_wallimg_id', true )){
       $ima = get_post_meta( $post->ID, '_meta_wallimg_id', true );
     } else {
@@ -74,7 +75,7 @@
     $imcimedium = wp_get_attachment_image_src( $ima, 'wallmedium');
     $imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
   ?>
-  <style type="text/css">
+  <!--style type="text/css">
     .hero {
        background-image:url('<?php echo $imcismall['0']; ?>');
     }
@@ -93,20 +94,40 @@
         background-image:url('<?php echo $imci['0']; ?>');
       }
     }
-  </style>  
+  </style-->  
   <section class="hero feles" role="banner">
     <div class="hero-content">
-      <h1 class="hero-text">
         <?php if (!is_archive()): ?>
-          <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
+          <h1 class="hero-text">
+            <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
+          </h1>
+          <figure class="topill">
+            <img src="http://lorempixel.com/480/480" alt="<?php the_title(); ?>">
+          </figure>
         <?php else: ?>
-              <?php if (is_tax('activity-category')): ?>
-                Activities in Budapest<small>Browse recommended activities</small>
-              <?php elseif (is_tax('package-category')): ?>
-                Program Packages in Budapest<small>Browse our packages</small>
-              <?php endif; ?>
+
+          <?php if (is_tax('activity-category')): ?>
+            <h1 class="hero-text">
+              Activities in Budapest<small>Browse recommended activities</small>
+            </h1>
+            <aside class="topwidget">
+              <h3>Not sure what to choose?</h3>
+              <p>We've already collected the best activities in the city</p>
+              <a href="?package-category=all-packages" class="btn">See our packages</a>
+            </aside>
+          <?php elseif (is_tax('package-category')): ?>
+            <h1 class="hero-text">
+              Program Packages in Budapest<small>Browse our packages</small>
+            </h1>
+            <aside class="topwidget">
+              <h3>Need more customized weekends?</h3>
+              <p>Check our activity list and choose the programs for your unique needs</p>
+              <a href="?activity-category=all-activities" class="btn">See our activities</a>
+            </aside>
+          <?php endif; ?>
+
         <?php endif; ?>
-      </h1>
+
     </div>
   </section> 
 <?php endif; ?>
