@@ -101,8 +101,29 @@
           <h1 class="hero-text">
             <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
           </h1>
+          <div class="tag-list">
+            <?php
+              if (is_singular('package')) {
+                  $terms=get_the_terms($post->ID, 'package-tag');
+               } elseif (is_singular('activity')) {
+                  $terms=get_the_terms($post->ID, 'activity-tag');
+               }              
+              $count = count($terms);
+              if ($count > 0) {
+                $term_list = '';
+                foreach ($terms as $term) {
+                  $term_list .= '<a href="' . get_term_link( $term ) . '" title="' . sprintf(__('View all package filed under %s', 'root'), $term->name) . '">' . $term->name . '</a>';
+                }
+                echo $term_list;
+              }
+            ?>
+          </div>
           <figure class="topill">
-            <img src="http://lorempixel.com/480/480" alt="<?php the_title(); ?>">
+            <?php if (has_post_thumbnail() ) : ?>
+              <?php the_post_thumbnail('small43');  ?>
+            <?php else: ?>
+              <img src="http://lorempixel.com/480/320" alt="<?php the_title(); ?>">
+            <?php endif; ?>
           </figure>
         <?php else: ?>
 

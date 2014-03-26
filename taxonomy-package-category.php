@@ -39,6 +39,6 @@ Template Name: Package Category List
 </ul>
 <div class="package-list ize-list">
   <?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('templates/square','package' ); ?>
+    <?php get_template_part('templates/item','package' ); ?>
   <?php endwhile; ?>
 </div>

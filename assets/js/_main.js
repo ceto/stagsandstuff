@@ -162,7 +162,7 @@ jQuery(document).ready(function($) {
 
 
 
-/********** Product Control scripts *********/
+/********** Filter Control Scripts *********/
 $(window).load(function(){
   var $container = $('.main .ize-list'),
     filters = {};

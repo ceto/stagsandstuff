@@ -7,7 +7,7 @@
     );
     foreach ( $nagytermlist as $term ) { $termik[] = $term->slug; }
   ?>
-  <article id="package-<?php echo $post->ID; ?>" <?php post_class( join(" ", $termik ).' package-item' ); ?>  >
+  <article id="package-<?php echo $post->ID; ?>" <?php post_class( join(" ", $termik ).' package-item ize-mini' ); ?>  >
     <header class="package-head">
       <h3 class="package-title">
         <a href="<?php the_permalink(); ?>">
@@ -19,9 +19,12 @@
     <div class="allother">
       <figure class="package-thumb">
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-          <?php //the_post_thumbnail('tiny11');  ?>
-          <?php $w=rand(320,330); $h=round($w/4*3); ?>
-          <img src="http://lorempixel.com/<?php echo $w ?>/<?php echo $h ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="" >
+          <?php if (has_post_thumbnail() ) : ?>
+            <?php the_post_thumbnail('tiny43');  ?>
+          <?php else: ?>
+            <?php $w=rand(320,330); $h=round($w/4*3); ?>
+            <img src="http://lorempixel.com/<?php echo $w ?>/<?php echo $h ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="" >
+          <?php endif; ?>
         </a>
       </figure>
       <div class="package-desc">

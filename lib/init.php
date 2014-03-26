@@ -29,12 +29,12 @@ function roots_setup() {
 
   add_image_size('medium169', 768, 432, true);
 
+  add_image_size('small43', 480, 360, true);
 
-  add_image_size('small34', 480, 740, true);
   add_image_size('slidefree', 9999, 1000, false);
     
   
-  add_image_size('tiny11', 200, 200, true);
+  add_image_size('tiny43', 320, 240, true);
   
   add_image_size('petit11', 120, 120, true);
 

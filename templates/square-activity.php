@@ -13,10 +13,12 @@
     data-name="<?php the_title(); ?>"
   >
     <figure class="activity-thumb">
-      <?php //the_post_thumbnail('tiny11');  ?>
-      <?php $w=rand(480,490); $h=round($w/4*3); ?>
-      <img src="http://lorempixel.com/<?php echo $w ?>/<?php echo $h ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="" >
-      
+      <?php if (has_post_thumbnail() ) : ?>
+        <?php the_post_thumbnail('tiny43');  ?>
+      <?php else: ?>
+        <?php $w=rand(320,330); $h=round($w/4*3); ?>
+        <img src="http://lorempixel.com/<?php echo $w ?>/<?php echo $h ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="" >
+      <?php endif; ?>
     </figure>
     <div class="activity-desc">
       <h3 class="activity-title"><?php the_title(); ?><small><?php echo get_post_meta($post->ID, '_meta_subtitle', true); ?></small></h3>
