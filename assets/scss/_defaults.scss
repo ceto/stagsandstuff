@@ -161,8 +161,9 @@ img {
 
   &:hover, &:focus {
     background-color: $red;
-    background-image: linear-gradient(to bottom, $red 0, $red 100%, $red 100%);
+    background-image: linear-gradient(to bottom, $red 0, $red 50%, lighten($red,10%) 50%);
     text-decoration: none;
+    color:darken($red,20%);
   }
 }
 .btn-light-line {

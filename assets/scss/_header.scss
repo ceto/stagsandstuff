@@ -1,34 +1,33 @@
-.hero {
+.minihero {
   @include clearfix();
-  background-color:#fff;
+  background-color:transparent;
   //background-image: url('../img/bphero.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow:hidden;
-
   width:100%;
-  min-height: 250px;
-  @include breakpoint($s3){
-    min-height: 500px; 
-    &.feles {
-      min-height: 0px;
-    }
 
+  .single-activity & {
+    margin-bottom:-3.2em;
   }
 }
 
 
-.hero-content {
+.minihero-content {
   @include clearfix();
   position: relative;
   text-align: left;
   max-width: $s5;
   margin:0 auto;
-  padding:1em 1em 4em;
+  padding:1em 1em;
   max-width:$s3;
+
+  .single-activity & {
+    padding-bottom:9em;
+  }
   @include breakpoint($s2){
-    padding:6em 1em 8em;
+    padding:6em 1em 1em;
   }
   @include breakpoint($s3){
 
@@ -38,20 +37,17 @@
   }
 
   .btn {
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.125em;
   }
-
-
   .tag-list {
     @include breakpoint($s2){
       width:66.666%;
       float:left;
-      clear:left;
     }
   }
 }
-.hero-text{
+.minihero-title{
   font-size: 2em;
   line-height: 1.125em;
   font-weight: 900;
@@ -69,7 +65,7 @@
   @include breakpoint($s2){
     font-size: 4em;
     line-height: 1em;
-    width:66%;
+    width:66.666%;
     float:left;
   }
 
@@ -82,46 +78,32 @@
     font-size: 66.666%; 
   }
 }
-.topwidget {
-  background-color: $gray-light;
-  background-color: rgba($gray-light,0.75);
-  padding:1em;
+
+
+.minihero .actblock{
+  margin:1em 0;
+  text-align: center;
   @include breakpoint($s2){
-    position:absolute;
-    right:0;
-    top:50%;
-    transform:translateY(-50%);
     width:33.333%;
-  } 
-  h3 {
-    font-size: 1.5em;
-    line-height: 1.125em;
-    //font-weight: 700;
-    color:$cyan;
-    margin:0 0 0;
-    font-variant: normal;
-  }
-  p{
-    font-size: 1.25em;
-    line-height: 1.4em;
-    font-style: italic;
-    margin:0.25em 0 0.5em;
+    float:right;
+
   }
 }
-.topill{
+
+.minihero-lead{
+  margin:2em 0;
+  p{
+    font-size:1.5em;
+    line-height: 1.4em;
+    font-weight: 800;
+    color:$gray;
+    display: inline;
+    background-color: $white;
+    background-color: rgba($white,0.5);
+     
+  }
   @include breakpoint($s2){
-    position:absolute;
-    
-    right:0;
-    top:50%;
-    transform:translateY(-50%);
-    width:33.333%;
+    width:66%;
+    float:left;
   }
-  img {
-    @include breakpoint($s2){
-      transform:rotate(30deg);
-    }
-
-  }
-
 }

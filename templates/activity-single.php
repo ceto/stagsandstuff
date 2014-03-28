@@ -1,4 +1,67 @@
 <?php while (have_posts()) : the_post(); ?>
+  <?php
+    $termik = array();
+    $ures = array();
+    $termlist=array_merge(
+      get_the_terms( $post->ID, 'activity-category' )?get_the_terms( $post->ID, 'activity-category' ):$ures,
+      get_the_terms( $post->ID, 'activity-tag' )?get_the_terms( $post->ID, 'activity-tag' ):$ures
+    );
+    $termlinks='';
+    foreach ( $termlist as $term ) { 
+      $termik[] = $term->slug;
+      $termlinks .= '<a href="' . get_term_link( $term ) . '" title="' . sprintf(__('View all package filed under %s', 'root'), $term->name) . '">' . $term->name . '</a>';
+    }
+    $termes = join(" ", $termik );
+  ?>
+  <?php
+    // if (get_post_meta( $post->ID, '_meta_wallimg_id', true )){
+    //   $ima = get_post_meta( $post->ID, '_meta_wallimg_id', true );
+    // } else {
+    //   $ima =  48;
+    // }
+    // $imci = wp_get_attachment_image_src( $ima, 'wallimg');
+    // $imcismall = wp_get_attachment_image_src( $ima, 'wallsmall');
+    // $imcimedium = wp_get_attachment_image_src( $ima, 'wallmedium');
+    // $imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
+  ?>
+  <!--style type="text/css">
+    .minihero {
+       background-image:url('<?php echo $imcismall['0']; ?>');
+    }
+    @media only screen and (min-width: 768px) {
+      .minihero {
+        background-image:url('<?php echo $imcimedium['0']; ?>');
+      }
+    }
+    @media only screen and (min-width: 1280px) {
+      .minihero {
+        background-image:url('<?php echo $imcigreat['0']; ?>');
+      }
+    }
+    @media only screen and (min-width: 1600px) {
+      .minihero {
+        background-image:url('<?php echo $imci['0']; ?>');
+      }
+    }
+  </style--> 
+    <header class="minihero" role="banner">
+      <div class="minihero-content">
+        <h1 class="minihero-title">
+          <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
+        </h1>
+        <div class="tag-list">
+          <?php echo $termlinks; ?>
+        </div>
+        <figure class="topill">
+          <?php if (has_post_thumbnail() ) : ?>
+            <?php the_post_thumbnail('small43');  ?>
+          <?php else: ?>
+            <img src="http://lorempixel.com/480/320" alt="<?php the_title(); ?>">
+          <?php endif; ?>
+        </figure>
+
+      </div>
+    </header>
 <?php
   $termik = array();
   $termlist=get_the_terms( $post->ID, 'activity-category' );

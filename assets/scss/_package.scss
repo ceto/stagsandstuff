@@ -1,16 +1,22 @@
 .single-package {
   article.package{
     @include clearfix();
-    background-color: $gray-superlight;
+    background-color:transparent;
+    background-position: 100% top;
+    background-repeat: no-repeat;
+    background-size: 66.666% auto;
     .inner{
       @include clearfix();
       max-width: $s3;
+      padding:1em;
       margin:0 auto;
     }
   }
   .containing-activities{
     @include clearfix();
     background-color: $gray-light;
+
+    
     .inner{
       @include clearfix();
       max-width: $s3;
@@ -21,13 +27,67 @@
 
   }
 
-  .package-lead{
-    font-size:2em;
-    line-height: 1.4em;
-    font-weight: 700;
-    color:$pink;
-  }
+  .package-links{
+    @include clearfix();
+    background-color: $gray-superlight;
+    background-color: rgba($gray-superlight,0.75);
+    padding:1em;
 
+    h3{
+      font-size: 2em;
+      line-height: 1em;
+      margin:0; 
+    }
+
+    ul{
+      @include clearfix();
+      margin:1em 0 1em 0;
+      padding:0 0;
+      counter-reset: actlinkcount;
+      @include breakpoint($s2){
+        float:left;
+        width:66.666%
+      }
+      li{
+        position: relative;
+
+        padding:0 0;
+        margin:0.125em 0;
+        list-style-type:none;
+        counter-increment: actlinkcount;
+        font-size: 1.25em;
+        line-height: 1.4em;
+        font-weight: 800;
+        font-style: italic;
+        font-variant: small-caps;
+        
+        @include breakpoint($s1){
+          width:50%;
+          float:left;
+          &:nth-child(2n+1){
+            clear:left;
+          }
+        }
+
+        &:before{
+          content: counter(actlinkcount)'.';
+          margin-right: 0.25em;
+          font-size: 1.25em;
+          line-height: 0.875em;
+          font-weight: 900;
+          color:$gray;
+          font-variant: normal;
+          font-style: italic;
+        }
+        a{
+          color:$red;
+          &:hover,&:focus{
+            color:$cyan;
+          }
+        }
+      }  
+    }  
+  }
 }
 
 
