@@ -1,3 +1,67 @@
+.mobile-header {
+  @include clearfix();
+  position: relative;
+  background-color: $gray-dark;
+  background-image: url(../img/csajos_hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @include breakpoint($s2){
+    display: none;
+  }
+}
+.mobile-logo{
+  @include text-hide();
+  display:block;
+  margin:5px auto;
+  width:100px;
+  height:42px;
+  background-color: transparent;
+  background-image:url('../img/logo.png');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  &:hover, &:focus {
+    opacity: 0.85;
+  }
+}
+
+.toprow{
+  @include clearfix();
+  background-color: #000;
+  background-color: rgba(#000,0.75);
+  border-bottom: 1px solid #000;
+  //background-color: #fff;
+  //color: $gray-dark;
+  color:#fff;
+  font-size: 0.875em;
+  padding:0.333em 1.25em;
+
+  @include breakpoint($s2){
+  }
+
+  .left-top{
+    @include breakpoint($s2){
+      float:left;
+    }
+  }
+  
+  a {
+    color:$red
+  }
+}
+
+.topenq.btn{
+
+  font-size: 0.875em;
+  color:#fff;
+  @include breakpoint($s2){
+    float:right;
+  }
+  
+}
+
 .minihero {
   @include clearfix();
   background-color:transparent;

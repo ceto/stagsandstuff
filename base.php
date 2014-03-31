@@ -9,10 +9,12 @@
     get_template_part('templates/header');
   ?>
   <div class="mindenmas">
-    <nav class="off-canvas-navigation">
-      <a class="menu-button" href="#menu"><i class="ion-navicon-round"></i></a>
-      <a class="brandi" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
-    </nav>
+    <header class="mobile-header" role="banner">
+      <nav class="off-canvas-navigation">
+        <a class="menu-button" href="#menu"><i class="ion-navicon-round"></i></a>
+      </nav>
+      <a class="mobile-logo" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+    </header>
     <?php get_template_part('templates/section','top'); ?>
     <div class="document" role="document">
       <?php get_template_part('templates/subnavigation'); ?>

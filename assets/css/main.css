@@ -2919,7 +2919,11 @@ blockquote {
   overflow: hidden;
   padding: 0;
   min-height: 100%;
-  background-color: #414040; }
+  background-color: #414040;
+  background-image: url(../img/csajos_hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
   .banner:before, .banner:after {
     content: " ";
     display: table; }
@@ -2927,11 +2931,8 @@ blockquote {
     clear: both; }
   @media only screen and (min-width: 768px) {
     .banner {
-      background-color: #fefeff;
       background-image: url(../img/csajos_hero.jpg);
-      background-repeat: no-repeat;
       background-size: cover;
-      background-position: center center;
       min-height: 250px;
       margin: 0 auto; } }
 
@@ -2946,7 +2947,7 @@ blockquote {
   max-width: calc(100% - 75px);
   height: 108px;
   margin: 100px auto 140px;
-  background-image: url("../img/logo_pink.png");
+  background-image: url("../img/logo.png");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 100% auto;
@@ -2955,33 +2956,13 @@ blockquote {
     .brand {
       display: block; } }
 
-.brandi {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-  display: block;
-  width: 260px;
-  height: 26px;
-  background-image: url("../img/logo.png");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 100% auto;
-  margin-top: 10px;
-  margin-left: 60px; }
-  .brandi:hover, .brandi:focus {
-    opacity: 0.85; }
-
 .nav-main {
   font-size: 1.25em;
   line-height: 2.5em;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  font-family: "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #414040;
-  background-image: linear-gradient(to bottom, #696565 0, #696565 50%, #414040 50%); }
+  font-family: "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .nav-main:before, .nav-main:after {
     content: " ";
     display: table; }
@@ -2989,10 +2970,18 @@ blockquote {
     clear: both; }
   @media only screen and (min-width: 768px) {
     .nav-main {
+      background-color: #414040;
+      background-image: linear-gradient(to bottom, #696565 0, #696565 50%, #414040 50%);
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0; } }
+  @media only screen and (min-width: 768px) {
+    .nav-main.fixed {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0; } }
 
 .nav-main .nav {
   margin: 0 auto;
@@ -3019,11 +3008,11 @@ blockquote {
     .nav-main .nav a:hover, .nav-main .nav a:focus {
       color: #fff;
       background-color: #696565;
+      background-color: rgba(105, 101, 101, 0.75);
       text-decoration: none; }
       @media only screen and (min-width: 768px) {
         .nav-main .nav a:hover, .nav-main .nav a:focus {
           color: #fff;
-          text-decoration: none;
           background-color: transparent; } }
   .nav-main .nav .active a {
     color: #2ab0e1; }
@@ -3043,12 +3032,12 @@ blockquote {
 
 /* Off Canvas Navigation */
 .off-canvas-navigation {
-  width: 100%;
   overflow: hidden;
   display: block;
-  color: #414040; }
-  .off-canvas-navigation .brand {
-    margin-left: 75px; }
+  color: #414040;
+  position: absolute;
+  left: 0;
+  top: 5px; }
 
 .menu-button {
   width: 50px;
@@ -3058,14 +3047,14 @@ blockquote {
   text-align: center;
   float: left;
   display: block;
-  background: #fefeff;
-  background: rgba(254, 254, 255, 0.3);
-  color: #414040; }
+  color: #cacaca; }
 
 a.menu-button:hover {
   text-decoration: none;
-  background: #414040;
   color: #fff; }
+
+html, body {
+  overflow-x: hidden; }
 
 /* Site Menu */
 .banner,
@@ -3270,6 +3259,65 @@ a.menu-button:hover {
         text-decoration: none; }
       .activity-pn li a i {
         font-size: 8em; }
+
+.mobile-header {
+  position: relative;
+  background-color: #414040;
+  background-image: url(../img/csajos_hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .mobile-header:before, .mobile-header:after {
+    content: " ";
+    display: table; }
+  .mobile-header:after {
+    clear: both; }
+  @media only screen and (min-width: 768px) {
+    .mobile-header {
+      display: none; } }
+
+.mobile-logo {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  display: block;
+  margin: 5px auto;
+  width: 100px;
+  height: 42px;
+  background-color: transparent;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto; }
+  .mobile-logo:hover, .mobile-logo:focus {
+    opacity: 0.85; }
+
+.toprow {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-bottom: 1px solid #000;
+  color: #fff;
+  font-size: 0.875em;
+  padding: 0.333em 1.25em; }
+  .toprow:before, .toprow:after {
+    content: " ";
+    display: table; }
+  .toprow:after {
+    clear: both; }
+  @media only screen and (min-width: 768px) {
+    .toprow .left-top {
+      float: left; } }
+  .toprow a {
+    color: #f23b55; }
+
+.topenq.btn, .topenq.btn-light-line {
+  font-size: 0.875em;
+  color: #fff; }
+  @media only screen and (min-width: 768px) {
+    .topenq.btn, .topenq.btn-light-line {
+      float: right; } }
 
 .minihero {
   background-color: transparent;
