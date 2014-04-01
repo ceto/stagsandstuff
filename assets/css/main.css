@@ -2234,8 +2234,6 @@ img {
     clear: both; }
   .single-activity .document, .single-package .document {
     max-width: 100%; }
-  .tax-activity-category .document, .tax-package-category .document {
-    background-color: #e6e6e6; }
 
 .main {
   position: relative;
@@ -3000,8 +2998,10 @@ html, body {
     font-size: 66.666%; }
 
 .topwidget {
-  background-color: #cacaca;
-  background-color: rgba(202, 202, 202, 0.75);
+  background-color: #f3f3f3;
+  background-color: rgba(243, 243, 243, 0.5);
+  border: 1px solid #cacaca;
+  border-radius: 15px;
   padding: 1em; }
   @media only screen and (min-width: 768px) {
     .topwidget {
@@ -3021,6 +3021,8 @@ html, body {
     line-height: 1.4em;
     font-style: italic;
     margin: 0.25em 0 0.5em; }
+  .topwidget .btn, .topwidget .btn-light-line {
+    display: block; }
 
 @media only screen and (min-width: 768px) {
   .topill {
@@ -3249,11 +3251,16 @@ html, body {
   color: #696565;
   font-size: 1.25em;
   line-height: 1.4em;
-  font-weight: 800; }
+  font-weight: 800;
+  margin-bottom: 1em; }
   @media only screen and (min-width: 768px) {
     .activity-content {
       width: 66.666%;
       float: left; } }
+  .activity-content p {
+    display: inline;
+    background-color: #f3f3f3;
+    background-color: rgba(243, 243, 243, 0.5); }
 
 .activity-addfavour {
   text-align: center;
@@ -3392,8 +3399,8 @@ html, body {
     .single-package .containing-activities .inner:after {
       clear: both; }
 .single-package .package-links {
-  background-color: #e6e6e6;
-  background-color: rgba(230, 230, 230, 0.75);
+  background-color: #f3f3f3;
+  background-color: rgba(243, 243, 243, 0.5);
   padding: 1em; }
   .single-package .package-links:before, .single-package .package-links:after {
     content: " ";
@@ -4036,12 +4043,20 @@ input[type="text"], input[type="email"], textarea {
   background-color: #f3f3f3;
   color: #d3206c; }
 
+.nav-tabs.glass li > a {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  .nav-tabs.glass li > a:hover, .nav-tabs.glass li > a:focus {
+    text-decoration: none; }
+
 .tab-content {
   background-color: #e6e6e6;
   max-width: 1280px;
   margin: 0 auto; }
   .tab-content.light {
     background-color: #f3f3f3; }
+  .tab-content.glass {
+    background-color: transparent; }
   .tab-content > .tab-pane {
     display: none; }
     .tab-content > .tab-pane:before, .tab-content > .tab-pane:after {

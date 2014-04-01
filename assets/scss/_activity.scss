@@ -244,6 +244,8 @@
     max-width:$s3;
     margin:3em auto;
     padding:1em;
+    //background-color:$gray-superlight;
+    //background-color:rgba($gray-superlight,0.75);
   }
 }
 
@@ -269,9 +271,16 @@
   font-size: 1.25em;
   line-height: 1.4em;
   font-weight:800;
+  margin-bottom: 1em;
   @include breakpoint($s2){
     width:66.666%;
     float:left;
+  }
+  p{
+    display: inline;
+    background-color: $white;
+    background-color: rgba($white,0.5);
+     
   }
 }
 

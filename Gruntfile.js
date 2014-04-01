@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
          outputStyle: 'nested',
-         sourceComments: 'map' 
+         sourceComments: 'map'
         },
         files: {
           'assets/css/main.css': 'assets/scss/styles.scss'

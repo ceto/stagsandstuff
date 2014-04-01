@@ -76,12 +76,12 @@
   foreach ( $termlist as $term ) { $termik[] = $term->slug; }
   $termes = join(" ", $termik );
 ?>
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs glass">
     <li class="active"><a href="#actpanel" data-toggle="tab"><?php _e('What to except','root') ?></a></li>
     <li><a href="#packpanel" data-toggle="tab"><?php _e('Enquire package for','root'); ?> <strong><?php the_title() ?></strong></a></li>
     <li><a href="#similarpanel" data-toggle="tab"><?php _e('Browse similar','root'); ?></a></li>
   </ul>
-  <div class="tab-content">
+  <div class="tab-content glass">
     <div class="tab-pane active fade in" id="actpanel">
       <article id="activity-<?php echo $post->ID  ?>" <?php post_class($termes); ?> >
         <div class="activity-content">

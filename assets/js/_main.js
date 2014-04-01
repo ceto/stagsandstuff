@@ -51,14 +51,14 @@ var UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 
-var resizeHero = function() {
-  var off_canvas_nav_display = $('.off-canvas-navigation').css('display');
-  if (off_canvas_nav_display === 'block') {
-      //$('.single-product .main .product').height($(window).height()-($('.off-canvas-navigation').offset().top + $('.off-canvas-navigation').height()));
-  } else {
-    //$('.single-post .main .post').css('min-height', $(window).height() - $('.main').offset().top );
-  }
-};
+// var resizeHero = function() {
+//   var off_canvas_nav_display = $('.off-canvas-navigation').css('display');
+//   if (off_canvas_nav_display === 'block') {
+//       //$('.single-product .main .product').height($(window).height()-($('.off-canvas-navigation').offset().top + $('.off-canvas-navigation').height()));
+//   } else {
+//     //$('.single-post .main .post').css('min-height', $(window).height() - $('.main').offset().top );
+//   }
+// };
 
 
 var showMenu = function() {
@@ -76,34 +76,31 @@ jQuery(window).resize(function(){
   if (off_canvas_nav_display === 'none') {
     $("body").removeClass("active-nav small-screen").addClass("two-column");
   }
-  resizeHero();
+  //resizeHero();
 });
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function($){
   $('.menu-button').click(function(e) {
     e.preventDefault();
     showMenu();
   });
-  resizeHero();
-  $('.main').fitVids();
+  //resizeHero();
+
 
   /************* Man navigation Fixing ***********/
-  var topi = jQuery('#nav-main').offset().top - parseFloat(jQuery('#nav-main').css('marginTop').replace(/auto/, 0));
-  jQuery(window).scroll(function (event) {
-    var y = $(this).scrollTop();
-    if (y >= topi) {
-      jQuery('#nav-main').addClass('fixed');
-    } else {
-      jQuery('#nav-main').removeClass('fixed');
-    }
-  });
-
-
-
-
+  if ( $('#nav-main').length ){
+    var top = $('#nav-main').offset().top - parseFloat($('#nav-main').css('marginTop').replace(/auto/, 0));
+    $(window).scroll(function (event) {
+      var y = $(this).scrollTop();
+      if (y >= top) {
+        $('#nav-main').addClass('fixed');
+      } else {
+        $('#nav-main').removeClass('fixed');
+      }
+    });
+  }
 
 });
-
 
 
 /********** Filter Control Scripts *********/
@@ -166,9 +163,5 @@ $(window).load(function(){
 
 
 jQuery(document).ready(function($){
-  $('.filt-placeholder').click(function(e){
-    e.preventDefault();
-    $(this).toggleClass('selected');
-    $($(this).attr('data-filter-name')).toggleClass('hide');
-  });
+  $('.main').fitVids();
 });

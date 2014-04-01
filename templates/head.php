@@ -9,6 +9,39 @@
   <!-- <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> -->
 
  <?php wp_head(); ?>
+ <script type="text/javascript" charset="utf-8">
+ $(function() { $('body').hide().show(); });
+</script>
+<script type="text/javascript">
+WebFontConfig = {
+  google: { families: ['Alegreya+Sans','Pacifico'] },
+    fontinactive: function (fontFamily, fontDescription) {
+   //Something went wrong! Let's load our local fonts.
+    WebFontConfig = {
+      custom: { families: ['Alegreya+Sans','Pacifico'],
+      urls: ['font-one.css','font-two.css']
+    }
+  };
+  loadFonts();
+  }
+};
+
+function loadFonts() {
+  var wf = document.createElement('script');
+  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+}
+
+(function () {
+  //Once document is ready, load the fonts.
+  loadFonts();
+  })();
+
+</script>
 
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 </head>
