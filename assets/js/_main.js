@@ -88,17 +88,17 @@ jQuery(document).ready(function($){
 
 
   /************* Man navigation Fixing ***********/
-  if ( $('#nav-main').length ){
-    var top = $('#nav-main').offset().top - parseFloat($('#nav-main').css('marginTop').replace(/auto/, 0));
-    $(window).scroll(function (event) {
-      var y = $(this).scrollTop();
-      if (y >= top) {
-        $('#nav-main').addClass('fixed');
-      } else {
-        $('#nav-main').removeClass('fixed');
-      }
-    });
-  }
+  var top = $('#nav-main').offset().top - parseFloat($('#nav-main').css('marginTop').replace(/auto/, 0));
+  $('.mindenmas').scroll(function (event) {
+    var y = $(this).scrollTop();
+    console.log(y+'-puna');           
+    if (y >= top) {
+      $('#nav-main').addClass('fixed');
+    } else {
+      $('#nav-main').removeClass('fixed');
+    }
+  });
+
 
 });
 
@@ -165,3 +165,4 @@ $(window).load(function(){
 jQuery(document).ready(function($){
   $('.main').fitVids();
 });
+

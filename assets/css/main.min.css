@@ -2173,8 +2173,7 @@ html, body {
   font: normal 16px/24px 'Alegreya Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   color: #414040;
-  height: 100%;
-  overflow-x: hidden; }
+  height: 100%; }
 
 body {
   background-color: #f3f3f3;
@@ -2524,8 +2523,6 @@ a.menu-button:hover {
   text-decoration: none;
   color: #fff; }
 
-html, body {
-  overflow-x: hidden; }
 
 /* Site Menu */
 .banner, .mindenmas {
@@ -2790,7 +2787,8 @@ html, body {
   @media only screen and (min-width: 768px) { }
   @media only screen and (min-width: 768px) {
     .toprow .left-top {
-      float: left; } }
+      float: left;
+      width: 540px; } }
   .toprow a {
     color: #f23b55; }
 

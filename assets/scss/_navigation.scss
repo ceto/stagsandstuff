@@ -179,8 +179,9 @@ a.menu-button:hover {
 }
 
 html,body {
-  overflow-x:hidden;
+  //overflow-x:hidden;
 }
+
 /* Site Menu */
 .banner, .mindenmas{
   transition: .2s all ease;     
@@ -213,7 +214,9 @@ html,body {
 }
 
 
-@media all and (min-width: $s2) { 
+@media all and (min-width: $s2) {
+           
+    
   .off-canvas-navigation {
     display:none;
   }

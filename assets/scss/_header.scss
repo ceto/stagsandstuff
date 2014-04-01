@@ -44,6 +44,7 @@
   .left-top{
     @include breakpoint($s2){
       float:left;
+      width:540px;
     }
   }
   
