@@ -9,7 +9,7 @@
   color:$white;
   padding:10px;
   border-radius: 15px;
-  margin:1em auto;
+  margin:1.5em 0.5em;
   counter-increment: actitemcount;
   &:before{
     position: absolute;
@@ -23,15 +23,15 @@
     line-height: 1em;
     font-weight: 700;
     color:rgba($gray,0.25);
-    
-
   }
 
 
   @include breakpoint($s2){
+    margin:2em auto;
   }
   
   .activity-thumb {
+    text-align: center;
     @include breakpoint($s2){
       float:left;
     }
@@ -51,16 +51,69 @@
   .activity-title{
     font-size: 2em;
     line-height: 1em;
+    font-weight:800;
+    font-style: italic;
+    text-transform: none;
+    font-variant: small-caps;
+    margin:0.25em 0 0.25em 0;
+    text-align: center;
+    @include breakpoint($s2){
+      text-align: left;
+      margin-top:0;
+    }
+    small {
+      display: block;
+      font-weight: 700;
+      font-style: normal;
+      font-variant: normal;
+      font-size: 50%;
+      line-height: 1em;
+    }
+
     a{
       color:$white;
+      &:hover, &:focus {
+        text-decoration: none;
+        color:$red;
+      }
+    }
+  }
+
+  .tag-list{
+    text-align: center;
+    @include breakpoint($s2){
+      text-align: left;
+    }
+  }
+  .activity-desc {
+    margin:0.75em 0 1em 0;
+    p{
+      position: relative;
+      margin:0;
+    }
+    a{
+      @include text-hide();
+      position: absolute;
+      top:0;right:0;bottom:0;left:0;
     }
   }
   .activity-footer{
     position: relative;
     z-index: 1;
+    text-align: center;
+    margin-bottom: 0em;
+    .btn{
+      display: block;
+    }
     @include breakpoint($s2){
       padding-left: 330px;
+      text-align: left;
+      margin-bottom:0;
+      .btn{
+        display: inline-block;
+      }
     }
+
   }
 }
 
@@ -160,11 +213,12 @@
 
 .activity-title{
   margin:0;
-  font-weight:800;
   color:$white;
   text-align: left;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1em;
+  font-weight:800;
+  font-style:italic;
   margin:0;
   text-transform: none;
   font-variant: small-caps;
@@ -172,7 +226,10 @@
     display: block;
     font-weight: 700;
     font-variant: normal;
-    font-size: 75%;
+    font-style:normal;
+    text-transform:lowercase;
+    font-size: 66.666%;
+    line-height:1em;
   }
 }
 
@@ -184,11 +241,11 @@
 
   article.activity {
     @include clearfix();
-      max-width:$s3;
-      margin:3em auto;
-      padding:1em;
-    }
+    max-width:$s3;
+    margin:3em auto;
+    padding:1em;
   }
+}
 
 
 .containing-packages {
@@ -205,38 +262,38 @@
 .activity-head {
   margin-bottom:16em;
 }
-.activity-back{
-  font-family: 'Lucida Grande', Tahoma, Verdana, "HelveticaNeueLTStd", Arial, sans-serif;
-  text-transform: uppercase;
-  color:#000;
-  font-size: 0.875em;
-  line-height: 1em;
-  i{
-    margin-right: 0.25em;
-    //display: inline-block;
-  }
-}
+
 
 .activity-content {
-  color:$gray-dark;
-  font-size: 1em;
+  color:$gray;
+  font-size: 1.25em;
   line-height: 1.4em;
-
-}
-.activity-addcont{
-  text-align: left;
-  padding:0 1em;
+  font-weight:800;
   @include breakpoint($s2){
+    width:66.666%;
     float:left;
-    clear:left;
-    padding:0 0 1em 0;
-    max-width:55%;
-  }
-  @include breakpoint($s3){
-    max-width:66.666%;
   }
 }
 
+.activity-addfavour{
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.125em;
+  padding:1em;
+  @include breakpoint($s2){
+    width:33.333%;
+    float:left;
+  }
+}
+
+.activity-gtk{
+  clear:both;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  h2{
+
+  }
+}
 .activity-footer{
   @include clearfix();
 }

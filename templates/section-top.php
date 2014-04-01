@@ -6,7 +6,7 @@
     </span>
   </div>
 </section>
-<?php elseif ( ( is_singular('post') &&  (get_post_format( $post->ID ) != 'gallery') )   ) :?>
+<?php elseif ( ( is_singular('post') )   ) :?>
   <?php
     $copt=get_option('cementlap_option_name');
     // $imci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'wallimg' ); 
@@ -70,7 +70,7 @@
     $imcimedium = wp_get_attachment_image_src( $ima, 'wallmedium');
     $imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
   ?>
-  <style type="text/css">
+  <!--style type="text/css">
     .mindenmas {
        background-image:url('<?php echo $imcismall['0']; ?>');
     }
@@ -89,7 +89,7 @@
         background-image:url('<?php echo $imci['0']; ?>');
       }
     }
-  </style>  
+  </style-->  
   <section class="hero feles" role="banner">
     <div class="hero-content">
         <?php if (!is_archive()): ?>

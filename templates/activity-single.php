@@ -1,5 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
   <?php
+    $reference_ID=$post->ID; 
     $termik = array();
     $ures = array();
     $termlist=array_merge(
@@ -59,7 +60,12 @@
             <img src="http://lorempixel.com/480/320" alt="<?php the_title(); ?>">
           <?php endif; ?>
         </figure>
-
+        <nav class="activity-pn">
+            <ul>
+              <li><?php previous_post_link( '%link', '<i class="ion-ios7-arrow-back"></i>', TRUE, ' ', 'product-category' ); ?> </li>
+              <li><?php next_post_link( '%link', '<i class="ion-ios7-arrow-forward"></i>', TRUE, ' ', 'product-category' ); ?></li>
+            </ul>
+        </nav> 
       </div>
     </header>
 <?php
@@ -70,9 +76,10 @@
   foreach ( $termlist as $term ) { $termik[] = $term->slug; }
   $termes = join(" ", $termik );
 ?>
-  <ul class="nav nav-tabs numbered">
+  <ul class="nav nav-tabs">
     <li class="active"><a href="#actpanel" data-toggle="tab"><?php _e('What to except','root') ?></a></li>
-    <li><a href="#packpanel" data-toggle="tab"><?php _e('Pre made packages for','root'); ?> <strong><?php the_title() ?></strong></a></li>
+    <li><a href="#packpanel" data-toggle="tab"><?php _e('Enquire package for','root'); ?> <strong><?php the_title() ?></strong></a></li>
+    <li><a href="#similarpanel" data-toggle="tab"><?php _e('Browse similar','root'); ?></a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active fade in" id="actpanel">
@@ -80,24 +87,23 @@
         <div class="activity-content">
           <?php the_content(); ?>  
         </div>
+        <div class="activity-addfavour">
+          <a href="#" class="btn"><small>Create your own package</small>Add to favourites</a>
+          <br>or select a premade <a href="#packpanel" data-toggle="tab">package</a>
+        </div>
+        <div class="activity-gtk">
+          <h2>God to know</h2>
+          <?php echo get_post_meta( $post->ID, '_meta_gtk', TRUE ); ?>
+        </div>
         <div class="gombsor">
           <a href="#" class="share-face"><i class="ion-social-facebook"></i><br /><span>Share</span></a>
           <a href="tel:+36209734344" class="call-phone"><i class="ion-iphone"></i><br /><span>+36.70.770.56.53</span></a>
           <a href="#" class="share-like"><i class="ion-thumbsup"></i><br /><span>Like It</span></a>
         </div>
-        <figure class="activity-figure">
-          <?php the_post_thumbnail('medium169') ; ?>
-        </figure>
         <footer class="activity-footer">
           <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
         </footer>
-         <nav class="activity-pn">
-              <ul>
-                <li><?php previous_post_link( '%link', '<i class="ion-ios7-arrow-back"></i>', TRUE, ' ', 'product-category' ); ?> </li>
-                <li><?php next_post_link( '%link', '<i class="ion-ios7-arrow-forward"></i>', TRUE, ' ', 'product-category' ); ?></li>
-              </ul>
-          </nav> 
-        </article>
+      </article>
     </div><!-- /.tab-pane -->
     <div class="tab-pane fade" id="packpanel">
       <div class="pack-lead">
@@ -125,6 +131,42 @@
         <?php endwhile; ?>
       </section>
     </div><!-- /.tab-pane -->
-  </div><!-- /.tab-content-->
+    <div class="tab-pane fade" id="similarpanel">
+      <?php
+        yarpp_related(
+          array(
+            // Pool options: these determine the "pool" of entities which are considered
+            'post_type' => array('activity' ),
+            'show_pass_post' => false, // show password-protected posts
+            'past_only' => false, // show only posts which were published before the reference post
+            'exclude' => array(), // a list of term_taxonomy_ids. entities with any of these terms will be excluded from consideration.
+            'recent' => false, // to limit to entries published recently, set to something like '15 day', '20 week', or '12 month'.
+            // Relatedness options: these determine how "relatedness" is computed
+            // Weights are used to construct the "match score" between candidates and the reference post
+            // 'weight' => array(
+            //     'body' => 1,
+            //     'title' => 2, // larger weights mean this criteria will be weighted more heavily
+            //     'tax' => array(
+            //         'post_tag' => 1,
+            //         ... // put any taxonomies you want to consider here with their weights
+            //     )
+            // ),
+            // Specify taxonomies and a number here to require that a certain number be shared:
+            'require_tax' => array(
+                'activity-category' => 1 // for example, this requires all results to have at least one 'post_tag' in common.
+            ),  
+            // The threshold which must be met by the "match score"
+            'threshold' => 2,
 
+            // Display options:
+            'template' => 'yarpp-related-tiles.php', // either the name of a file in your active theme or the boolean false to use the builtin template
+            'limit' => 8, // maximum number of results
+            'order' => 'score DESC'
+          ),
+          $reference_ID, // second argument: (optional) the post ID. If not included, it will use the current post.
+          true
+        ); // third argument: (optional) true to echo the HTML block; false to return it
+      ?>
+    </div><!-- /.tab-pane --> 
+  </div><!-- /.tab-content-->
 <?php endwhile; ?>

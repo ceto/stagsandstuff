@@ -36,12 +36,22 @@ module.exports = function(grunt) {
         jsHandle: 'roots_scripts'
       }
     },
+    // sass: {
+    //   dist: {
+    //     options: {
+    //      style: 'nested',
+    //      sourcemap: true
+    //     },
+    //     files: {
+    //       'assets/css/main.css': 'assets/scss/styles.scss'
+    //     }
+    //   }
+    // },
     sass: {
       dist: {
         options: {
-         style: 'nested',
-         /*noCache: true,*/
-         sourcemap: true
+         outputStyle: 'nested',
+         sourceComments: 'map' 
         },
         files: {
           'assets/css/main.css': 'assets/scss/styles.scss'
@@ -99,7 +109,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-wp-version');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
 

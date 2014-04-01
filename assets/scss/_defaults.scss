@@ -5,9 +5,18 @@ html, body {
   font: normal 16px/24px $sans-serif;
   text-rendering: optimizeLegibility;
   color: $gray-dark;
-  background-color: $white;
+ 
   height: 100%;
-  
+  overflow-x: hidden;
+}
+
+body{
+  background-color: $white;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url('../img/bp_hatter.jpg');
+  background-attachment: fixed;
 }
 
 a {
@@ -163,7 +172,7 @@ img {
     background-color: $red;
     background-image: linear-gradient(to bottom, $red 0, $red 50%, lighten($red,10%) 50%);
     text-decoration: none;
-    color:darken($red,20%);
+    //color:darken($red,20%);
   }
 }
 .btn-light-line {

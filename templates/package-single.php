@@ -22,21 +22,21 @@
       $imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
   ?>
   <style type="text/css">
-    article.package {
+    .mindenmas {
        background-image:url('<?php echo $imcismall['0']; ?>');
     }
     @media only screen and (min-width: 768px) {
-      article.package {
+      .mindenmas {
         background-image:url('<?php echo $imcimedium['0']; ?>');
       }
     }
     @media only screen and (min-width: 1280px) {
-      article.package {
+      .mindenmas {
         background-image:url('<?php echo $imcigreat['0']; ?>');
       }
     }
     @media only screen and (min-width: 1600px) {
-      article.package {
+      .mindenmas {
         background-image:url('<?php echo $imci['0']; ?>');
       }
     }
@@ -88,8 +88,8 @@
       </footer>
       <nav class="package-pn">
         <ul>
-          <li><?php previous_post_link( '%link', '<i class="ion-ios7-arrow-back"></i> %title', TRUE, ' ', 'package-category' ); ?> </li>
-          <li><?php next_post_link( '%link', '%title <i class="ion-ios7-arrow-forward"></i>', TRUE, ' ', 'package-category' ); ?></li>
+          <li><?php previous_post_link( '%link', '<i class="ion-ios7-arrow-back"></i> %title', FALSE, ' ', 'package-category' ); ?> </li>
+          <li><?php next_post_link( '%link', '%title <i class="ion-ios7-arrow-forward"></i>', FALSE, ' ', 'package-category' ); ?></li>
         </ul>
       </nav>
     </div> 

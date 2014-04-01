@@ -81,6 +81,10 @@
 // Hide tabbable panes to start, show them when `.active`
 .tab-content {
   background-color: $gray-superlight;
+  //background-color: rgba($gray-superlight,0.75);
+  
+  max-width:$s4;
+  margin:0 auto;
   &.light{
     background-color: $white;
   }
