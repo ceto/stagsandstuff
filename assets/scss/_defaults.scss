@@ -6,6 +6,10 @@ html, body {
   text-rendering: optimizeLegibility;
   color: $gray-dark;
   height: 100%;
+  overflow-x:hidden;
+  @include breakpoint($s2){
+    overflow-x:visible; 
+  }
 }
 
 body{

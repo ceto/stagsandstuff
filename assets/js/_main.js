@@ -89,9 +89,9 @@ jQuery(document).ready(function($){
 
   /************* Man navigation Fixing ***********/
   var top = $('#nav-main').offset().top - parseFloat($('#nav-main').css('marginTop').replace(/auto/, 0));
-  $('.mindenmas').scroll(function (event) {
+  $(window).scroll(function (event) {
     var y = $(this).scrollTop();
-    console.log(y+'-puna');           
+    console.log(y+'-puna');
     if (y >= top) {
       $('#nav-main').addClass('fixed');
     } else {

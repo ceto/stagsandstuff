@@ -1,0 +1,72 @@
+.activity-chooser{
+  @include clearfix();
+
+  
+  .col{
+    @include breakpoint($s1){
+      width:50%;
+      float:left;
+    }
+  }
+}
+.activity-listitem{
+  @include clearfix();
+  position:relative;
+  background-color: $gray-dark;
+  margin:1em 0;
+  padding:1em 2em;
+  border-radius: 4px;
+
+  &:hover, &:focus {
+    background-color: $gray;
+  }
+
+  @include breakpoint($s1){
+    margin:0.5em 0.25em;
+  }
+  @include breakpoint($s2){
+    margin:1em 0.5em;
+  }
+  @include breakpoint($s3){
+    margin:1em 1em;
+  }
+  .feje{
+    @include clearfix();
+
+  }
+  input[type="checkbox"]{
+    position:absolute;
+    left:0.5em;
+    top:1.25em;
+
+  }
+  .activity-title{
+    float:left;
+  }
+  
+  .switcher{
+    font-size: 2em;
+    line-height: 1em;
+    position: absolute;
+    right:0.5em;
+    left:1em;
+    top:0.5em;
+    color:$white;
+    text-align: right;
+
+  }
+
+  .adatai{
+    @include clearfix();
+
+    color: $white;
+  }
+  
+  .activity-pic {
+    margin:1em 0;
+    img {
+      border-radius: 20px;
+      border:10px solid $white;
+    }
+  }
+}

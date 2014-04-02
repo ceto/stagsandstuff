@@ -54,7 +54,7 @@
       </h1>
     </div-->
   </section> 
-<?php elseif ( ( is_page() || is_archive('activity-category')  )   ) :?>
+<?php elseif ( ( !is_page_template('package-builder.php') && (is_page() || is_archive('activity-category'))  )   ) :?>
   <?php
     $copt=get_option('cementlap_option_name');
     

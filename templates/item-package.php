@@ -8,6 +8,27 @@
     foreach ( $nagytermlist as $term ) { $termik[] = $term->slug; }
   ?>
   <article id="package-<?php echo $post->ID; ?>" <?php post_class( join(" ", $termik ).' package-item ize-mini' ); ?>  >
+    <?php
+      if (get_post_meta( $post->ID, '_meta_wallimg_id', true )){
+        $ima = get_post_meta( $post->ID, '_meta_wallimg_id', true );
+        //$imci = wp_get_attachment_image_src( $ima, 'wallimg');
+        $imcismall = wp_get_attachment_image_src( $ima, 'wallsmall');
+        $imcimedium = wp_get_attachment_image_src( $ima, 'wallmedium');
+        //$imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
+      ?>
+      <style type="text/css">
+        #coverphoto-<?php echo $post->ID; ?> {
+           background-image:url('<?php echo $imcismall['0']; ?>');
+        }
+        @media only screen and (min-width: 768px) {
+          #coverphoto-<?php echo $post->ID; ?> {
+            background-image:url('<?php echo $imcimedium['0']; ?>');
+          }
+        }
+        </style>
+      <?php } ?>
+
+    <a href="<?php the_permalink(); ?>" id="coverphoto-<?php echo $post->ID; ?>" class="coverphoto"></a>
     <header class="package-head">
       <h3 class="package-title">
         <a href="<?php the_permalink(); ?>">
@@ -17,7 +38,7 @@
       </h3>
     </header>
     <div class="allother">
-      <figure class="package-thumb">
+      <!--figure class="package-thumb">
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
           <?php if (has_post_thumbnail() ) : ?>
             <?php the_post_thumbnail('tiny43');  ?>
@@ -26,7 +47,7 @@
             <img src="http://lorempixel.com/<?php echo $w ?>/<?php echo $h ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="" >
           <?php endif; ?>
         </a>
-      </figure>
+      </figure-->
       <div class="package-desc">
         <div class="package-tags">
           <div class="tag-list">

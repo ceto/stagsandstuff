@@ -394,6 +394,44 @@ function cmb_accomodation( array $meta_boxes ) {
 /********* End of Custom MetaBoxes for Accomodation Management ****************/
 
 
+/********* Custom MetaBoxes for Pages and Posts ****************/
+
+/**
+ * Accomodation Metaboxes
+*/
+add_filter( 'cmb_meta_boxes', 'cmb_pp' );
+function cmb_pp( array $meta_boxes ) {
+  $prefix = '_meta_';
+
+  $meta_boxes[] = array(
+    'id'         => 'ppmeta',
+    'title'      => 'Additional page/post details',
+    'pages'      => array( 'page', 'post'), // Post type
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    'fields'     => array(
+      array(
+        'name' => __( 'Post/page subtitle', 'root' ),
+        'desc' => __( 'Subtitle folowing main title ', 'root' ),
+        'id'   => $prefix . 'subtitle',
+        'type' => 'text',
+      ),
+      array(
+        'name' => __( 'Fullscreen banner wallpaper', 'root' ),
+        'desc' => __( 'Upload an image or enter a URL. (min: 1920×1280px)', 'root' ),
+        'id'   => $prefix . 'wallimg',
+        'type' => 'file',
+        'save_id' => true, // save ID using true
+        'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
+      ),
+    ),
+  );
+  return $meta_boxes;
+}
+
+/********* End of Custom MetaBoxes for Accomodation Management ****************/
+
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 /**
  * Initialize the metabox class.

@@ -1,3 +1,61 @@
+.banner {
+  @include clearfix();
+  position: relative;
+  overflow: hidden;
+  padding:0;
+  min-height: 100%;
+  background-color: $gray-dark;
+  background-image: url(../img/hero_girls.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  //
+  //filter:brightness(0.5); 
+
+  @include breakpoint($s2) {
+    background-image: url(../img/hero_girls.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+
+    min-height:0;
+    margin:0 auto;
+  }
+  @include breakpoint($s3) {
+  
+  }
+  &.active {
+    
+  }
+
+}
+
+
+
+.brand{
+  @include text-hide();
+  display:block;
+  //background-color: gray;
+  width:348px;
+  height:179px;
+  max-width: calc(100% - 75px);
+  margin:60px auto 100px;
+  background-image:url('../img/logo.png');
+  background-repeat:no-repeat;
+  background-position: left center;
+  background-size: 100% auto;
+  display:none;
+  @include breakpoint($s2) {
+    display:block;
+  }
+
+  &:hover, &:focus {
+    
+  }
+}
+
+
 .mobile-header {
   @include clearfix();
   position: relative;

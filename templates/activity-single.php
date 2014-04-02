@@ -78,7 +78,7 @@
 ?>
   <ul class="nav nav-tabs glass">
     <li class="active"><a href="#actpanel" data-toggle="tab"><?php _e('What to except','root') ?></a></li>
-    <li><a href="#packpanel" data-toggle="tab"><?php _e('Enquire package for','root'); ?> <strong><?php the_title() ?></strong></a></li>
+    <li><a href="#packpanel" data-toggle="tab"><?php _e('In package','root'); ?></a></li>
     <li><a href="#similarpanel" data-toggle="tab"><?php _e('Browse similar','root'); ?></a></li>
   </ul>
   <div class="tab-content glass">

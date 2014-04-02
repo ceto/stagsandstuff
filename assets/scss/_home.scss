@@ -115,15 +115,14 @@
   @include breakpoint($s2){
     position:absolute;
     z-index:0;
-    
     right:0;
-    top:50%;
-    transform:translateY(-50%);
+    top:4em;
     width:33.333%;
   }
   img {
+    border:10px solid $gray;
+    border-radius:20px;
     @include breakpoint($s2){
-      transform:rotate(30deg);
     }
 
   }
