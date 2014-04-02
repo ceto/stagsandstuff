@@ -1,9 +1,9 @@
 <?php
     $termik = array();
-
+    $ures = array();
     $nagytermlist=array_merge(
-      get_the_terms( $post->ID, 'activity-category' ),
-      get_the_terms($post->ID, 'activity-tag')
+      get_the_terms( $post->ID, 'activity-category' )?get_the_terms( $post->ID, 'activity-category' ):$ures,
+      get_the_terms($post->ID, 'activity-tag')?get_the_terms($post->ID, 'activity-tag'):$ures
     );
     foreach ( $nagytermlist as $term ) { $termik[] = $term->slug; }
   ?>
