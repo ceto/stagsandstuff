@@ -1,7 +1,7 @@
 .nav-main{
   @include clearfix();
-  font-size: 1.25em;
-  line-height: 2.5em;
+  font-size: 1.125em;
+  line-height: 2.25em;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
@@ -20,7 +20,7 @@
       position: fixed;
       left:0;right:0;
       top:0;
-      height:50px;
+      height:80px;
       z-index:2;
       .logo-pengeto{
         display: block;

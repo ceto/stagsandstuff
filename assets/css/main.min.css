@@ -2380,8 +2380,8 @@ blockquote {
     text-decoration: none; }
 
 .nav-main {
-  font-size: 1.25em;
-  line-height: 2.5em;
+  font-size: 1.125em;
+  line-height: 2.25em;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
@@ -2407,7 +2407,7 @@ blockquote {
       left: 0;
       right: 0;
       top: 0;
-      height: 50px;
+      height: 80px;
       z-index: 2; }
       .nav-main.fixed .logo-pengeto {
         display: block; } }
@@ -2743,12 +2743,11 @@ a.menu-button:hover {
   text-shadow: none;
   background-color: transparent;
   border: 0;
-  display: block;
-  width: 348px;
-  height: 179px;
+  width: 240px;
+  height: 120px;
   max-width: -webkit-calc(100% - 75px);
   max-width: calc(100% - 75px);
-  margin: 60px auto 100px;
+  margin: 40px auto 80px;
   background-image: url('../img/logo.png');
   background-repeat: no-repeat;
   background-position: left center;
@@ -2927,7 +2926,7 @@ a.menu-button:hover {
   .content-info a {
     color: #696565; }
     .content-info a:hover, .content-info a:focus {
-      colro: #cacaca; }
+      color: #cacaca; }
 
 .footer-sidebar {
   max-width: 1600px;
@@ -2936,7 +2935,8 @@ a.menu-button:hover {
   font-size: 0.875em;
   line-height: 1.25em;
   font-weight: 300;
-  color: #696565; }
+  color: #f3f3f3;
+  background-color: #414040; }
   .footer-sidebar:before, .footer-sidebar:after {
     content: " ";
     display: table; }
@@ -2988,12 +2988,13 @@ a.menu-button:hover {
         text-transform: uppercase; }
 
 .footer-copy {
-  font-size: 0.666em;
+  font-size: 0.75em;
   line-height: 1.25em;
   font-weight: 300;
   padding: 1.25em;
   position: relative;
-  background-color: #e6e6e6; }
+  background-color: #000;
+  color: #f3f3f3; }
   @media only screen and (min-width: 1024px) {
     .footer-copy {
       padding: 1.25em 3em; } }
@@ -3917,21 +3918,27 @@ a.menu-button:hover {
       width: -webkit-calc(100%);
       width: calc(100%); }
 
-.single-format-standard .post header, .single-format-standard .post .entry-content, .single-format-standard .post .entry-footer, .single-format-standard .post .addcont {
+.single-format-standard .post header, .single-format-standard .post .entry-figure, .single-format-standard .post .entry-content, .single-format-standard .post .entry-footer, .single-format-standard .post .addcont {
   margin: 0 auto;
   max-width: 768px;
   padding: 0 1em; }
-  .single-format-standard .post header:before, .single-format-standard .post header:after, .single-format-standard .post .entry-content:before, .single-format-standard .post .entry-content:after, .single-format-standard .post .entry-footer:before, .single-format-standard .post .entry-footer:after, .single-format-standard .post .addcont:before, .single-format-standard .post .addcont:after {
+  .single-format-standard .post header:before, .single-format-standard .post header:after, .single-format-standard .post .entry-figure:before, .single-format-standard .post .entry-figure:after, .single-format-standard .post .entry-content:before, .single-format-standard .post .entry-content:after, .single-format-standard .post .entry-footer:before, .single-format-standard .post .entry-footer:after, .single-format-standard .post .addcont:before, .single-format-standard .post .addcont:after {
     content: " ";
     display: table; }
-  .single-format-standard .post header:after, .single-format-standard .post .entry-content:after, .single-format-standard .post .entry-footer:after, .single-format-standard .post .addcont:after {
+  .single-format-standard .post header:after, .single-format-standard .post .entry-figure:after, .single-format-standard .post .entry-content:after, .single-format-standard .post .entry-footer:after, .single-format-standard .post .addcont:after {
     clear: both; }
   @media only screen and (min-width: 1024px) { }
 @media only screen and (min-width: 768px) { }
 @media only screen and (min-width: 1024px) { }
+.single-format-standard .post .entry-figure img {
+  border: 10px solid #4d77ff;
+  border-radius: 20px; }
 .single-format-standard .post .entry-title {
-  font-weight: 100;
-  font-size: 3em;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: none;
+  font-variant: small-caps;
+  font-size: 4em;
   line-height: 1.125em;
   text-align: center;
   margin: 1.25em 0 0; }
@@ -3948,7 +3955,7 @@ a.menu-button:hover {
 
 .entry-meta {
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.75em;
   line-height: 1em;
   margin: 0 0 1em 0;
   padding: 1.5em 0 1.5em 0;

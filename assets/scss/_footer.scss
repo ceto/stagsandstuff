@@ -5,7 +5,7 @@
  a{
   color:$gray;
   &:hover, &:focus{
-      colro:$gray-light;
+      color:$gray-light;
   }
  }
 }
@@ -18,7 +18,8 @@
   font-size: 0.875em;
   line-height: 1.25em;
   font-weight: 300;
-  color:$gray;
+  color:$white;
+  background-color: $gray-dark;
   @include breakpoint($s3){
     padding:2em 0;
   }
@@ -74,12 +75,13 @@
 }
 
 .footer-copy{
-  font-size: 0.666em;
+  font-size: 0.75em;
   line-height: 1.25em;
   font-weight: 300;
   padding:1.25em;
   position: relative;
-  background-color:$gray-superlight;
+  background-color:#000;
+  color:$white;
   @include breakpoint($s3){
     padding:1.25em 3em;
   }

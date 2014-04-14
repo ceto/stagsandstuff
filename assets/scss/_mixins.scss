@@ -1,6 +1,9 @@
 @mixin breakpoint($breakpoint) {
   @media only screen and (min-width: $breakpoint) { @content; }
 }
+@mixin vbreakpoint($breakpoint) {
+  @media only screen and (min-height: $breakpoint) { @content; }
+}
 
 @mixin clearfix() {
   &:before,

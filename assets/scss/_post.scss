@@ -234,7 +234,7 @@
 
   
   .post {
-    header, .entry-content, .entry-footer, .addcont{
+    header, .entry-figure, .entry-content, .entry-footer, .addcont{
       @include clearfix();
       margin:0 auto;
       max-width: $s2;
@@ -251,10 +251,18 @@
       @include breakpoint($s3){
       }
     }
-    
+    .entry-figure {
+      img{
+        border:10px solid $blue;
+        border-radius: 20px;
+      }
+    }
     .entry-title {
-      font-weight: 100;
-      font-size: 3em;
+      font-weight: 900;
+      font-style: italic;
+      text-transform: none;
+      font-variant: small-caps;
+      font-size: 4em;
       line-height: 1.125em;
       text-align: center;
       margin: 1.25em 0 0;
@@ -279,7 +287,7 @@
 .entry-meta{
   @include clearfix();
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.75em;
   line-height: 1em;
   margin:0 0 1em 0;
   padding:1.5em 0 1.5em 0;

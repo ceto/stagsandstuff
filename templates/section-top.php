@@ -27,7 +27,7 @@
     $imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
     
   ?>
-  <style type="text/css">
+  <!--style type="text/css">
     .hero {
       background-image:none;
     }
@@ -46,14 +46,9 @@
         background-image:url('<?php echo $imci['0']; ?>');
       }
     }
-  </style>  
-  <section class="hero" role="banner">
-    <!--div class="hero-content">
-      <h1 class="hero-text">
-          <?php the_title();  ?>
-      </h1>
-    </div-->
-  </section> 
+  </style-->  
+  <!--section class="hero" role="banner">
+  </section--> 
 <?php elseif ( ( !is_page_template('package-builder.php') && (is_page() || is_archive('activity-category'))  )   ) :?>
   <?php
     $copt=get_option('cementlap_option_name');
