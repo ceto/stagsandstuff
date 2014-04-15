@@ -56,38 +56,38 @@
 }
 
 
-.archive.category, .blog{
-  .main {
-    text-align: center;
-    @include breakpoint($s3){
-      padding:2em 6em;
-    }
+// .archive.category, .blog{
+//   .main {
+//     text-align: center;
+//     @include breakpoint($s3){
+//       padding:2em 6em;
+//     }
 
-  }
+//   }
   
-  .page-header {
-    display:none;
-  }
-  .post {
-    margin:1em auto;
-    max-width: 480px;
-    @include breakpoint($s1){
-      float:left;
-      width:calc(50% - 1em);
-      margin:0.5em 0.5em;
-    }
-    @include breakpoint($s2){
-      float:left;
-      width:calc(33.333333% - 1em);
-      margin:0.5em 0.5em;
-    }
+//   .page-header {
+//     //display:none;
+//   }
+//   .post {
+//     margin:1em auto;
+//     max-width: 480px;
+//     @include breakpoint($s1){
+//       float:left;
+//       width:calc(50% - 1em);
+//       margin:0.5em 0.5em;
+//     }
+//     @include breakpoint($s2){
+//       float:left;
+//       width:calc(33.333333% - 1em);
+//       margin:0.5em 0.5em;
+//     }
 
-    @include breakpoint($s5){
-      width:calc(25% - 1em);
-      margin:0.5em 0.5em;
-    }
-  }
-}
+//     @include breakpoint($s5){
+//       width:calc(25% - 1em);
+//       margin:0.5em 0.5em;
+//     }
+//   }
+// }
 
 .fresh-posts {
 
@@ -116,6 +116,77 @@
       margin:0.5em 0.5em;
     }
 
+  }
+}
+
+
+.square{
+  position: relative;
+  margin:1em auto;
+  background-color: $white;
+  background-color: rgba($white,0.9);
+  border-radius: 20px;
+  border-color: $gray-superlight;
+  border-style: solid;
+  border-width: 1px;
+  padding:10px;
+  @include breakpoint($s1){
+    float:left;
+    width:calc(50% - 1em);
+    margin:0.5em 0.5em;
+  }
+  @include breakpoint($s2){
+    float:left;
+    width:calc(33.333333% - 1em);
+    margin:0.5em 0.5em;
+  }
+
+  @include breakpoint($s4){
+    width:calc(25% - 1em);
+    margin:0.5em 0.5em;
+  }
+  @include breakpoint($s5){
+    width:calc(20% - 1em);
+    margin:0.5em 0.5em;
+  }
+
+  .square-thumb{
+    img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    a {
+      display: block;
+      filter:brightness(0.5);
+      &:hover, &:focus{
+        filter:brightness(1);
+
+      }
+    }
+
+  }
+  .square-desc {
+    //display:none;
+    padding:10px 0 0;
+    // position: absolute;
+    // top:0;
+    // left:0;
+    // right:0;
+    // bottom:0;
+  }
+  .square-title{
+    font-size: 1.333em;
+    line-height: 1em;
+    min-height:2em;
+    margin: 0 0 0;
+    //text-align: center;
+    a{
+      color:$red;
+      &:hover, &:focus{
+        color:$cyan;
+
+      }
+    }
   }
 }
 
@@ -230,17 +301,43 @@
   }
 }
 
-.single-format-standard {
+.single-post {
+    background-size: cover;
 
   
   .post {
-    header, .entry-figure, .entry-content, .entry-footer, .addcont{
+    //max-width: $s2;
+    //margin:0 auto;
+    padding:0 0 6em;
+    background-color: $white;
+    background-color: rgba($white,0.95);
+
+    @include breakpoint($s2){
+      max-width: 75%;
+    }
+    @include breakpoint($s3){
+      max-width: $s2;
+    }
+    @include breakpoint($s4){
+      max-width: $s3;
+      //margin:0 auto;
+      font-size: 1.25em;
+      line-height: 1.4em;
+    }
+
+    header, .entry-content, .entry-footer, .addcont{
       @include clearfix();
       margin:0 auto;
       max-width: $s2;
       padding:0 1em;
+      @include breakpoint($s2){
+        padding:0 2em;
+      }
       @include breakpoint($s3){
-        //padding:0 0;
+        padding:0 4em;
+      }
+      @include breakpoint($s4){
+        padding:0 0;
       }
 
     }
@@ -252,9 +349,20 @@
       }
     }
     .entry-figure {
+      @include clearfix();
+      border-top: 1px solid $gray-superlight;
+      border-bottom: 1px solid $gray-superlight;
+      @include breakpoint($s2){
+        display: none;
+      }
       img{
-        border:10px solid $blue;
-        border-radius: 20px;
+        // border-top: 10px solid #fff;
+        // border-bottom: 10px solid #fff;
+        // border:10px solid #fff;
+        border-style: solid;
+        border-color: $gray-dark;
+        border-width: 10px 0;
+        //border-radius: 20px;
       }
     }
     .entry-title {
@@ -263,9 +371,10 @@
       text-transform: none;
       font-variant: small-caps;
       font-size: 4em;
-      line-height: 1.125em;
+      line-height: 1em;
       text-align: center;
       margin: 1.25em 0 0;
+      color:$red;
     }
 
   }

@@ -1,7 +1,23 @@
 .content-info {
-  clear:both;
   @include clearfix();
+  clear:both;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    // width:174px;
+    // height:289px;
+    width:120px;
+    height:200px;
+    top:-100px;
+    left:calc(50% - 87px);
 
+    background-image: url(../img/logo_pajzs.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+  }
+  
  a{
   color:$gray;
   &:hover, &:focus{
@@ -12,7 +28,7 @@
 
 .footer-sidebar {
   @include clearfix();
-  max-width: $s5;
+  //max-width: $s5;
   margin: auto;
   padding:2em 0;
   font-size: 0.875em;
@@ -20,8 +36,10 @@
   font-weight: 300;
   color:$white;
   background-color: $gray-dark;
+  border-top:10px solid $brown; 
   @include breakpoint($s3){
-    padding:2em 0;
+    //padding:2em 0;
+    
   }
 
   .widget{

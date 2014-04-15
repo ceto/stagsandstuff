@@ -14,7 +14,7 @@ html, body {
 
 body{
   background-color: $white;
-  background-position: center bottom;
+  background-position: center 120%;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-image: url('../img/bp_hatter.jpg');
@@ -24,11 +24,13 @@ body{
 a {
   color: $blue;
   text-decoration: none;
+  &:hover, &:focus{
+    color:$red;
+    text-decoration: underline;
+  }
 }
 
-a:hover, a:focus {
-  text-decoration: underline;
-}
+
 
 p {
   hyphens: auto;

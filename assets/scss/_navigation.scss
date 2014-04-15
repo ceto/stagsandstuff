@@ -1,15 +1,15 @@
 .nav-main{
   @include clearfix();
   font-size: 1.125em;
-  line-height: 2.25em;
+  line-height: 3em;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
   font-family: $sans-serif;
+  border-bottom: 1px solid $gray-superlight;
 
   @include breakpoint($s2) {
-    background-color: $gray-dark;
-    background-image: linear-gradient(to bottom, $gray 0, $gray 50%, $gray-dark 50%);
+    background-color: $white;
     position: absolute;
     left:0; right:0;
     //top:34px;
@@ -20,27 +20,38 @@
       position: fixed;
       left:0;right:0;
       top:0;
-      height:80px;
+      height:3.5em;
+      line-height: 3.5em;
       z-index:2;
-      .logo-pengeto{
+      background-color: #fff;
+      //background-image: none;
+      //background-image: url(../img/hero_girls.jpg);
+      //background-size: 100% auto;
+      //background-position: center center;
+         
+      .logo-navbar{
         display: block;
+      }
+      .nav {
+        text-align: right;
+        margin-right: 2em;
       }
     }
   }
 
-  .logo-pengeto{
-    background-image: url('../img/logo_pure.png');
+  .logo-navbar{
+    background-image: url('../img/logo_navbar.png');
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100% auto;
+    background-position: left center;
+    background-size: auto 85%;
     display: inline-block;
-    float:left;
-    width:120px;
-    height:50px;
+    //float:left;
+    width:180px;
+    height:3.5em;
     //margin:0 2em 0 2em;
     //margin-left: calc(100% - 1024px + 2em);
     position: absolute;
-    left:calc((100% - 1024px) / 2 - 120px);
+    left:2em;
     // top:0;
     display: none;
   }
@@ -75,8 +86,9 @@
 
   a {
     color:$white;
+    color:$gray-dark;
     display: block;
-    padding:0 1em;
+    padding:0 1.5em;
     @include breakpoint($s2) {
       display: inline-block;
     }
@@ -87,12 +99,13 @@
       text-decoration: none;
       @include breakpoint($s2) {
         color:#fff;
-        background-color: transparent;
+        background-color: $gray-dark;
       }
     }
   }
   .active a {
-    color:$cyan;
+    color:#fff;
+    background-color: $cyan;
   }
 
   li.telcsi{
