@@ -20,11 +20,6 @@ Template Name: Package Category List
 ?>
 
 <ul class="nav nav-tabs filtro filt-item glass" ata-filter-group="package-category">
-  <li id="filter-<?php echo $term->slug; ?>" class="active">
-    <a href="#" data-filter-value="*" class="filt-item-input" id="<?php echo $term->slug; ?>" class="selected">
-        All
-    </a>
-  </li>
   <?php $filtlist=get_terms('package-category'); ?>
   <?php foreach ( $filtlist as $term ) {  ?>
     <?php if (!in_array($term->slug, array('all-packages')  ) ): ?>
@@ -36,6 +31,11 @@ Template Name: Package Category List
     <?php endif; ?>
   
   <?php } ?>
+  <li id="filter-<?php echo $term->slug; ?>" class="active">
+    <a href="#" data-filter-value="*" class="filt-item-input" id="<?php echo $term->slug; ?>" class="selected">
+        All
+    </a>
+  </li>
 </ul>
 <div class="package-list ize-list">
   <?php while (have_posts()) : the_post(); ?>

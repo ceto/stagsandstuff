@@ -1,7 +1,7 @@
 <header class="banner" role="banner">
   <div class="toprow">
-    <div class="left-top">Call us: <a href="tel:0036707705653">+36 70 774 6545</a> &middot; Email Us: <a href="mailto:szabogabi@gmail.com">hello@stagsandstuff.com</a></div>
-    <a href="<?php echo get_permalink(104); ?>" class="btn topenq">Package builder</a>
+    <div class="left-top">Call us: <a href="tel:0036302767512">0036302767512</a> &middot; Email Us: <a href="mailto:info@stagsandstuff.com">info@stagsandstuff.com</a></div>
+    <a href="<?php echo get_permalink(104); ?>" class="btn topenq">Build Your Own Package</a>
   </div>
   <a class="brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
   <nav id="nav-main" class="nav-main" role="navigation">
