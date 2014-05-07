@@ -146,6 +146,19 @@ img {
       padding: 1em 1em;
     }
   }
+
+  .page-header{
+
+    
+    h1{
+      color:$cyan;
+      font-size: 4em;
+      text-align: center;
+      margin-top: 0.5em;
+      font-style: italic;
+
+    }
+  }
 }
 
 
@@ -176,6 +189,7 @@ img {
     background-color: $red;
     background-image: linear-gradient(to bottom, $red 0, $red 50%, lighten($red,10%) 50%);
     text-decoration: none;
+    color:$white;
     //color:darken($red,20%);
   }
 }
@@ -231,7 +245,7 @@ blockquote{
 .tag-list {
   a{
     border-radius: 4px;
-    background-color: $gray;
+    background-color: $blue-dark;
     color:#fff;
     display: inline-block;
     font-family: $script;
@@ -241,7 +255,7 @@ blockquote{
     padding:0.5em 1em;
     margin:0 0.5em 0.5em 0;
     &:hover, &:focus {
-      background-color: $gray-dark;
+      background-color: $gray;
       text-decoration: none;
     }
   }

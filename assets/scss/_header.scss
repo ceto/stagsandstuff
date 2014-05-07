@@ -151,7 +151,7 @@
     padding-bottom:9em;
   }
   @include breakpoint($s2){
-    padding:6em 1em 1em;
+    padding:4em 1em 1em;
   }
   @include breakpoint($s3){
 
@@ -178,9 +178,9 @@
   font-style:italic;
   text-transform: none;
   font-variant: small-caps;
-  color:$gray;
-  text-shadow: 1px 1px 3px #fff;
-  margin:0;
+  color:$cyan;
+  text-shadow: 1px 1px 3px $white;
+  margin:0 0 0.5em;
   
   @include breakpoint($s1){
     font-size: 3em;
@@ -199,7 +199,9 @@
     text-transform: none;
     font-weight: 800;
     font-variant: normal;
-    font-size: 66.666%; 
+    font-size: 66.666%;
+    line-height:1;
+    color:$gray;
   }
 }
 

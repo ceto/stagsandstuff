@@ -181,6 +181,9 @@
   }
   .package-head{
     background-color: $gray-dark;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
     @include breakpoint($s2){
     }
 
@@ -211,7 +214,7 @@
       display: block;
       padding:0.5em;
       &:hover, &:focus {
-        color:$cyan;
+        color:#fff;
         text-decoration: none;
       }
     }
@@ -221,6 +224,8 @@
     @include clearfix();
     background-color: #fff;
     padding:1em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     @include breakpoint($s2){
       padding-right: 40%
     }
@@ -233,6 +238,9 @@
     position: relative;
     p{
       margin:0;
+    }
+    .more-link{
+      display: none;
     }
   }
   .package-footer{
