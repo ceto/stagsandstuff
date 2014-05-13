@@ -3520,7 +3520,7 @@ blockquote {
       top: 0;
       height: 3.5em;
       line-height: 3.5em;
-      z-index: 2;
+      z-index: 3;
       background-color: #fff; }
       .nav-main.fixed .logo-navbar {
         display: block; }
