@@ -410,12 +410,17 @@
 /*********** Related an Similar acitvites section *********/
 .related-activities {
   @include clearfix();
-  margin:2em auto;
-  max-width: $s5;
-  padding:1em;
+  margin:0 auto 80px auto;
+  max-width: $s4;
+  //padding:0.5em;
+  font-size:0;
+  text-align: center; 
 
-  h3{
-    //text-align: center;
+  h4{
+    font-size:18px;
   }
 
 }
+
+
+

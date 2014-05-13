@@ -78,7 +78,7 @@
 ?>
   <ul class="nav nav-tabs glass">
     <li class="active"><a href="#actpanel" data-toggle="tab"><?php _e('What to except','root') ?></a></li>
-    <li><a href="#packpanel" data-toggle="tab"><?php _e('In package','root'); ?></a></li>
+    <li><a href="#packpanel" data-toggle="tab"><?php _e('Enquire in package','root'); ?></a></li>
     <li><a href="#similarpanel" data-toggle="tab"><?php _e('Browse similar','root'); ?></a></li>
   </ul>
   <div class="tab-content glass">
@@ -133,6 +133,8 @@
       </section>
     </div><!-- /.tab-pane -->
     <div class="tab-pane fade" id="similarpanel">
+
+      <div class="related-activities">
       <?php
         yarpp_related(
           array(
@@ -144,20 +146,20 @@
             'recent' => false, // to limit to entries published recently, set to something like '15 day', '20 week', or '12 month'.
             // Relatedness options: these determine how "relatedness" is computed
             // Weights are used to construct the "match score" between candidates and the reference post
-            // 'weight' => array(
-            //     'body' => 1,
-            //     'title' => 2, // larger weights mean this criteria will be weighted more heavily
-            //     'tax' => array(
-            //         'post_tag' => 1,
-            //         ... // put any taxonomies you want to consider here with their weights
-            //     )
-            // ),
+            'weight' => array(
+                'body' => 2,
+                'title' => 1, // larger weights mean this criteria will be weighted more heavily
+                'tax' => array(
+                    'activity-category' => 1,
+                    'activity-tag' => 3 // put any taxonomies you want to consider here with their weights
+                )
+            ),
             // Specify taxonomies and a number here to require that a certain number be shared:
             'require_tax' => array(
-                'activity-category' => 1 // for example, this requires all results to have at least one 'post_tag' in common.
+                'activity-tag' => 1 // for example, this requires all results to have at least one 'post_tag' in common.
             ),  
             // The threshold which must be met by the "match score"
-            'threshold' => 2,
+            'threshold' => 5,
 
             // Display options:
             'template' => 'yarpp-related-tiles.php', // either the name of a file in your active theme or the boolean false to use the builtin template
@@ -168,6 +170,7 @@
           true
         ); // third argument: (optional) true to echo the HTML block; false to return it
       ?>
+      </div>
     </div><!-- /.tab-pane --> 
   </div><!-- /.tab-content-->
 <?php endwhile; ?>

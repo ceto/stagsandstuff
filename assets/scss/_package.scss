@@ -236,6 +236,10 @@
     position: relative;
     p{
       margin:0;
+      display:none;
+    }
+    p:first-of-type{
+      display:block;
     }
     .more-link{
       display: none;

@@ -64,7 +64,7 @@
             ?>
           </div>
         </div>
-        <?php the_content() ?>
+        <?php the_content('Show Details', FALSE) ?>
       </div>
       <footer class="package-footer">
         <a href="<?php the_permalink(); ?>" class="btn package-detbtn">Details</a>
