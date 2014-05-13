@@ -50,6 +50,22 @@ var UTIL = {
 
 $(document).ready(UTIL.loadEvents);
 
+//*********** Smooth scroll *************
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if ( (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && (location.hostname === this.hostname) && (!$(this).attr('data-toggle'))   )  ) {
+      //alert($(this).attr('data-toggle'));
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 80
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
 // var resizeHero = function() {
 //   var off_canvas_nav_display = $('.off-canvas-navigation').css('display');
@@ -91,7 +107,6 @@ jQuery(document).ready(function($){
   var top = $('#nav-main').offset().top - parseFloat($('#nav-main').css('marginTop').replace(/auto/, 0));
   $(window).scroll(function (event) {
     var y = $(this).scrollTop();
-    console.log(y+'-puna');
     if (y >= top) {
       $('#nav-main').addClass('fixed');
     } else {

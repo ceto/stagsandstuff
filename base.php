@@ -11,7 +11,7 @@
   <div class="mindenmas">
     <header class="mobile-header" role="banner">
       <nav class="off-canvas-navigation">
-        <a class="menu-button" href="#menu"><i class="ion-navicon-round"></i></a>
+        <a class="menu-button" href="#menu"><i class="icon-316"></i></a>
       </nav>
       <a class="mobile-logo" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
     </header>

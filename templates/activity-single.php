@@ -85,16 +85,17 @@
     <div class="tab-pane active fade in" id="actpanel">
       <article id="activity-<?php echo $post->ID  ?>" <?php post_class($termes); ?> >
         <div class="activity-content">
-          <?php the_content(); ?>  
+          <?php the_content(); ?>
+          <div class="activity-gtk">
+            <h2><i class="icon-271"></i> Good to know</h2>
+            <?php echo get_post_meta( $post->ID, '_meta_gtk', TRUE ); ?>
+          </div>
         </div>
         <div class="activity-addfavour">
           <a href="#" class="btn"><small>Create your own package</small>Add to favourites</a>
           <br>or select a premade <a href="#packpanel" data-toggle="tab">package</a>
         </div>
-        <div class="activity-gtk">
-          <h2>God to know</h2>
-          <?php echo get_post_meta( $post->ID, '_meta_gtk', TRUE ); ?>
-        </div>
+
         <div class="gombsor">
           <a href="#" class="share-face"><i class="ion-social-facebook"></i><br /><span>Share</span></a>
           <a href="tel:+36209734344" class="call-phone"><i class="ion-iphone"></i><br /><span>+36.70.770.56.53</span></a>

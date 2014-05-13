@@ -22,45 +22,93 @@
 }
 
 .ctitle{
-  margin-top:0;
+  margin:0.125em 0 0 ;
   font-size: 3em;
   line-height: 1em;
-  font-weight: 700;
-  text-transform: uppercase;
-  color:$soldier;
+  color:$gray-dark;
+  text-align: center;
+  font-style: italic;
 }
-.controls{
+.csubtitle{
+  margin:0.125em 0 0 ;
+  font-size: 2em;
+  line-height: 1em;
+  color:#fff;
+  text-align: center;
+}
+.leftfields{
+  @include breakpoint($s2){
+    float:left;
+    width:calc(50% - 1em);
+  }
+}
+.rightfields{
+  @include breakpoint($s2){
+    float:left;
+    width:calc(50% - 1em);
+    margin-left: 2em;
+  }
+}
+
+
+  hr{
+    border-width:2px;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-top-color: $gray-light;
+    border-bottom-color: $gray-superlight;
+    border-bottom-width:1px;
+
+    //height:5px;
+    border-radius: 2px;
+    //background-color: $gray;
+    margin:1em 25%;
+  }
+
+.items{
+  @include clearfix();
   margin:1em 0;
   label{
-    font-size: 1.5em;
-    line-height: 1.25em;
+    display: block;
+    font-size: 1.25em;
+    line-height: 1em;
+    padding:0.125em 0 0.25em 0.25em;
+    font-weight: 900;
+    font-variant: small-caps;
+    font-style: italic;
+    //text-align: right;
     min-width: 6em;
     margin-right: 1em;
-    text-transform: uppercase;
-    display: inline-block;
-    color:$soldier;
+    //text-transform: uppercase;
+    display: block;
+    color:$gray;
   
   }
 
 }
 input[type="text"], input[type="email"], textarea{
-  border: 1px solid $gray-light;
+  border: 1px solid #fff;
   font-size: 1.5em;
-  color:$soldier;
+  border-radius: 4px;
+  background-color: $white;
+  color:$gray-dark;
   line-height: 1.25em;
   padding:0.25em;
-  background-color: rgba(#fff,0.5);
-  width: 20em;
-  max-width: 100%;
-  //outline-color: #fff;
-  outline: 0 solid #fff;
-  &:hover, &:focus {
-    border:1px solid $blue;
-    outline-color: $orange;
 
+  width: 16em;
+  max-width: 100%;
+  outline-color: $cyan;
+  //outline: 0 solid #fff;
+  &:focus {
+    background-color: #fff;
+    
+  }
+  &:hover {
+    border:1px solid $cyan;
   }
 
 }
+
 
 .submitbtn {
   //float:right;
@@ -71,17 +119,28 @@ input[type="text"], input[type="email"], textarea{
 
 .actions {
   @include clearfix();
-  text-align: right;
+  clear:both;
+  text-align: center;
   font-size: 1.5em;
-  width: 20em;
-  max-width: 100%;
+
+  //width: 20em;
+  //max-width: 100%;
+
   @include breakpoint($s2) {
-    width: 27em;
+    //float:left;
+    margin:0 auto;
+    width:calc(50% - 0.666em);
+  }
+  
+  .btn {
+    margin-top:0.5em;
+    width:100%;
+    //display:block;
   }
 }
 
 .oki {
   float:left;
-  padding-top: 3em;
+  padding-top: 0.5em;
   font-size: 0.75em;
 }

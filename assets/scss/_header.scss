@@ -142,16 +142,15 @@
   @include clearfix();
   position: relative;
   text-align: left;
-  max-width: $s5;
   margin:0 auto;
-  padding:1em 1em;
+  padding:1em 0.5em;
   max-width:$s3;
 
   .single-activity & {
     padding-bottom:9em;
   }
   @include breakpoint($s2){
-    padding:4em 1em 1em;
+    padding:4em 0.5em 1em;
   }
   @include breakpoint($s3){
 
@@ -163,6 +162,11 @@
   .btn {
     font-size: 1.5em;
     line-height: 1.125em;
+    display:block;
+    margin-bottom:2em;
+    @include breakpoint($s1){
+      display:inline-block
+    }
   }
   .tag-list {
     @include breakpoint($s2){
@@ -213,26 +217,28 @@
   position: relative;
   @include breakpoint($s2){
     width:33.333%;
-    float:right;
+    position:absolute;
+    top:4em;
+    right:0;
 
   }
 }
 
 .minihero-lead{
   margin:2em 0;
+  padding:1em;
+  background-color: rgba(#fff,0.9);
+  border-radius: 20px;
+  
   p{
-    font-size:1.5em;
+    font-size:1.25em;
     line-height: 1.4em;
     //font-weight: 800;
     color:$gray-dark;
-    text-shadow:0 0 10px $white;
-    //display: inline;
-    //background-color: $white;
-    //background-color: rgba($white,0.5);
      
   }
   @include breakpoint($s2){
-    width:66%;
+    width:66.666%;
     float:left;
   }
 }
