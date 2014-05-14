@@ -1,13 +1,9 @@
+.builder-form{
+  max-width: $s3;
+  margin:0 auto;
+}
 .activity-chooser{
   @include clearfix();
-
-  
-  .col{
-    @include breakpoint($s1){
-      width:50%;
-      float:left;
-    }
-  }
 }
 .activity-listitem{
   @include clearfix();
@@ -68,5 +64,19 @@
       border-radius: 20px;
       border:10px solid $white;
     }
+  }
+}
+
+
+.details-wrap{
+  @include clearfix();
+  font-size: 1.25em;
+  line-height: 1.4;
+  background-color:$gray-dark;
+  color:$gray-light; 
+  padding:1em;
+  border-radius:20px;
+  label {
+     color:$gray-light; 
   }
 }

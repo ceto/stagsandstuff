@@ -1,10 +1,4 @@
-<div id="package-enquire" class="package-enquire collapse">
-  <div class="panel-body">
-    <a class="panel-close" href="#" data-toggle="collapse" data-target="#package-enquire"><i class="icon-057"></i></a>
-    <h2 class="ctitle">Enquire for <?php the_title(); ?></h2>
-    <h3 class="csubtitle">Add your details here</h3>
-     <hr>
-    <form class="form-horizontal" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+<div class="details-wrap">
     <div class="leftfields">
       <div class="items">
         <label for="message_name">Name *</label>
@@ -35,6 +29,6 @@
       <input type="submit" class="btn submitbtn" value="<?php _e('Send form','roots'); ?>">
       <div class="oki">*Fields are required</div>
     </div>
-    </form>
-  </div>
 </div>
+
+

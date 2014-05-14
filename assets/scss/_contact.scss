@@ -86,7 +86,7 @@
   }
 
 }
-input[type="text"], input[type="email"], textarea{
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea{
   border: 1px solid #fff;
   font-size: 1.5em;
   border-radius: 4px;
@@ -106,9 +106,10 @@ input[type="text"], input[type="email"], textarea{
   &:hover {
     border:1px solid $cyan;
   }
-
 }
-
+input[type="date"] {
+  padding:0.125em 0.25em;
+}
 
 .submitbtn {
   //float:right;

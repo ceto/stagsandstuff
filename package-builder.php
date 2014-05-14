@@ -55,10 +55,12 @@ Template Name: Package Builder
     <li><a href="#secondpanel" data-toggle="tab"><?php _e('Choose a hostel','root'); ?></a></li>
     <li><a href="#thirdpanel" data-toggle="tab"><?php _e('Send form','root'); ?></a></li>
   </ul>
+  <form class="form-horizontal builder-form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
   <div class="tab-content glass">
     
     <div class="tab-pane active fade in" id="firstpanel">
-      <h3>Choose your activities</h3>
+      <h2 class="ctitle">Choose your activities</h2>
+      <hr>
       <div id="#activity-chooser" class="activity-chooser">
         <?php 
           $the_activity=new WP_Query( array(
@@ -69,12 +71,12 @@ Template Name: Package Builder
           $fele=round($nop / 2);
           $i=0;
         ?>
-        <div class="col col-first">
+        <div class="col-half col-first">
           <?php while ($i++ < $fele)  : $the_activity->the_post(); ?>
             <?php get_template_part('templates/listitem','activity' ); ?>
           <?php endwhile; ?>
         </div>
-        <div class="col col-second">
+        <div class="col-half col-second">
           <?php while ( $the_activity->have_posts() ) : $the_activity->the_post(); ?>
             <?php get_template_part('templates/listitem','activity' ); ?>
           <?php endwhile; ?>
@@ -83,11 +85,36 @@ Template Name: Package Builder
     </div><!-- /.tab-pane -->
     
     <div class="tab-pane fade" id="secondpanel">
-      <p>        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.</p>
+      <h2 class="ctitle">Select preferred accomodation</h2>
+      <hr>
+      <div id="#acc-chooser" class="acc-chooser">
+        <?php 
+          $the_acc=new WP_Query( array(
+            'post_type' => array('accomodation'),
+            'posts_per_page' => -1
+          ));
+          $nop=$the_acc->post_count;
+          $fele=round($nop / 2);
+          $i=0;
+        ?>
+        <div class="col-half col-first">
+          <?php while ($i++ < $fele)  : $the_acc->the_post(); ?>
+            <?php get_template_part('templates/listitem','accomodation' ); ?>
+          <?php endwhile; ?>
+        </div>
+        <div class="col-half col-second">
+          <?php while ( $the_acc->have_posts() ) : $the_acc->the_post(); ?>
+            <?php get_template_part('templates/listitem','accomodation' ); ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
     </div><!-- /.tab-pane -->
     <div class="tab-pane fade" id="thirdpanel">
-      <p>
-      Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-      </p>
+      <h2 class="ctitle">Add your details to send</h2>
+      <hr>
+      <?php get_template_part( 'templates/builder', 'details' ); ?>
     </div><!-- /.tab-pane -->
 <?php endwhile; ?>
+
+</div><!-- /.tab-content -->
+</form>

@@ -21,6 +21,13 @@ body{
   background-attachment: fixed;
 }
 
+.col-half{
+  @include breakpoint($s1){
+    width:50%;
+    float:left;
+  }
+}
+  
 a {
   color: $blue;
   text-decoration: none;
