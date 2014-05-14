@@ -122,6 +122,14 @@
   
 }
 
+.cart {
+  margin-right:1em;
+  display:inline-block;
+  @include breakpoint($s2){
+    float:right;
+  }
+}
+
 .minihero {
   @include clearfix();
   background-color:transparent;

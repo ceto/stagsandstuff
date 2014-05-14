@@ -652,3 +652,19 @@ function ss_modify_num_activity($query)
 }
  
 add_action('pre_get_posts', 'ss_modify_num_activity');
+
+
+
+
+/************* SESSION HANDLING ************/
+add_action('init', 'ssStartSession', 1);
+add_action('wp_logout', 'ssEndSession');
+add_action('wp_login', 'ssEndSession');
+
+function ssStartSession() {
+  if(!session_id()) { session_start(); }
+}
+
+function ssEndSession() {
+  session_destroy ();
+}

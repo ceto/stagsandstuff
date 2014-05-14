@@ -3927,6 +3927,13 @@ a.menu-button:hover {
     .topenq.btn {
       float: right; } }
 
+.cart {
+  margin-right: 1em;
+  display: inline-block; }
+  @media only screen and (min-width: 768px) {
+    .cart {
+      float: right; } }
+
 .minihero {
   background-color: transparent;
   background-position: center center;
@@ -5505,7 +5512,7 @@ input[type="date"] {
 
 .builder-form {
   max-width: 1024px;
-  margin: 0 auto; }
+  margin: 3em auto 8em auto; }
 
 .activity-chooser:before, .activity-chooser:after {
   content: " ";

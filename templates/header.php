@@ -2,6 +2,9 @@
   <div class="toprow">
     <div class="left-top">Call us: <a href="tel:0036302767512">0036302767512</a> &middot; Email Us: <a href="mailto:info@stagsandstuff.com">info@stagsandstuff.com</a></div>
     <a href="<?php echo get_permalink(104); ?>" class="btn topenq"><i class="icon-027"></i> Build Your Own Package</a>
+    <?php if (count($_SESSION['actList'])>0) :?>
+    <span class="cart">Starred <?php echo count($_SESSION['actList']); ?> item</span>
+    <?php endif; ?>
   </div>
   <a class="brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
   <nav id="nav-main" class="nav-main" role="navigation">

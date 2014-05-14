@@ -92,8 +92,12 @@
           </div>
         </div>
         <div class="activity-addfavour">
-          <a href="#" class="btn"><small>Create your own package</small>Add to favourites</a>
-          <br>or select a premade <a href="#packpanel" data-toggle="tab">package</a>
+          <form action="<?php echo get_stylesheet_directory_uri(); ?>/session-helper.php" method="post">
+            <button class="btn" type="submit" name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
+              <small>Create your own package</small>Add to favourites
+            </button>
+          </form>
+          or select a premade <a href="#packpanel" data-toggle="tab">package</a>
         </div>
 
         <div class="gombsor">
