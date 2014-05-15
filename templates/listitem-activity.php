@@ -9,7 +9,7 @@
   ?>
   <div id="activity-<?php echo $post->ID; ?>" <?php post_class( join(" ", $termik ).' activity-listitem' ); ?>  >
       <div class="feje">
-        <input type="checkbox" value="<?php echo $post->ID; ?>">
+        <input type="checkbox" <?php echo in_array($post->ID, $_SESSION['actList'])?'checked="checked"':''; ?> value="<?php echo $post->ID; ?>">
         <h3 class="activity-title">
           <?php the_title(); ?>
           <small><?php echo get_post_meta($post->ID, '_meta_subtitle', true); ?></small>

@@ -20,6 +20,16 @@
       </form>
         </div>
       </section>
+      <section class="widget">
+            <div class="gombsor">
+              <h3>Share with your Friends</h3>
+              <a href="#" class="share-face"><i class="icon-091"></i><br /><span>Facebook</span></a>
+              <a href="#" class="share-gplus"><i class="icon-103"></i><br /><span>Google Plus</span></a>
+              <a href="#" class="share-twitter"><i class="icon-094"></i><br /><span>Twitter</span></a>
+              <a href="tel:0036302767512" class="call-phone"><i class="icon-023"></i><br /><span>00.36.30.276.7512</span></a>
+              <a href="#" class="share-like"><i class="icon-211"></i><br /><span>Like It</span></a>
+            </div>
+      </section>
   </div>
   <div class="footer-copy">
     © 2014 Stags & Stuff | Site by <a href="http://hydrogene.hu">HYDROGENE</a>

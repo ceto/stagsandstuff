@@ -40,14 +40,6 @@ Template Name: Package Builder
       <h1 class="minihero-title">
         <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
       </h1>
-      <!--figure class="topill">
-        <?php if (has_post_thumbnail() ) : ?>
-          <?php the_post_thumbnail('small43');  ?>
-        <?php else: ?>
-          <img src="http://lorempixel.com/480/320" alt="<?php the_title(); ?>">
-        <?php endif; ?>
-      </figure-->
-      <div class="minihero-lead"><?php the_content(); ?></div>
     </div>
   </header>
   <ul class="nav nav-tabs numbered glass">
@@ -59,7 +51,7 @@ Template Name: Package Builder
   <div class="tab-content glass">
     
     <div class="tab-pane active fade in" id="firstpanel">
-      <h2 class="ctitle">Choose your activities</h2>
+      <h2 class="ctitle">Choose activities</h2>
       <hr>
       <div id="#activity-chooser" class="activity-chooser">
         <?php 
@@ -82,6 +74,7 @@ Template Name: Package Builder
           <?php endwhile; ?>
         </div>
       </div>
+      <button class="btn" data-toggle="tab" href="#secondpanel">Next step<small>Choose accomodation</small></button>
     </div><!-- /.tab-pane -->
     
     <div class="tab-pane fade" id="secondpanel">
@@ -108,6 +101,7 @@ Template Name: Package Builder
           <?php endwhile; ?>
         </div>
       </div>
+      <button class="btn" data-toggle="tab" href="#thirdpanel">Next step<small>Send form</small></button>
     </div><!-- /.tab-pane -->
     <div class="tab-pane fade" id="thirdpanel">
       <h2 class="ctitle">Add your details to send</h2>

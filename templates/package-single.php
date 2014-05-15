@@ -73,18 +73,14 @@
             </div>
             <div class="gombsor">
               <h3>Share with your Friends</h3>
-              <a href="#" class="share-face"><i class="icon-091"></i><br /><span>Facebook</span></a>
-              <a href="#" class="share-gplus"><i class="icon-103"></i><br /><span>Google Plus</span></a>
-              <a href="#" class="share-twitter"><i class="icon-094"></i><br /><span>Twitter</span></a>
-              <a href="tel:0036302767512" class="call-phone"><i class="icon-023"></i><br /><span>00.36.30.276.7512</span></a>
-              <a href="#" class="share-like"><i class="icon-211"></i><br /><span>Like It</span></a>
+<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
             </div>
-            <nav class="package-pn">
+            <!--nav class="package-pn">
               <ul>
                 <li><?php previous_post_link( '%link', '<i class="ion-ios7-arrow-back"></i> %title', FALSE, ' ', 'package-category' ); ?> </li>
                 <li><?php next_post_link( '%link', '%title <i class="ion-ios7-arrow-forward"></i>', FALSE, ' ', 'package-category' ); ?></li>
               </ul>
-            </nav>
+            </nav-->
 
           </div>  
       </div>
