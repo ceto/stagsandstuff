@@ -15,5 +15,6 @@
       endif;
     ?>
   </nav>
+  <?php get_template_part( 'templates/home', 'banner' ); ?>
 </header>
 

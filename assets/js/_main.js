@@ -125,6 +125,7 @@ $(window).load(function(){
 
   $container.isotope({
     itemSelector : '.ize-mini',
+    layoutMode: 'cellsByRow',
     animationOptions: {
       duration: 750,
       easing: 'linear',

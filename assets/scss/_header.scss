@@ -29,6 +29,10 @@
     
   }
 
+  .page-template-tmpl-home-php & {
+    height:900px;
+    background-image: url(../img/full_bg.jpg);
+  }
 }
 
 
@@ -53,6 +57,9 @@
 
   &:hover, &:focus {
     
+  }
+  .page-template-tmpl-home-php & {
+    margin-bottom: 0;
   }
 }
 

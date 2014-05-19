@@ -3850,6 +3850,9 @@ a.menu-button:hover {
       min-height: 0;
       margin: 0 auto; } }
   @media only screen and (min-width: 1024px) { }
+  .page-template-tmpl-home-php .banner {
+    height: 900px;
+    background-image: url(../img/full_bg.jpg); }
 
 .brand {
   font: 0/0 a;
@@ -3868,6 +3871,8 @@ a.menu-button:hover {
   @media only screen and (min-width: 768px) {
     .brand {
       display: block; } }
+  .page-template-tmpl-home-php .brand {
+    margin-bottom: 0; }
 
 .mobile-header {
   position: relative;
@@ -4127,6 +4132,28 @@ a.menu-button:hover {
   @media only screen and (min-width: 1024px) {
     .footer-copy {
       padding: 1.25em 3em; } }
+
+.home-banner {
+  max-width: 1024px;
+  margin: 0 auto;
+  color: #f3f3f3;
+  font-size: 2em; }
+  .home-banner .banner-divider {
+    margin: 0 auto 1em auto;
+    width: 50%;
+    max-width: 768px;
+    border-width: 4px;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-top-color: #fff;
+    border-bottom-color: #f3f3f3;
+    border-bottom-width: 0px;
+    border-radius: 2px; }
+  .home-banner .banner-title {
+    font-size: 4em;
+    line-height: 0.75;
+    text-align: center;
+    margin: 0; }
 
 .hero {
   background-position: center center;
@@ -4685,11 +4712,19 @@ a.menu-button:hover {
     display: table; }
   .package-item:after {
     clear: both; }
+  @media only screen and (min-width: 768px) {
+    .package-item {
+      float: left;
+      width: calc(50% - 1.5em);
+      margin: 3em 0 3em 3em; }
+      .package-item:nth-child(2n+1) {
+        margin-left: 0;
+        clear: left; } }
   .package-item .coverphoto {
     display: block;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -4em;
     bottom: 0;
     width: 100%;
     background-position: right bottom;
@@ -4719,6 +4754,7 @@ a.menu-button:hover {
     .package-item .package-thumb img {
       border-radius: 15px; }
   .package-item .package-head {
+    position: relative;
     background-color: #414040;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px; }
@@ -4744,10 +4780,13 @@ a.menu-button:hover {
     .package-item .package-title a {
       color: #f3f3f3;
       display: block;
-      padding: 0.5em; }
+      padding: 0.5em 0.5em 0.5em; }
       .package-item .package-title a:hover, .package-item .package-title a:focus {
         color: #fff;
         text-decoration: none; }
+  .package-item .package-tags {
+    position: relative;
+    padding: 0 1em 0.25em; }
   .package-item .allother {
     background-color: #fff;
     padding: 1em;
@@ -4758,9 +4797,7 @@ a.menu-button:hover {
       display: table; }
     .package-item .allother:after {
       clear: both; }
-    @media only screen and (min-width: 768px) {
-      .package-item .allother {
-        padding-right: 40%; } }
+    @media only screen and (min-width: 768px) { }
   .package-item .package-desc {
     font-size: 1.25em;
     line-height: 1.4em;
@@ -4776,8 +4813,6 @@ a.menu-button:hover {
     position: relative;
     margin-top: 1em; }
     @media only screen and (min-width: 768px) { }
-  .package-item .package-tags {
-    position: relative; }
 
 /******Enquire From *******/
 .package-enquire {
