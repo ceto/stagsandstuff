@@ -1,0 +1,69 @@
+.accomodarion-list{
+  max-width: $s3;
+  margin:0 auto;
+  @include breakpoint($s5){
+   max-width: $s4;
+  }
+}
+
+.accomodation-item {
+  @include clearfix();
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $orange;
+  margin:4em auto;
+  
+  &:nth-child(2n+1) {
+    .accomodation-details {
+      @include breakpoint($s1){
+        float:right;
+      }
+    }
+  }
+}
+
+.accomodation-thumb{
+  @include breakpoint($s1){
+    display:none;
+  }
+}
+
+
+.accomodation-title{
+  margin: 0;
+  border-bottom: 5px solid $cyan;
+  padding: 10px 0 5px 0;
+  a{
+    color:$gray;
+    font-size: 2em;
+    &:hover, &:focus {
+      text-decoration: none;
+      color:$orange;
+    }
+  }
+}
+
+.accomodation-details {
+  padding:1em;
+  border-radius: 20px;
+  border-width:10px;
+  border-style: solid;
+  border-color: $cyan;
+  background-color: $white;
+  
+  @include breakpoint($s1){
+   width: $s0;
+   margin:-2em 2em 2em 2em; 
+  }
+
+  @include breakpoint($s2){
+   width: 45%;
+   margin:-2em 2em 2em 2em; 
+  }
+  @include breakpoint($s5){
+   width: 33.333%;
+   margin:-2em 4em 2em 4em; 
+  }
+
+}

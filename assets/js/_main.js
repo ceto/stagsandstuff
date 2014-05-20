@@ -76,6 +76,18 @@ $(function() {
 //   }
 // };
 
+var resizeHero = function() {
+
+  if ( $(window).height() > 900 ) {
+    $('.fullscreen').height( $(window).height() );
+  } else {
+    
+  }
+
+  //$('.contact-row.open').css('min-height',($(window).height()-($('.banner').offset().top + $('.banner').height())));
+};
+
+
 
 var showMenu = function() {
   $('body').toggleClass("active-nav");
@@ -92,7 +104,7 @@ jQuery(window).resize(function(){
   if (off_canvas_nav_display === 'none') {
     $("body").removeClass("active-nav small-screen").addClass("two-column");
   }
-  //resizeHero();
+  resizeHero();
 });
 
 jQuery(document).ready(function($){
@@ -100,7 +112,7 @@ jQuery(document).ready(function($){
     e.preventDefault();
     showMenu();
   });
-  //resizeHero();
+  resizeHero();
 
 
   /************* Man navigation Fixing ***********/

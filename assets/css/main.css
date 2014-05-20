@@ -3831,7 +3831,7 @@ a.menu-button:hover {
   overflow: hidden;
   padding: 0;
   min-height: 100%;
-  background-color: #414040;
+  background-color: #000;
   background-image: url(../img/hero_girls.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -3850,9 +3850,11 @@ a.menu-button:hover {
       min-height: 0;
       margin: 0 auto; } }
   @media only screen and (min-width: 1024px) { }
-  .page-template-tmpl-home-php .banner {
-    height: 900px;
-    background-image: url(../img/full_bg.jpg); }
+  .banner.fullscreen {
+    height: 940px;
+    background-image: url(../img/full_bg.jpg);
+    background-color: #000;
+    background-attachment: fixed; }
 
 .brand {
   font: 0/0 a;
@@ -3860,8 +3862,8 @@ a.menu-button:hover {
   text-shadow: none;
   background-color: transparent;
   border: 0;
-  width: 382px;
-  height: 161px;
+  width: 320px;
+  height: 130px;
   margin: 0 auto 72px;
   background-image: url('../img/logo.png');
   background-repeat: no-repeat;
@@ -4135,9 +4137,17 @@ a.menu-button:hover {
 
 .home-banner {
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 1em auto 120px;
   color: #f3f3f3;
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%; }
   .home-banner .banner-divider {
     margin: 0 auto 1em auto;
     width: 50%;
@@ -4154,6 +4164,24 @@ a.menu-button:hover {
     line-height: 0.75;
     text-align: center;
     margin: 0; }
+  .home-banner .banner-text {
+    font-weight: 400; }
+  .home-banner .home-btn {
+    margin-top: 2em;
+    margin-bottom: 0;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #fff;
+    color: #fff; }
+    .home-banner .home-btn:hover, .home-banner .home-btn:focus {
+      color: #f23b55;
+      border-color: #f23b55; }
+  .home-banner .home-discl {
+    margin-top: 0.5em;
+    font-size: 0.75em;
+    font-style: italic; }
+    .home-banner .home-discl a {
+      color: #f23b55; }
 
 .hero {
   background-position: center center;
@@ -4497,8 +4525,34 @@ a.menu-button:hover {
     .activity-content {
       width: 66.666%;
       float: left; } }
+  .activity-content .activity-metablock {
+    font-size: 0.875em;
+    line-height: 1.25;
+    font-weight: 400;
+    background-color: #f3f3f3;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 2em 1em; }
+    .activity-content .activity-metablock:before, .activity-content .activity-metablock:after {
+      content: " ";
+      display: table; }
+    .activity-content .activity-metablock:after {
+      clear: both; }
+    .activity-content .activity-metablock h2 {
+      margin: 0; }
   .activity-content .activity-gtk {
-    font-weight: 400; }
+    margin-bottom: 2em; }
+  .activity-content .activity-time {
+    min-width: 33.333%;
+    max-width: 50%;
+    float: left; }
+  .activity-content .activity-guide {
+    max-width: 33.333%;
+    min-width: 25%;
+    float: left; }
+  .activity-content .gombsor {
+    margin-top: 1em;
+    clear: both; }
 
 .activity-addfavour {
   text-align: center;
@@ -4845,6 +4899,63 @@ a.menu-button:hover {
   .panel-close:hover, .panel-close:focus {
     text-decoration: none;
     color: #f23b55; }
+
+.accomodarion-list {
+  max-width: 1024px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1600px) {
+    .accomodarion-list {
+      max-width: 1280px; } }
+
+.accomodation-item {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #FF9900;
+  margin: 4em auto; }
+  .accomodation-item:before, .accomodation-item:after {
+    content: " ";
+    display: table; }
+  .accomodation-item:after {
+    clear: both; }
+  @media only screen and (min-width: 480px) {
+    .accomodation-item:nth-child(2n+1) .accomodation-details {
+      float: right; } }
+
+@media only screen and (min-width: 480px) {
+  .accomodation-thumb {
+    display: none; } }
+
+.accomodation-title {
+  margin: 0;
+  border-bottom: 5px solid #2ab0e1;
+  padding: 10px 0 5px 0; }
+  .accomodation-title a {
+    color: #696565;
+    font-size: 2em; }
+    .accomodation-title a:hover, .accomodation-title a:focus {
+      text-decoration: none;
+      color: #FF9900; }
+
+.accomodation-details {
+  padding: 1em;
+  border-radius: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #2ab0e1;
+  background-color: #f3f3f3; }
+  @media only screen and (min-width: 480px) {
+    .accomodation-details {
+      width: 320px;
+      margin: -2em 2em 2em 2em; } }
+  @media only screen and (min-width: 768px) {
+    .accomodation-details {
+      width: 45%;
+      margin: -2em 2em 2em 2em; } }
+  @media only screen and (min-width: 1600px) {
+    .accomodation-details {
+      width: 33.333%;
+      margin: -2em 4em 2em 4em; } }
 
 .product-control {
   text-align: center; }

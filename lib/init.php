@@ -26,6 +26,7 @@ function roots_setup() {
   add_image_size('wallmedium', 1280, 9999);
   add_image_size('wallsmall', 768, 9999);
 
+  add_image_size('large41', 1280, 320, true);
 
   add_image_size('medium169', 768, 432, true);
 

@@ -291,12 +291,42 @@
   p{
         
   }
-  .activity-gtk{
+  .activity-metablock{
+    font-size: 0.875em;
+    line-height: 1.25;
     font-weight: 400;
-    h2{
+    @include clearfix();
+    background-color: $white;
+    //border-bottom: 1px solid $gray-light;
+    //border-top: 1px solid $gray-light;
+    border: 1px solid $gray-superlight;
+    border-radius: 4px;
 
+    padding:2em 1em;
+    h2 {
+      margin: 0;
     }
   }
+  .activity-gtk{
+    margin-bottom:2em;
+  }
+  .activity-time{
+    min-width: 33.333%;
+    max-width:50%;
+    float:left;
+  }
+  .activity-guide{
+    max-width:33.333%;
+    min-width: 25%;
+    float:left;
+  }
+
+  .gombsor{
+    margin-top:1em;
+    clear:both;
+  }
+
+
 }
 
 .activity-addfavour{

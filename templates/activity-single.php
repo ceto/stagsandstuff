@@ -86,9 +86,25 @@
       <article id="activity-<?php echo $post->ID  ?>" <?php post_class($termes); ?> >
         <div class="activity-content">
           <?php the_content(); ?>
-          <div class="activity-gtk">
-            <h2><i class="icon-271"></i> Good to know</h2>
-            <?php echo get_post_meta( $post->ID, '_meta_gtk', TRUE ); ?>
+          <div class="activity-metablock">
+            <?php if (get_post_meta( $post->ID, '_meta_gtk', TRUE ) != '') : ?>
+              <div class="activity-gtk">
+                <h2><i class="icon-271"></i> Good to know</h2>
+                <?php echo get_post_meta( $post->ID, '_meta_gtk', TRUE ); ?>
+              </div>
+            <?php endif; ?>
+            <?php if (get_post_meta( $post->ID, '_meta_time', TRUE ) != '') : ?>
+              <div class="activity-time">
+                <h2><i class="icon-016"></i> Time</h2>
+                <?php echo get_post_meta( $post->ID, '_meta_time', TRUE ); ?>
+              </div>
+            <?php endif; ?>
+            <?php if (get_post_meta( $post->ID, '_meta_guide', TRUE ) != '') : ?>
+              <div class="activity-guide">
+                <h2><i class="icon-029"></i> Guide</h2>
+                <?php echo get_post_meta( $post->ID, '_meta_guide', TRUE ); ?>
+              </div>
+            <?php endif; ?>
           </div>
           <div class="gombsor">
             <h3>Share with your Friends</h3>

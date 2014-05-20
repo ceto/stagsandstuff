@@ -10,8 +10,9 @@
 
  <?php wp_head(); ?>
  <script type="text/javascript" charset="utf-8">
- $(function() { $('body').hide().show(); });
-</script>
+    $(function() { $('body').hide().show(); });
+  </script>
+
 <script type="text/javascript">
 WebFontConfig = {
   google: { families: ['Alegreya+Sans','Pacifico'] },

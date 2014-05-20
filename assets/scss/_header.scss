@@ -4,7 +4,7 @@
   overflow: hidden;
   padding:0;
   min-height: 100%;
-  background-color: $gray-dark;
+  background-color: #000;
   background-image: url(../img/hero_girls.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,9 +29,12 @@
     
   }
 
-  .page-template-tmpl-home-php & {
-    height:900px;
+  &.fullscreen {
+    height:940px;
     background-image: url(../img/full_bg.jpg);
+    //background-image: none;
+    background-color: #000;
+    background-attachment: fixed;
   }
 }
 
@@ -39,12 +42,11 @@
 
 .brand{
   @include text-hide();
-
-  //background-color: gray;
-  // width:348px;
-  // height:179px;
-  width:382px;
-  height:161px;
+  //width:382px;
+  //height:161px;
+  width:320px;
+  height:130px;
+  
   margin:0 auto 72px;
   background-image:url('../img/logo.png');
   background-repeat:no-repeat;
