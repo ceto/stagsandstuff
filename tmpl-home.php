@@ -3,6 +3,10 @@
 Template Name: Home Template
 */
 ?>
+<section class="hiw">
+  <h2>How it works?</h2>
+</section>
+
 <section class="fresh-posts">
   <?php 
     $the_posts = new WP_Query(array(

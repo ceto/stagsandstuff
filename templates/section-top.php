@@ -1,15 +1,6 @@
-<?php if (is_page_template('tmpl-home.php')): ?>
-<section class="hero" role="banner">
-  <div class="hero-content">
-    <span class="hero-text">
-        <?php bloginfo('description' ); ?>
-    </span>
-  </div>
-</section>
-<?php elseif ( ( is_singular('post') )   ) :?>
-  <!--section class="hero" role="banner">
-  </section--> 
-<?php elseif ( ( !is_page_template('package-builder.php') && (is_page() || is_archive('activity-category'))  )   ) :?>
+<?php if ( ( is_singular('post') )   ) :?>
+
+<?php elseif ( ( !is_page_template('package-builder.php') && !is_page_template('tmpl-home.php') &&  (is_page() || is_archive('activity-category'))  )   ) :?>
   <section class="hero feles" role="banner">
     <div class="hero-content">
         <?php if (!is_archive() ): ?>
