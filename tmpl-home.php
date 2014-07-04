@@ -4,12 +4,14 @@ Template Name: Home Template
 */
 ?>
 <section class="hww">
-  <ul class="nav nav-tabs glass">
+
+  <div class="hww-inner">
+    <h1 class="homediscl"><strong>Stags & Stuff</strong> provides organized activities in Budapest for small amount group of visitors</h1>
+    <ul class="nav nav-tabs glass home-tabs">
     <li class="active"><a href="#hiwpanel" data-toggle="tab">How It Works?</a></li>
     <li><a href="#wcupanel" data-toggle="tab">Why Choose Us</a></li>
     <li><a href="#abupanel" data-toggle="tab">About Us</a></li>
-  </ul>
-  <div class="hww-inner">
+    </ul>
 
   <div class="tab-content glass">
 
@@ -62,7 +64,7 @@ Template Name: Home Template
 
 
 
-<section class="fresh-posts">
+<section class="fresh-posts" style="display:none;">
   <?php 
     $the_posts = new WP_Query(array(
       'post_type' => 'post',
@@ -72,6 +74,4 @@ Template Name: Home Template
   <?php while ($the_posts->have_posts()) : $the_posts->the_post(); ?>
     <?php get_template_part('templates/content','' ); ?>
   <?php endwhile; ?>
-
-
 </section>

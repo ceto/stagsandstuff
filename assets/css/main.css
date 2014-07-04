@@ -4319,14 +4319,65 @@ a.menu-button:hover {
     color: #2ab0e1; }
     .hww h3 strong {
       font-weight: 900;
-      color: #696565; }
+      color: #cacaca; }
+  .hww a {
+    color: #2ab0e1; }
   .hww hr {
     margin: 4em 0; }
+  .hww .tab-pane h3:first-child {
+    margin-top: 1em; }
+  .hww .tab-pane ol {
+    counter-reset: linkcount;
+    padding: 0 0 0 0; }
+  .hww .tab-pane li {
+    position: relative;
+    padding: 0.25em 0 0.25em 1.75em;
+    margin: 0.25em 0;
+    list-style-type: none;
+    counter-increment: linkcount; }
+    .hww .tab-pane li:before {
+      position: absolute;
+      left: 0.25em;
+      content: counter(linkcount) '.';
+      margin-right: 0.25em;
+      font-size: 1.25em;
+      line-height: 1em;
+      font-weight: 900;
+      color: #696565;
+      font-variant: normal;
+      font-style: italic; }
+  .hww .tab-pane ul {
+    padding: 0 0 0 0; }
+    .hww .tab-pane ul li:before {
+      content: '+'; }
+
+.homediscl {
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 300;
+  color: #696565;
+  font-variant: normal;
+  text-transform: uppercase;
+  margin-bottom: 2em; }
+  .homediscl strong {
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 900;
+    color: #2ab0e1;
+    font-size: 133%; }
+
+.home-tabs.nav-tabs {
+  font-size: 0.75em;
+  padding: 0; }
+  .home-tabs.nav-tabs li {
+    margin-left: 0; }
+    .home-tabs.nav-tabs li > a {
+      padding: 0.25em 0.5em; }
 
 .hww-inner {
   max-width: 1024px;
   margin: 0 auto;
-  padding-left: 27%;
+  padding-left: 29%;
   padding-right: 1em; }
 
 .containing-activities {
