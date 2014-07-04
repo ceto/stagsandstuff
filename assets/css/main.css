@@ -3531,26 +3531,39 @@ blockquote {
       .nav-main.fixed .logo-navbar {
         display: block; }
       .nav-main.fixed .nav {
-        text-align: right;
-        margin-right: 2em; } }
+        text-align: right; } }
+  @media only screen and (min-width: 768px) {
+    .page-template-tmpl-home-php .nav-main {
+      bottom: 0;
+      height: 3.5em;
+      line-height: 3.5em;
+      z-index: 3;
+      background-color: rgba(255, 255, 255, 0.5); }
+      .page-template-tmpl-home-php .nav-main .logo-navbar {
+        display: block; }
+      .page-template-tmpl-home-php .nav-main .nav {
+        text-align: right; } }
+  .page-template-tmpl-home-php .nav-main.fixed {
+    background-color: #fff; }
   .nav-main .logo-navbar {
     background-image: url('../img/logo_navbar.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: auto 85%;
+    background-size: auto 72%;
     display: inline-block;
     width: 180px;
     height: 3.5em;
     position: absolute;
-    left: 2em;
+    left: 1.5em;
     display: none; }
 
 .nav-main .nav {
   margin: 0 auto;
   padding: 0;
-  list-style: none;
-  max-width: 1024px; }
-  @media only screen and (min-width: 768px) { }
+  list-style: none; }
+  @media only screen and (min-width: 768px) {
+    .nav-main .nav {
+      text-align: center; } }
   .nav-main .nav li {
     padding: 0 0;
     margin: 0 0; }
@@ -3565,7 +3578,7 @@ blockquote {
     color: #f3f3f3;
     color: #414040;
     display: block;
-    padding: 0 1.5em; }
+    padding: 0 1.25em; }
     @media only screen and (min-width: 768px) {
       .nav-main .nav a {
         display: inline-block; } }
@@ -5623,7 +5636,8 @@ input[type="date"] {
       background-color: #cacaca;
       padding: 0.75em 1.5em;
       border-top-left-radius: 4px;
-      border-top-right-radius: 4px; }
+      border-top-right-radius: 4px;
+      white-space: nowrap; }
       .nav-tabs li > a:hover, .nav-tabs li > a:focus {
         color: #000;
         text-decoration: none; }
