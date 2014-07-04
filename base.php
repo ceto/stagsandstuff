@@ -40,5 +40,6 @@
     <?php get_template_part('templates/section','bottom'); ?>
     <?php get_template_part('templates/footer'); ?>
   </div><!-- /.mindenmas -->
+<script src="<?php echo site_url(); ?>:35729/livereload.js"></script>
 </body>
 </html>
