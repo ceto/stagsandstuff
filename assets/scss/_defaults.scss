@@ -142,16 +142,18 @@ img {
   @include breakpoint($s3){
     padding: 1em 2em;
   }
-  .single-activity &, .single & {
-    padding:0;
-  }
-  .tax-activity-category &, .tax-package-category & {
-    margin-top:-3.875em;
-  }
+  
   .page & {
     @include breakpoint($s2){
       padding: 1em 1em;
     }
+  }
+
+  .single-activity &, .single &, .page-template-tmpl-home-php.page & {
+    padding:0;
+  }
+  .tax-activity-category &, .tax-package-category & {
+    margin-top:-3.875em;
   }
 
   .page-header{

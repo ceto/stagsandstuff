@@ -3400,13 +3400,13 @@ img {
   @media only screen and (min-width: 1024px) {
     .main {
       padding: 1em 2em; } }
-  .single-activity .main, .single .main {
-    padding: 0; }
-  .tax-activity-category .main, .tax-package-category .main {
-    margin-top: -3.875em; }
   @media only screen and (min-width: 768px) {
     .page .main {
       padding: 1em 1em; } }
+  .single-activity .main, .single .main, .page-template-tmpl-home-php.page .main {
+    padding: 0; }
+  .tax-activity-category .main, .tax-package-category .main {
+    margin-top: -3.875em; }
   .main .page-header h1 {
     color: #2ab0e1;
     font-size: 4em;
@@ -4296,6 +4296,38 @@ a.menu-button:hover {
   border: 10px solid #696565;
   border-radius: 20px; }
   @media only screen and (min-width: 768px) { }
+
+.hww {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+  background-attachment: scroll;
+  background-image: url('../img/heroes.jpg');
+  font-size: 1.25em;
+  line-height: 1.4;
+  padding: 2em 0.75em 33% 0.75em; }
+  .hww:before, .hww:after {
+    content: " ";
+    display: table; }
+  .hww:after {
+    clear: both; }
+  .hww h3 {
+    font-size: 1.75em;
+    line-height: 1;
+    margin: 1.5em 0 0;
+    color: #2ab0e1; }
+    .hww h3 strong {
+      font-weight: 900;
+      color: #696565; }
+  .hww hr {
+    margin: 4em 0; }
+
+.hww-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 27%;
+  padding-right: 1em; }
 
 .containing-activities {
   counter-reset: actitemcount; }

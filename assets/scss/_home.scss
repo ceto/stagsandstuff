@@ -197,3 +197,38 @@
   }
 
 }
+
+
+.hww{
+  @include clearfix();
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+  background-attachment: scroll;
+  background-image: url('../img/heroes.jpg');
+
+  font-size: 1.25em;
+  line-height: 1.4;
+  padding:2em 0.75em 33% 0.75em;
+  h3{
+    font-size: 1.75em;
+    line-height: 1;
+    margin:1.5em 0 0;
+    color:$cyan;
+    strong{
+      font-weight: 900;
+      color:$gray;
+    }
+  }
+  hr{
+    margin:4em 0;
+  }
+}
+.hww-inner{
+  max-width: $s3;
+  margin:0 auto;
+  padding-left: 27%;
+  padding-right: 1em;
+
+}
