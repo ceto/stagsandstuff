@@ -72,18 +72,25 @@
           $itercsi=0;
         ?>
       <h3 class="csubtitle">You have selected <?php echo $nop ?> activities</h3>
-      <div id="#activity-chooser" class="activity-chooser">
-        <div class="col-half col-first">
-          <?php while ($itercsi < $fele)  : $the_activity->the_post(); ?>
-            <?php get_template_part('templates/listitem','activity' ); ?>
-          <?php endwhile; ?>
+      <?php if ($nop>0): ?>
+        <div id="#activity-chooser" class="activity-chooser">
+          <div class="col-half col-first">
+            <?php while ($itercsi < $fele)  : $the_activity->the_post(); ?>
+              <?php get_template_part('templates/listitem','activity' ); ?>
+            <?php endwhile; ?>
+          </div>
+          <div class="col-half col-second">
+            <?php while ( $the_activity->have_posts() ) : $the_activity->the_post(); ?>
+              <?php get_template_part('templates/listitem','activity' ); ?>
+            <?php endwhile; ?>
+          </div>
         </div>
-        <div class="col-half col-second">
-          <?php while ( $the_activity->have_posts() ) : $the_activity->the_post(); ?>
-            <?php get_template_part('templates/listitem','activity' ); ?>
-          <?php endwhile; ?>
-        </div>
-      </div>
+      <?php endif ?>
+      <p class="broki-helper">
+        Need more? <a href="?activity-category=all-activities"> Browse all activities</a>
+      </p>
+
+
     </div><!-- /.tab-pane -->
 
 

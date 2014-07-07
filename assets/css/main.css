@@ -5626,6 +5626,12 @@ a.menu-button:hover {
   .broki:after {
     clear: both; }
 
+.broki-helper {
+  padding: 0 1em 0 1em;
+  text-align: center; }
+  .broki-helper a {
+    color: #2ab0e1; }
+
 hr {
   border-width: 2px;
   border-right-width: 0;
