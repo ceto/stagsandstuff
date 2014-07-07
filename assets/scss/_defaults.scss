@@ -125,7 +125,7 @@ img {
   @include clearfix();
   max-width: $s5;
   margin:0 auto;
-  .single-activity &, .single-package &{
+  .single-activity &, .single-package &, .page-template-tmpl-home-php & {
     max-width: 100%;
   }
   .tax-activity-category &, .tax-package-category &,  {

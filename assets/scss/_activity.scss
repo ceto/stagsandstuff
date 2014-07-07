@@ -137,7 +137,7 @@
     padding:0 0 0 0;
   }
   @include breakpoint($s2){
-    //padding:1em 0.5em 1em 1em;
+    margin-bottom: 120px;
   }
   @include breakpoint($s3){
      //padding:2em 1em 1em 2em;
@@ -379,33 +379,7 @@
   }
 }
 
-.gombsor{
 
-  a {
-    font-size: 16px;
-    //width:33.3333333%;
-    display: inline-block;
-    padding:1em;
-    text-align:center;
-    color:$gray;
-    &:hover, &:focus {
-      text-decoration: none;
-      color:$gray-dark;
-    }
-    &.call-phone {
-      //font-feature-settings: "lnum", "tnum";
-    }
-
-    i{
-      font-size: 2.25em;
-    }
-    span{
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 0.75em;
-    } 
-  }
-}
 
 /*********** Containing packages section *********/
 .pack-lead{

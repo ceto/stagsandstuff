@@ -204,13 +204,17 @@
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: left bottom;
-  background-size: cover;
+  background-size: 100% auto;
   background-attachment: scroll;
   background-image: url('../img/heroes.jpg');
-
   font-size: 1.25em;
   line-height: 1.4;
   padding:2em 0.75em 33% 0.75em;
+  @include breakpoint($s3){
+    padding:2em 0.75em 33% 0.75em;
+    background-size: cover;
+  }
+
   h3{
     font-size: 1.75em;
     line-height: 1;
@@ -229,6 +233,10 @@
   }
 
   .tab-pane{
+    
+    @include breakpoint($s3){
+      min-height: 38em;
+    }
     h3:first-child {
       margin-top:1em;
     }
@@ -290,6 +298,7 @@ font-size:0.75em;
  padding:0;
  li{
   margin-left:0;
+  margin-bottom: 0.5em;
   >a {
     padding:0.25em 0.5em;
 
@@ -300,7 +309,13 @@ font-size:0.75em;
 .hww-inner{
   max-width: $s3;
   margin:0 auto;
-  padding-left: 29%;
-  padding-right: 1em;
+ 
+  padding:0 1em;
+  @include breakpoint($s1){
+     padding-left: 22%;
+  }
+  @include breakpoint($s3){
+     padding-left: 29%;
+  }
 
 }

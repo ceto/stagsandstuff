@@ -9,7 +9,7 @@
     // height:289px;
     width:120px;
     height:200px;
-    top:-100px;
+    top:42%;
     left:calc(50% - 87px);
 
     background-image: url(../img/logo_pajzs.png);
@@ -19,11 +19,19 @@
   }
   
  a{
-  color:$gray;
+  color:$green;
   &:hover, &:focus{
-      color:$gray-light;
+      color:$red;
+      text-decoration: none;
   }
  }
+}
+
+.side-inner {
+  @include clearfix();
+  max-width: $s4;
+  margin:0 auto;
+
 }
 
 .footer-sidebar {
@@ -31,7 +39,7 @@
   //max-width: $s5;
   margin: auto;
   padding:2em 0;
-  font-size: 0.875em;
+  font-size: 1em;
   line-height: 1.25em;
   font-weight: 300;
   color:$white;
@@ -60,11 +68,12 @@
     }
     h3 {
       margin:1em 0 1.5em;
-      font-size: 1.25em;
+      font-size: 1.333em;
       line-height: 1em;
-      font-weight: 400;
-      text-transform: none;
-      font-variant:small-caps;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-variant:normal;
+
 
       @include breakpoint($s1){
         margin-top:0;  
@@ -84,7 +93,8 @@
         margin:0;
         padding:0.5em 0;
         a {
-          text-transform: uppercase;
+          font-weight:700;
+
         }
       }
     }
@@ -92,8 +102,85 @@
   
 }
 
+.footer-social {
+  @include clearfix();
+  //max-width: $s5;
+  margin: auto;
+  padding:2em 0;
+  background-color: #000;
+  color:$white;
+  
+  .widget {
+    @include clearfix();
+    padding:1em 1em;
+    @include breakpoint($s1){
+      padding:2em 1em;
+       width:50%;
+      float:left;
+    }
+    @include breakpoint($s2){
+      padding:2em 2em 2em 2em;
+     
+    }
+    @include breakpoint($s3){
+      padding:3em 3em 3em 3em;
+    }
+    
+
+    h3{
+      margin:1em 0 1.5em;
+      font-size: 1.333em;
+      line-height: 1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-variant:normal; 
+    }
+  }
+
+
+
+}
+
+.gombsor{
+
+  a {
+    font-size: 16px;
+    //width:33.3333333%;
+    display: inline-block;
+    padding:1em;
+    text-align:center;
+    color:$green;
+    &:hover, &:focus {
+      text-decoration: none;
+      color:$red;
+      i {
+        border-color:$red;
+      }
+    }
+    &.call-phone {
+      //font-feature-settings: "lnum", "tnum";
+    }
+
+    i{
+      text-align: center;
+      font-size: 2em;
+      line-height: 1.666;
+      border:2px solid $green;
+      width:1.75em;
+      height:1.75em;
+      display: inline-block;
+      border-radius: 50%;
+    }
+    span{
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.875em;
+    } 
+  }
+}
+
 .footer-copy{
-  font-size: 0.75em;
+  font-size: 1em;
   line-height: 1.25em;
   font-weight: 300;
   padding:1.25em;
