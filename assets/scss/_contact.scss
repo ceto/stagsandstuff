@@ -28,6 +28,10 @@
   color:$gray-dark;
   text-align: center;
   font-style: italic;
+  .details-wrap & {
+    color:$white;
+  }
+
 }
 .csubtitle{
   margin:0.125em 0 0 ;
@@ -35,6 +39,8 @@
   line-height: 1em;
   color:#fff;
   text-align: center;
+
+
 }
 .leftfields{
   @include breakpoint($s2){
@@ -48,6 +54,20 @@
     width:calc(50% - 1em);
     margin-left: 2em;
   }
+}
+.brokielso{
+  @include clearfix();
+}
+
+.broki{
+  @include clearfix();
+  background-color: $green;
+  border: 10px solid $gray;
+  padding:1.5em 0.5em 2em 0.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius:20px;
+
 }
 
 

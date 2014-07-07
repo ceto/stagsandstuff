@@ -4409,6 +4409,8 @@ a.menu-button:hover {
       color: #cacaca; }
   .hww a {
     color: #2ab0e1; }
+  .hww .btn, .hww .btn-light-line {
+    color: #f3f3f3; }
   .hww hr {
     margin: 4em 0; }
   @media only screen and (min-width: 1024px) {
@@ -4461,7 +4463,8 @@ a.menu-button:hover {
   padding: 0; }
   .home-tabs.nav-tabs li {
     margin-left: 0;
-    margin-bottom: 0.5em; }
+    margin-right: 0.75em;
+    margin-bottom: 0.75em; }
     .home-tabs.nav-tabs li > a {
       padding: 0.25em 0.5em; }
 
@@ -5583,6 +5586,8 @@ a.menu-button:hover {
   color: #414040;
   text-align: center;
   font-style: italic; }
+  .details-wrap .ctitle {
+    color: #f3f3f3; }
 
 .csubtitle {
   margin: 0.125em 0 0;
@@ -5601,6 +5606,25 @@ a.menu-button:hover {
     float: left;
     width: calc(50% - 1em);
     margin-left: 2em; } }
+
+.brokielso:before, .brokielso:after {
+  content: " ";
+  display: table; }
+.brokielso:after {
+  clear: both; }
+
+.broki {
+  background-color: #008A96;
+  border: 10px solid #696565;
+  padding: 1.5em 0.5em 2em 0.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 20px; }
+  .broki:before, .broki:after {
+    content: " ";
+    display: table; }
+  .broki:after {
+    clear: both; }
 
 hr {
   border-width: 2px;
@@ -5893,7 +5917,7 @@ input[type="date"] {
   line-height: 1.4;
   background-color: #414040;
   color: #cacaca;
-  padding: 1em;
+  padding: 2em 1em;
   border-radius: 20px; }
   .details-wrap:before, .details-wrap:after {
     content: " ";

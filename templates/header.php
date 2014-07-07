@@ -1,9 +1,9 @@
 <header class="banner<?php echo is_page_template('tmpl-home.php')?' fullscreen':''; ?>" role="banner" id="pagetop">
   <div class="toprow">
     <div class="left-top">Call us: <a href="tel:0036302767512">0036302767512</a> &middot; Email Us: <a href="mailto:info@stagsandstuff.com">info@stagsandstuff.com</a></div>
-    <a href="<?php echo get_permalink(104); ?>" class="btn topenq"><i class="icon-027"></i> Build Your Own Package</a>
+    <a href="<?php echo get_permalink(104); ?>" class="btn topenq"><i class="icon-027"></i> Enquire Activities</a>
     <?php if (count($_SESSION['actList'])>0) :?>
-    <span class="cart">Starred <?php echo count($_SESSION['actList']); ?> item</span>
+    <span class="cart">Starred <?php echo count($_SESSION['actList']); ?> activity</span>
     <?php endif; ?>
   </div>
   <a class="brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>

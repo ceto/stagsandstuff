@@ -228,6 +228,9 @@
   a {
     color:$cyan;
   }
+  .btn {
+    color:$white;
+  }
   hr{
     margin:4em 0;
   }
@@ -298,7 +301,8 @@ font-size:0.75em;
  padding:0;
  li{
   margin-left:0;
-  margin-bottom: 0.5em;
+  margin-right: 0.75em;
+  margin-bottom: 0.75em;
   >a {
     padding:0.25em 0.5em;
 

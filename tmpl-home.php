@@ -17,7 +17,7 @@ Template Name: Home Template
 
     <div class="tab-pane active fade in" id="hiwpanel">
       <h3>We have pre-made packages with all the best and famous <strong>activities in Budapest</strong></h3>
-      <p>If you like one of <strong><a href="#" tilte="Browse packages">our packages</a></strong>,
+      <p>If you like one of <strong><a href="?package-category=all-packages" tilte="Browse packages">our packages</a></strong>,
       just click to the <em>enquire button</em> and fill in the filelds,
       <strong>add your details</strong> and we send you the offer in the <strong>next 24 hours.</strong></p>
       <h3>Would you like to create your own <strong>program package?</strong> You can do it!</h3>
@@ -27,6 +27,9 @@ Template Name: Home Template
         <li><strong>Check up on</strong> selected items, <strong>choose the hostel</strong> you’d like to be accomodated and <strong>send the form</strong> to us with all your datas.</li>
         <li>We send you <strong>our offer</strong> in the next 24 hours.</li>
       </ol>
+      <p>
+        <a class="btn" href="?activity-category=all-activities" tilte="Browse activities">Browse activities</a>
+      </p>
     </div>
 
 
