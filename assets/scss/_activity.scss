@@ -284,27 +284,40 @@
   background-color: rgba(#fff,0.9);
   padding:1em;
   border-radius:20px;
-  @include breakpoint($s2){
-    width:66.666%;
-    float:left;
-  }
+  h2 {
+      margin: 0.25em 0 0 0;
+      font-size: 1.75em;
+      strong {
+        font-weight:900;
+        color:$cyan;
+        font-size: 133.333%;
+      }
+      i{
+        color:$green;
+        font-size: 125%;
+      }
+    }
+
   p{
         
   }
   .activity-metablock{
-    font-size: 0.875em;
-    line-height: 1.25;
+    //font-size: 1.25em;
+    //line-height: 1.25;
     font-weight: 400;
     @include clearfix();
     background-color: $white;
-    //border-bottom: 1px solid $gray-light;
-    //border-top: 1px solid $gray-light;
     border: 1px solid $gray-superlight;
     border-radius: 4px;
 
     padding:2em 1em;
     h2 {
       margin: 0;
+      font-size: 1.5em;
+      i{
+        color:$green;
+        font-size: 133.333%;
+      }
     }
   }
   .activity-gtk{
@@ -329,14 +342,30 @@
 
 }
 
+.act-fejcsi {
+  @include clearfix();
+}
+.act-cont {
+  @include breakpoint($s2){
+    float:left;
+    width:66.666%;
+  }
+}
 .activity-addfavour{
   text-align: center;
-  font-size: 1.25em;
-  line-height: 1.125em;
+  //font-size: 1.25em;
+  //line-height: 1.125em;
   padding:1em;
+
   @include breakpoint($s2){
     width:33.333%;
-    float:left;
+    float:right;
+    padding-right: 0;
+  
+  }
+
+  .btn {
+    white-space: normal;
   }
 }
 

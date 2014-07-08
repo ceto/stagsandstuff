@@ -85,7 +85,35 @@
     <div class="tab-pane active fade in" id="actpanel">
       <article id="activity-<?php echo $post->ID  ?>" <?php post_class($termes); ?> >
         <div class="activity-content">
-          <?php the_content(); ?>
+
+          <div class="act-fejcsi">
+            <div class="act-cont">
+              <h2><strong><?php the_title();  ?></strong> - What To Except</h2>
+              <?php the_content(); ?></div>
+            <div class="activity-addfavour">
+              <form action="<?php echo get_stylesheet_directory_uri(); ?>/session-helper.php" method="post">
+                <button class="btn" type="submit" data-loading-text="Adding..." name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
+                  <small>Create your own package</small>Add to favourites
+                </button>
+                <script>
+                  $('#act-toggle').click(function () {
+                    var btn = $(this);
+                    btn.button('loading');
+                    $.post(
+                      btn.parent().attr('action'),
+                      { 'act-toggle' : <?php echo $post->ID; ?> }
+                    ).always(function () {
+                      btn.button('reset')
+                    });
+                    return false;
+                  });
+                </script>
+              </form>
+              or select a premade <a href="#packpanel" data-toggle="tab">package</a>
+            </div>
+          </div>
+  
+         
           <div class="activity-metablock">
             <?php if (get_post_meta( $post->ID, '_meta_gtk', TRUE ) != '') : ?>
               <div class="activity-gtk">
@@ -111,27 +139,7 @@
             <div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
           </div>
         </div>
-        <div class="activity-addfavour">
-          <form action="<?php echo get_stylesheet_directory_uri(); ?>/session-helper.php" method="post">
-            <button class="btn" type="submit" data-loading-text="Adding..." name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
-              <small>Create your own package</small>Add to favourites
-            </button>
-            <script>
-              $('#act-toggle').click(function () {
-                var btn = $(this);
-                btn.button('loading');
-                $.post(
-                  btn.parent().attr('action'),
-                  { 'act-toggle' : <?php echo $post->ID; ?> }
-                ).always(function () {
-                  btn.button('reset')
-                });
-                return false;
-              });
-            </script>
-          </form>
-          or select a premade <a href="#packpanel" data-toggle="tab">package</a>
-        </div>
+
 
         <footer class="activity-footer">
           <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>

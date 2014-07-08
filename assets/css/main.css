@@ -4706,13 +4706,17 @@ a.menu-button:hover {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 1em;
   border-radius: 20px; }
-  @media only screen and (min-width: 768px) {
-    .activity-content {
-      width: 66.666%;
-      float: left; } }
+  .activity-content h2 {
+    margin: 0.25em 0 0 0;
+    font-size: 1.75em; }
+    .activity-content h2 strong {
+      font-weight: 900;
+      color: #2ab0e1;
+      font-size: 133.333%; }
+    .activity-content h2 i {
+      color: #008A96;
+      font-size: 125%; }
   .activity-content .activity-metablock {
-    font-size: 0.875em;
-    line-height: 1.25;
     font-weight: 400;
     background-color: #f3f3f3;
     border: 1px solid #e6e6e6;
@@ -4724,7 +4728,11 @@ a.menu-button:hover {
     .activity-content .activity-metablock:after {
       clear: both; }
     .activity-content .activity-metablock h2 {
-      margin: 0; }
+      margin: 0;
+      font-size: 1.5em; }
+      .activity-content .activity-metablock h2 i {
+        color: #008A96;
+        font-size: 133.333%; }
   .activity-content .activity-gtk {
     margin-bottom: 2em; }
   .activity-content .activity-time {
@@ -4739,15 +4747,27 @@ a.menu-button:hover {
     margin-top: 1em;
     clear: both; }
 
+.act-fejcsi:before, .act-fejcsi:after {
+  content: " ";
+  display: table; }
+.act-fejcsi:after {
+  clear: both; }
+
+@media only screen and (min-width: 768px) {
+  .act-cont {
+    float: left;
+    width: 66.666%; } }
+
 .activity-addfavour {
   text-align: center;
-  font-size: 1.25em;
-  line-height: 1.125em;
   padding: 1em; }
   @media only screen and (min-width: 768px) {
     .activity-addfavour {
       width: 33.333%;
-      float: left; } }
+      float: right;
+      padding-right: 0; } }
+  .activity-addfavour .btn, .activity-addfavour .btn-light-line {
+    white-space: normal; }
 
 .activity-footer:before, .activity-footer:after {
   content: " ";
