@@ -3318,7 +3318,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    filter: blur(8px) brightness(0.3); }
+    filter: blur(2px) brightness(0.3); }
 
 @media only screen and (min-width: 480px) {
   .col-half {
@@ -5918,6 +5918,37 @@ input[type="date"] {
       clear: both; }
   .tab-content > .active {
     display: block; }
+
+.gallery {
+  margin: 0 -0.333em; }
+  .gallery .thumbi {
+    position: relative;
+    width: 50%;
+    float: left;
+    padding: 0.333em; }
+    @media only screen and (min-width: 768px) {
+      .gallery .thumbi {
+        width: 33.333%; } }
+    .gallery .thumbi a.thumbnail {
+      display: block;
+      background-color: #2ab0e1;
+      border-radius: 15px;
+      padding: 8px; }
+      .gallery .thumbi a.thumbnail img {
+        border-radius: 10px; }
+    .gallery .thumbi .caption {
+      position: absolute;
+      top: 0.333em;
+      right: 0.333em;
+      bottom: 0.333em;
+      left: 0.333em;
+      background-color: rgba(42, 176, 225, 0.75);
+      border-radius: 15px;
+      font-weight: 900;
+      padding: 1em;
+      color: #f3f3f3;
+      text-decoration: none;
+      display: none; }
 
 .builder-form {
   max-width: 1024px;

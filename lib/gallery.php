@@ -41,7 +41,7 @@ function roots_gallery($attr) {
     'icontag'    => '',
     'captiontag' => '',
     'columns'    => 4,
-    'size'       => 'mediumfree',
+    'size'       => 'small43',
     'include'    => '',
     'exclude'    => '',
     'link'       => 'file'
@@ -96,19 +96,19 @@ function roots_gallery($attr) {
         $image = wp_get_attachment_link($id, $size, true, false);
         break;
     }
-    $output .= ($i % $columns == 0) ? '<div class="row gallery-row">': '';
-    $output .= '<div class="' . $grid .'">' . $image;
+    //$output .= ($i % $columns == 0) ? '<div class="row gallery-row">': '';
+    $output .= '<div class="thumbi ' . $grid .'">' . $image;
 
     if (trim($attachment->post_excerpt)) {
-      $output .= '<div class="caption hidden">' . wptexturize($attachment->post_excerpt) . '</div>';
+      $output .= '<a href="#" class="caption hidden">' . wptexturize($attachment->post_excerpt) . '</a>';
     }
 
     $output .= '</div>';
     $i++;
-    $output .= ($i % $columns == 0) ? '</div>' : '';
+    //$output .= ($i % $columns == 0) ? '</div>' : '';
   }
 
-  $output .= ($i % $columns != 0 ) ? '</div>' : '';
+  //$output .= ($i % $columns != 0 ) ? '</div>' : '';
   $output .= '</div>';
 
   return $output;
@@ -121,7 +121,7 @@ function roots_gallery($attr) {
 
 
 /*******Custum Carousel Gallery *******/
-function roots_slidegallery($attr) {
+function roots_ssgallery($attr) {
   $post = get_post();
 
   static $instance = 0;
@@ -195,7 +195,7 @@ function roots_slidegallery($attr) {
   }
 
   $unique = (get_query_var('page')) ? $instance . '-p' . get_query_var('page'): $instance;
-  $output = '<div class="slidegallery slidegallery-' . $id . '-' . $unique . '"><ul>';
+  $output = '<div class="slidegallery slidegallery-' . $id . '-' . $unique . '"><div>';
 
   $i = 0;
   $link='none';
@@ -211,16 +211,16 @@ function roots_slidegallery($attr) {
         $image = wp_get_attachment_link($id, $size, true, false);
         break;
     }
-    $output .= '<li class="slide-item">' . $image;
+    $output .= '<div class="slide-item">' . $image;
 
     if (trim($attachment->post_excerpt)) {
       $output .= '<div class="caption hidden">' . wptexturize($attachment->post_excerpt) . '</div>';
     }
 
-    $output .= '</li>';
+    $output .= '</div>';
     $i++;
   }
-  $output .= '</ul>';
+  $output .= '</div>';
   $output .= '<nav class="slidecontroll"><a href="#" class="prev"><i class="ion-ios7-arrow-thin-left"></i></a><a href="#" class="next"><i class="ion-ios7-arrow-thin-right"></i></a></nav>';
   $output .= '</div>';
 

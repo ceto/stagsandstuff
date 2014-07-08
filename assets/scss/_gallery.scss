@@ -1,0 +1,44 @@
+.gallery {
+  margin:0 -0.333em;
+  .thumbi{
+    position:relative;
+    width:50%;
+    float:left;
+    padding:0.333em;
+    @include breakpoint($s2) {
+      width:33.333%;
+    }
+
+    &:hover, &:focus{
+        .caption {
+          //display:block;
+        }
+
+      }
+    
+
+    a.thumbnail{
+      display: block;
+      background-color: $cyan;
+      border-radius:15px;
+      padding:8px;
+
+
+      img{
+        border-radius:10px;
+      }
+    }
+    .caption {
+      position: absolute;
+      top:0.333em;right:0.333em;bottom:0.333em;left:0.333em;
+      background-color: rgba($cyan,0.75);
+      border-radius:15px;
+      font-weight: 900;
+      padding:1em;
+      color:$white;
+      text-decoration: none;
+      display: none;
+      
+    }
+  }
+}

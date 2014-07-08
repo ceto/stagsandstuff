@@ -192,5 +192,30 @@ $(window).load(function(){
 
 jQuery(document).ready(function($){
   $('.main').fitVids();
+
+  $('.gallery').magnificPopup({
+    delegate: 'a.thumbnail',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+      verticalFit: true,
+      titleSrc: function(item) {
+        return item.el.find('img').attr('alt') + ' &middot; <a class="image-source-link" href="'+item.el.attr('href')+'" target="_blank">image source</a>';
+      }
+    },
+    gallery: {
+      enabled: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300, // don't foget to change the duration also in CSS
+      opener: function(element) {
+        return element.find('img');
+      }
+    }
+    
+  });
 });
 
