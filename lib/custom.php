@@ -662,7 +662,10 @@ add_action('wp_logout', 'ssEndSession');
 add_action('wp_login', 'ssEndSession');
 
 function ssStartSession() {
-  if(!session_id()) { session_start(); }
+  if(!session_id()) { 
+    session_start(); 
+    $_SESSION['actList']=array();    
+    }
 }
 
 function ssEndSession() {
