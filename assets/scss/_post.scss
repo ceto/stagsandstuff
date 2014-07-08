@@ -320,11 +320,13 @@
     }
     @include breakpoint($s3){
       max-width: $s2;
+      font-size: 1.25em;
+      line-height: 1.4em;
     }
     @include breakpoint($s4){
       max-width: $s3;
       //margin:0 auto;
-      font-size: 1.25em;
+      font-size: 1.333em;
       line-height: 1.4em;
     }
 
@@ -371,13 +373,13 @@
     .entry-title {
       font-weight: 900;
       font-style: italic;
-      text-transform: none;
-      font-variant: small-caps;
+      //text-transform: uppercase;
+      //font-variant: normal;
       font-size: 4em;
       line-height: 1em;
-      text-align: center;
+      //text-align: center;
       margin: 1.25em 0 0;
-      color:$red;
+      color:$cyan;
     }
 
   }
@@ -386,8 +388,8 @@
       font-weight: 300;
       //text-transform: uppercase;
       font-variant: small-caps;
-      text-align: center;
-      padding:1.5em 0 0;
+      //text-align: center;
+      padding:0.5em 0 0;
       font-size: 0.75em;
       a{
         font-variant: small-caps;
@@ -398,11 +400,12 @@
     
 .entry-meta{
   @include clearfix();
-  text-align: center;
+  //text-align: center;
   font-size: 1.75em;
   line-height: 1em;
+  font-weight: 700;
   margin:0 0 1em 0;
-  padding:1.5em 0 1.5em 0;
+  padding:0.5em 0 0.5em 0;
   position: relative;
 
   &:before {
@@ -415,21 +418,29 @@
     width:10%;
     border-bottom:1px solid $gray-light;
   }
-
+  a{
+    color:$red;
+  }
 }
 .published {
   display: inline;
   font-variant: small-caps;
   padding:0;
   margin:0;
-  font-weight: 300;
+  font-weight: 700;
+  color:$gray;
 }
 .byline {
+
   display: inline;
   font-variant: small-caps;
   padding:0;
   margin:0;
   font-weight: 300;
+  a{
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
+  }
   &:before {
     content:'   —   ';
 

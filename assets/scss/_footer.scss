@@ -43,8 +43,12 @@
   line-height: 1.25em;
   font-weight: 300;
   color:$white;
+  border-top:10px solid $brown;
   background-color: $gray-dark;
-  border-top:10px solid $brown; 
+  background-image: url('../img/footer_bg.png');
+  background-size: 90% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat; 
   @include breakpoint($s3){
     //padding:2em 0;
     
@@ -136,10 +140,8 @@
       font-variant:normal; 
     }
   }
-
-
-
 }
+
 
 .gombsor{
 
@@ -179,10 +181,26 @@
   }
 }
 
+.widget-mc {
+  label{
+    display:block;
+    font-weight:900;
+    font-style: italic;
+    font-size: 1.25em;
+    line-height: 1;
+    color:$gray-light;
+    margin-bottom: 0.25em;
+
+  }
+  #mc-embedded-subscribe{
+    margin-top:0.5em;
+  }
+}
+
 .footer-copy{
   font-size: 1em;
   line-height: 1.25em;
-  font-weight: 300;
+  font-weight: 500;
   padding:1.25em;
   position: relative;
   background-color:#000;

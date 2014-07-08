@@ -17,6 +17,6 @@
 					$msg='Activity removed';
 				}
 		}
-	header( 'Location: '.$_SERVER['HTTP_REFERER'].'&msg='.$msg );
+	header( 'Location: '.$_SERVER['HTTP_REFERER'].'?msg='.$msg );
 	die();
 ?>

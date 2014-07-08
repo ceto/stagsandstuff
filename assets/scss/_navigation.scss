@@ -183,10 +183,21 @@ a.menu-button:hover {
   width: 100%;
 }
 .mindenmas {
-  background-position: 100% bottom;
-  background-repeat: no-repeat;
-  background-size: auto 72%;
+
+
+
+  background-size: cover, cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  //background-image: linear-gradient(to top, rgba($white,0.33) 0, rgba($white,0.66) 10%, rgba($white,1) 22%), url(../img/bp_hatter_old.jpg);
+
+  .single-package &{
+    background-position: 100% bottom;
+    background-repeat: no-repeat;
+    background-size: auto 72%;
+    background-attachment: fixed;
+  }
 }
 
 

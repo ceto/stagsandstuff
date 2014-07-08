@@ -24,8 +24,8 @@
           <div id="mc_embed_signup">
           <form action="http://marrakeshcementlap.us5.list-manage1.com/subscribe/post?u=f75f449c913cf58fb513b4418&amp;id=7fa0ff2925" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div class="mc-field-group">
-            <label for="mce-EMAIL">E-mail</label>
-            <input type="email" value="" placeholder="Your email" name="EMAIL" class="required email" id="mce-EMAIL">
+            <label for="mce-EMAIL">Add your e-mail to receive newsletter</label>
+            <input type="email" value="" placeholder="johndoe@example.com" name="EMAIL" class="required email" id="mce-EMAIL">
           </div>
             <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display:none"></div>

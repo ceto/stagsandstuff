@@ -4,7 +4,7 @@
     $termik = array();
     $ures = array();
     $termlist=array_merge(
-      get_the_terms( $post->ID, 'activity-category' )?get_the_terms( $post->ID, 'activity-category' ):$ures,
+      //get_the_terms( $post->ID, 'activity-category' )?get_the_terms( $post->ID, 'activity-category' ):$ures,
       get_the_terms( $post->ID, 'activity-tag' )?get_the_terms( $post->ID, 'activity-tag' ):$ures
     );
     $termlinks='';
@@ -14,39 +14,51 @@
     }
     $termes = join(" ", $termik );
   ?>
-  <?php
+  <?php 
     // if (get_post_meta( $post->ID, '_meta_wallimg_id', true )){
     //   $ima = get_post_meta( $post->ID, '_meta_wallimg_id', true );
     // } else {
     //   $ima =  48;
     // }
-    // $imci = wp_get_attachment_image_src( $ima, 'wallimg');
-    // $imcismall = wp_get_attachment_image_src( $ima, 'wallsmall');
-    // $imcimedium = wp_get_attachment_image_src( $ima, 'wallmedium');
-    // $imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
-  ?>
-  <!--style type="text/css">
-    .minihero {
-       background-image:url('<?php echo $imcismall['0']; ?>');
+
+    if (has_post_thumbnail( $post->ID ) ) {
+      $ima = get_post_thumbnail_id( $post->ID );
+    } else {
+      $ima =  48;
     }
+
+    $imci = wp_get_attachment_image_src( $ima, 'wallimg');
+    $imcismall = wp_get_attachment_image_src( $ima, 'wallsmall');
+    $imcimedium = wp_get_attachment_image_src( $ima, 'wallmedium');
+    $imcigreat = wp_get_attachment_image_src( $ima, 'wallgreat');
+  ?>
+  <style type="text/css">
+    .mindenmas {
+    background-image: -webkit-linear-gradient(bottom, rgba(243, 243, 243, 0.33) 0%, rgba(243, 243, 243, 0.66) 10%, #f3f3f3 22%), url('<?php echo $imcigreat[0]; ?>');
+    background-image: -o-linear-gradient(bottom, rgba(243, 243, 243, 0.33) 0%, rgba(243, 243, 243, 0.66) 10%, #f3f3f3 22%), url('<?php echo $imcigreat[0]; ?>');
+    background-image: linear-gradient(to top, rgba(243, 243, 243, 0.33) 0%, rgba(243, 243, 243, 0.66) 10%, #f3f3f3 22%), url('<?php echo $imcigreat[0]; ?>');
+    
+      }
     @media only screen and (min-width: 768px) {
-      .minihero {
-        background-image:url('<?php echo $imcimedium['0']; ?>');
+      .mindenmas {
       }
     }
     @media only screen and (min-width: 1280px) {
-      .minihero {
-        background-image:url('<?php echo $imcigreat['0']; ?>');
+      .mindenmas {
       }
     }
     @media only screen and (min-width: 1600px) {
-      .minihero {
-        background-image:url('<?php echo $imci['0']; ?>');
+      .mindenmas {
+
       }
     }
-  </style--> 
+  </style> 
     <header class="minihero" role="banner">
       <div class="minihero-content">
+        <div class="bread">
+          <a href="?activity-category=all-activities">Activities</a> /
+          <a href="?activity-category=all-activities">Daytime activities</a>
+        </div>
         <h1 class="minihero-title">
           <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
         </h1>
@@ -92,24 +104,28 @@
               <?php the_content(); ?></div>
             <div class="activity-addfavour">
               <form action="<?php echo get_stylesheet_directory_uri(); ?>/session-helper.php" method="post">
-                <button class="btn" type="submit" data-loading-text="Adding..." name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
-                  <small>Create your own package</small>Add to favourites
-                </button>
-                <script>
-                  $('#act-toggle').click(function () {
-                    var btn = $(this);
-                    btn.button('loading');
-                    $.post(
-                      btn.parent().attr('action'),
-                      { 'act-toggle' : <?php echo $post->ID; ?> }
-                    ).always(function () {
-                      btn.button('reset')
-                    });
-                    return false;
-                  });
-                </script>
+                <?php if (!in_array($post->ID, $_SESSION['actList']) ) : ?>
+                  <button class="btn btn-notin" type="submit" name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
+                     <i class="icon-271"></i>Add activity to your own package
+                  </button>
+                  <?php else: ?>
+                  <button class="btn btn-in" type="submit" name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
+                     <i class="icon-016"></i>Activity added to your own package
+                  </button>
+                  <?php endif; ?>
+
               </form>
-              or select a premade <a href="#packpanel" data-toggle="tab">package</a>
+              <?php if (!in_array($post->ID, $_SESSION['actList']) ) : ?>
+                    Click to add 
+                  <?php else: ?>
+                    Click to remove
+                  <?php endif; ?>
+              
+              <?php if (isset($_GET['msg'])): ?>
+                <!--div class="msg">
+                  <?php echo $_GET['msg']; ?>
+                </div-->
+              <?php endif; ?>
             </div>
           </div>
   

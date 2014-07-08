@@ -22,5 +22,6 @@
     </figure>
     <div class="activity-desc">
       <h3 class="activity-title"><?php the_title(); ?><small><?php echo get_post_meta($post->ID, '_meta_subtitle', true); ?></small></h3>
+      <?php get_template_part('templates/act','katt'); ?>
     </div>
   </a><!-- /#activity-## -->

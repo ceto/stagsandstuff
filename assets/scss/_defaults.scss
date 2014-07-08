@@ -125,6 +125,14 @@ img {
   @include clearfix();
   max-width: $s5;
   margin:0 auto;
+
+  // background-size: cover, 100% auto;
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-position: center bottom;
+  // background-image: linear-gradient(to top, rgba($white,0.5) 0, rgba($white,0.75) 100px, rgba($white,1) 200px),
+  // url(../img/bp_hatter_blue.jpg);
+
   .single-activity &, .single-package &, .page-template-tmpl-home-php & {
     max-width: 100%;
   }
@@ -269,4 +277,54 @@ blockquote{
       text-decoration: none;
     }
   }
+}
+
+
+
+.mini-btn{
+  border:none;
+  background-color: transparent;
+  max-width: 30px;
+  max-height: 30px;
+  overflow: hidden;
+  color:#fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  &:before {
+    font-family: 'captain-icon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e63a";
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+    color:$red;
+  }
+  &.mini-in{
+    //color:$green;
+    &:before {
+      content: "\e636";
+    }
+    &:hover, &:focus {
+      color:$red;
+      &:before {
+        content: "\e638";
+      }
+    }
+  }
+  &.mini-notin{
+    display:none;
+    .activity:hover &,.activity:focus &{
+      display: inline-block;
+    }
+    
+  }
+
 }

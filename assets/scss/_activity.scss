@@ -206,7 +206,12 @@
   // }
   
   .activity-desc{
-    padding:10px 10px 0 10px;
+    position: relative;
+    padding:5px 30px 5px 0;
+  }
+  .act-katt{
+    right:0;
+    bottom:0;
   }
   .activity-thumb{
     img {
@@ -314,6 +319,10 @@
     h2 {
       margin: 0;
       font-size: 1.5em;
+      font-variant: normal;
+      color:$gray;
+      //text-transform: uppercase;
+
       i{
         color:$green;
         font-size: 133.333%;
@@ -363,9 +372,30 @@
     padding-right: 0;
   
   }
-
+  h3{
+    margin-top:0;
+  }
   .btn {
     white-space: normal;
+    i{
+      font-size: 250%;
+      display: block;
+      margin:0 0 0.333em 0;
+    }
+  }
+  .btn-in {
+    background-color: lighten($green,10%);
+    background-image: linear-gradient(to bottom, lighten($green,10%) 0, lighten($green,10%) 50%, $green 50%);
+    &:hover, &:focus {
+      background-color: $green;
+      background-image: linear-gradient(to bottom, $green 0, $green 50%, lighten($green,10%) 50%);
+      text-decoration: none;
+      color:$white;
+    }
+  }
+
+  .btn-notin{
+
   }
 }
 
@@ -455,5 +485,14 @@
 
 }
 
+/******* Act Kattt **********/
+
+.act-katt{
+  position:absolute;
+  width:30px;
+  height: 30px;
+  text-align: center;
+  overflow: hidden;
+}
 
 
