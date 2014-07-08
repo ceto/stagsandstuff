@@ -3298,12 +3298,27 @@ html, body {
       overflow-x: visible; } }
 
 body {
+  position: relative;
   background-color: #f3f3f3;
   background-position: center 120%;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-image: url('../img/bp_hatter.jpg');
   background-attachment: fixed; }
+  body.single-post:before {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(8px) brightness(0.3); }
 
 @media only screen and (min-width: 480px) {
   .col-half {
@@ -3521,17 +3536,27 @@ blockquote {
     content: "\e63a"; }
   .mini-btn:hover, .mini-btn:focus {
     text-decoration: none;
-    color: #f23b55; }
+    color: #2ab0e1; }
   .mini-btn.mini-in:before {
     content: "\e636"; }
-  .mini-btn.mini-in:hover, .mini-btn.mini-in:focus {
-    color: #f23b55; }
-    .mini-btn.mini-in:hover:before, .mini-btn.mini-in:focus:before {
-      content: "\e638"; }
+  .mini-btn.mini-in:hover:before, .mini-btn.mini-in:focus:before {
+    content: "\e638"; }
   .mini-btn.mini-notin {
     display: none; }
     .activity:hover .mini-btn.mini-notin, .activity:focus .mini-btn.mini-notin {
       display: inline-block; }
+
+.bread {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 1;
+  margin-bottom: 0.75em; }
+  .bread a {
+    color: #696565; }
+    .bread a:hover, .bread a:focus {
+      color: #414040;
+      text-decoration: none; }
 
 .nav-main {
   font-size: 1.125em;
@@ -4673,7 +4698,7 @@ a.menu-button:hover {
 .activity-mini {
   font: normal 16px/24px 'Alegreya Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: inline-block;
-  background-color: #414040;
+  background-color: #2ab0e1;
   padding: 10px;
   margin: 4% 2%;
   border-radius: 20px;
@@ -4684,11 +4709,11 @@ a.menu-button:hover {
     background-color: #4d77ff; }
   .activity-mini.transfer {
     background-color: #5b0188; }
-  .activity-mini.daytime-activities {
-    background-color: #2ab0e1; }
+  .activity-mini.incustom {
+    background-color: #008A96 !important; }
   .activity-mini:hover, .activity-mini:focus {
     text-decoration: none;
-    background-color: #696565; }
+    background-color: #f23b55; }
   @media only screen and (min-width: 480px) {
     .activity-mini {
       width: 46%; } }

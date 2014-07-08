@@ -56,8 +56,7 @@
     <header class="minihero" role="banner">
       <div class="minihero-content">
         <div class="bread">
-          <a href="?activity-category=all-activities">Activities</a> /
-          <a href="?activity-category=all-activities">Daytime activities</a>
+          <a href="?activity-category=all-activities">Activities in Budapest</a> 
         </div>
         <h1 class="minihero-title">
           <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
@@ -106,11 +105,11 @@
               <form action="<?php echo get_stylesheet_directory_uri(); ?>/session-helper.php" method="post">
                 <?php if (!in_array($post->ID, $_SESSION['actList']) ) : ?>
                   <button class="btn btn-notin" type="submit" name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
-                     <i class="icon-271"></i>Add activity to your own package
+                     <i class="icon-059"></i>Add activity to your own package
                   </button>
                   <?php else: ?>
                   <button class="btn btn-in" type="submit" name="act-toggle" id="act-toggle" value="<?php echo $post->ID ?>">
-                     <i class="icon-016"></i>Activity added to your own package
+                     <i class="icon-055"></i>Activity added to your own package
                   </button>
                   <?php endif; ?>
 

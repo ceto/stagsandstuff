@@ -24,17 +24,17 @@
       background-image:none;
     }
     @media only screen and (min-width: 768px) {
-      body {
+      body, body:before {
         background-image:url('<?php echo $imcimedium['0']; ?>');
       }
     }
     @media only screen and (min-width: 1280px) {
-      body {
+      body, body:before {
         background-image:url('<?php echo $imcigreat['0']; ?>');
       }
     }
     @media only screen and (min-width: 1600px) {
-      body {
+      body, body:before {
         background-image:url('<?php echo $imci['0']; ?>');
       }
     }

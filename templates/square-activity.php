@@ -6,6 +6,7 @@
       get_the_terms($post->ID, 'activity-tag')
     );
     foreach ( $nagytermlist as $term ) { $termik[] = $term->slug; }
+    $termik[] = (in_array(get_the_id(), $_SESSION['actList']))?'incustom':'notincustom';
   ?>
   <a id="activity-<?php echo $post->ID; ?>" <?php post_class( join(" ", $termik ).' activity-mini ize-mini' ); ?>
     href="<?php the_permalink(); ?>"

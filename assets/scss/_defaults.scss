@@ -1,3 +1,4 @@
+
 /* apply a natural box layout model to all elements */
 * {box-sizing: border-box;}
 
@@ -13,12 +14,28 @@ html, body {
 }
 
 body{
+  position: relative;
   background-color: $white;
   background-position: center 120%;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-image: url('../img/bp_hatter.jpg');
   background-attachment: fixed;
+  &.single-post {
+    &:before{
+      position: fixed;
+      left:0;right:0;
+      top:0;bottom:0;
+      display: block;
+      content: '';
+      background-color: rgba(#000,0.5);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      filter:blur(8px) brightness(0.3);
+    }
+  }
 }
 
 .col-half{
@@ -305,7 +322,7 @@ blockquote{
   }
   &:hover, &:focus {
     text-decoration: none;
-    color:$red;
+    color:$cyan;
   }
   &.mini-in{
     //color:$green;
@@ -313,7 +330,7 @@ blockquote{
       content: "\e636";
     }
     &:hover, &:focus {
-      color:$red;
+      //color:$pink;
       &:before {
         content: "\e638";
       }
@@ -327,4 +344,20 @@ blockquote{
     
   }
 
+}
+
+
+.bread {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 1;
+  a{
+    color:$gray;
+    &:hover, &:focus {
+      color:$gray-dark;
+      text-decoration: none;
+    }
+  }
+  margin-bottom: 0.75em;
 }

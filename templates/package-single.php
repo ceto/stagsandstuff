@@ -3,7 +3,7 @@
   $termik = array();
   $ures = array();
   $termlist=array_merge(
-    get_the_terms( $post->ID, 'package-category' )?get_the_terms( $post->ID, 'package-category' ):$ures,
+    //get_the_terms( $post->ID, 'package-category' )?get_the_terms( $post->ID, 'package-category' ):$ures,
     get_the_terms( $post->ID, 'package-tag' )?get_the_terms( $post->ID, 'package-tag' ):$ures
   );
   $termlinks='';
@@ -46,6 +46,9 @@
     <header class="minihero" role="banner">
         <?php get_template_part( 'templates/package', 'enquire' ); ?>
       <div class="minihero-content">
+        <div class="bread">
+          <a href="?package-category=all-packages">Program Packages in Budapest</a> 
+        </div>
         <h1 class="minihero-title">
           <?php the_title();  ?><small><?php echo get_post_meta( $post->ID, '_meta_subtitle', true); ?></small>
         </h1>
