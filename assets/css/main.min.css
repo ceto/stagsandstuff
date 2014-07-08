@@ -5671,7 +5671,7 @@ a.menu-button:hover {
     text-transform: uppercase; }
 
 .entry-meta {
-  font-size: 1.75em;
+  font-size: 1.5em;
   line-height: 1em;
   font-weight: 700;
   margin: 0 0 1em 0;
@@ -5704,7 +5704,6 @@ a.menu-button:hover {
 
 .byline {
   display: inline;
-  font-variant: small-caps;
   padding: 0;
   margin: 0;
   font-weight: 300; }
@@ -5991,76 +5990,6 @@ input[type="date"] {
       clear: both; }
   .tab-content > .active {
     display: block; }
-
-.slidegallery {
-  width: 100%;
-  position: relative; }
-  .slidegallery > ul {
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-transition: margin 0.2s ease;
-    transition: margin 0.2s ease;
-    position: relative; }
-    .slidegallery > ul > li {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      display: inline-block; }
-  .slidegallery .slide-item {
-    position: relative;
-    -webkit-transition: -webkit-filter 0.2s ease;
-    transition: filter 0.2s ease;
-    -webkit-transition: -webkit-filter 0.2s ease;
-    -moz-transition: -moz-filter 0.2s ease;
-    -ms-transition: -ms-filter 0.2s ease;
-    max-width: 100%; }
-    .js .slidegallery .slide-item {
-      -webkit-filter: brightness(0.125) blur(3px);
-      filter: brightness(0.125) blur(3px); }
-    .slidegallery .slide-item.active {
-      -webkit-filter: brightness(1) blur(0);
-      filter: brightness(1) blur(0); }
-    .slidegallery .slide-item img {
-      max-height: 100%;
-      width: auto;
-      max-width: none; }
-    .slidegallery .slide-item .caption {
-      white-space: wrap;
-      position: absolute;
-      padding: 0.25em;
-      display: inline-block;
-      bottom: 2em;
-      left: 2em;
-      padding: 0.25em 0.25em 0.125em;
-      background-color: rgba(65, 64, 64, 0.75);
-      color: #fff;
-      font-size: 0.75em;
-      line-height: 1em;
-      font-weight: 400;
-      font-style: italic;
-      text-align: center; }
-  .slidegallery .slidecontroll {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -webkit-calc(50% - 2em);
-    top: calc(50% - 2em); }
-    .slidegallery .slidecontroll a {
-      font-size: 3em;
-      line-height: 0.25em;
-      display: block;
-      background-color: rgba(65, 64, 64, 0.75);
-      padding: 0 0.5em;
-      text-align: center;
-      color: #f3f3f3; }
-      .slidegallery .slidecontroll a:hover, .slidegallery .slidecontroll a:focus {
-        color: #fff;
-        background-color: rgba(255, 153, 0, 0.75); }
-      .slidegallery .slidecontroll a.prev {
-        float: left; }
-      .slidegallery .slidecontroll a.next {
-        float: right; }
 
 .builder-form {
   max-width: 1024px;

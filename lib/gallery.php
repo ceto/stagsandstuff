@@ -227,7 +227,7 @@ function roots_slidegallery($attr) {
   return $output;
 }
   remove_shortcode('gallery');
-  add_shortcode('gallery', 'roots_slidegallery');
+  add_shortcode('gallery', 'roots_gallery');
   add_filter('use_default_gallery_style', '__return_null');
 
 /**

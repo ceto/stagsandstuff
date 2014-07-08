@@ -401,7 +401,7 @@
 .entry-meta{
   @include clearfix();
   //text-align: center;
-  font-size: 1.75em;
+  font-size: 1.5em;
   line-height: 1em;
   font-weight: 700;
   margin:0 0 1em 0;
@@ -433,7 +433,7 @@
 .byline {
 
   display: inline;
-  font-variant: small-caps;
+  //font-variant: small-caps;
   padding:0;
   margin:0;
   font-weight: 300;
