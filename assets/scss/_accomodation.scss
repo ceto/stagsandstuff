@@ -1,4 +1,25 @@
-.accomodarion-list{
+.page-template-archive-accomodation-php {
+
+  .topill{
+    display:none;
+  }
+  .hero-content {
+    padding:1em 1em 1em;
+    @include breakpoint($s2){
+      padding:1em 1em 1em;
+    }
+    @include breakpoint($s3){
+
+    }
+    @include breakpoint($s4){
+
+    }
+    .hero-text{
+      margin-bottom: 0;
+    }
+  }
+}
+.accomodation-list{
   max-width: $s3;
   margin:0 auto;
   @include breakpoint($s5){
