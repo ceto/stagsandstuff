@@ -1,6 +1,6 @@
 <?php if ( ( is_singular('post') )   ) :?>
 
-<?php elseif ( ( !is_page_template('package-builder.php') && !is_page_template('tmpl-home.php') &&  (is_page() || is_archive('activity-category'))  )   ) :?>
+<?php elseif ( ( !is_page_template('package-builder.php') && !is_page_template('tmpl-home.php') && !is_page_template('tmpl-gallery.php') &&  (is_page() || is_archive('activity-category'))  )   ) :?>
   <section class="hero feles" role="banner">
     <div class="hero-content">
         <?php if (!is_archive() ): ?>
@@ -19,12 +19,12 @@
 
           <?php if (is_tax('activity-category')): ?>
             <h1 class="hero-text">
-              Activities in Budapest<small>Browse recommended activities</small>
+              Activities in Budapest<small>Browse and mark your favourites</small>
             </h1>
             <aside class="topwidget">
-              <h3>Not sure what to choose?</h3>
-              <p>We've already collected the best activities in the city</p>
-              <a href="?package-category=all-packages" class="btn">See our packages</a>
+              <h3>Build Your Own Package</h3>
+              <p>We offer the best activities in the city.  Mark your favourites to create a custom built package</p>
+              <a href="<?php echo get_permalink(104); ?>" class="btn">Enquire selected activities</a>
             </aside>
           <?php elseif (is_tax('package-category')): ?>
             <h1 class="hero-text">
@@ -32,7 +32,7 @@
             </h1>
             <aside class="topwidget">
               <h3>Need more customized weekends?</h3>
-              <p>Check our activity list and choose the programs for your unique needs</p>
+              <p>Check out the best activities and choose the programs for your unique needs</p>
               <a href="?activity-category=all-activities" class="btn">See our activities</a>
             </aside>
           <?php endif; ?>

@@ -48,7 +48,7 @@
       <div class="accomodation-desc">
         <?php the_content( __('Details','root')); ?>
         <?php //the_excerpt(); ?>
-        <a href="<?php the_permalink(); ?>" class="btn accomodation-detbtn">Visit Gallery</a>
+        <a href="<?php the_permalink(); /*echo  get_post_meta($post->ID, '_meta_siteurl', true);  */?>" class="btn accomodation-detbtn">See Gallery</a>
       </div>
     </div>
   </article><!-- /#accomodation-## -->

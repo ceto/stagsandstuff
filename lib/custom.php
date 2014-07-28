@@ -371,12 +371,10 @@ function cmb_accomodation( array $meta_boxes ) {
     'priority'   => 'high',
     'show_names' => true, // Show field names on the left
     'fields'     => array(
-      array(
-        'name' => __( 'Some meta name', 'root' ),
-        'desc' => __( 'description of this meta', 'root' ),
-        'id'   => $prefix . 'cucu',
-        'type' => 'text_medium',
-        // 'repeatable' => true,
+        array(
+        'name' => __( 'Website URL', 'root' ),
+        'id'   => $prefix . 'siteurl',
+        'type' => 'text_url',
       ),
       array(
         'name' => __( 'Fullscreen banner wallpaper', 'root' ),
@@ -385,6 +383,13 @@ function cmb_accomodation( array $meta_boxes ) {
         'type' => 'file',
         'save_id' => true, // save ID using true
         'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
+      ),
+      array(
+        'name'    => __( 'Gallery', 'root' ),
+        'desc'    => __( 'Insert gallery shortcode here', 'root' ),
+        'id'      => $prefix . 'gal',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 15, 'wpautop' => true ),
       ),
     ),
   );
@@ -397,7 +402,7 @@ function cmb_accomodation( array $meta_boxes ) {
 /********* Custom MetaBoxes for Pages and Posts ****************/
 
 /**
- * Accomodation Metaboxes
+ * Pages and Posts Metaboxes
 */
 add_filter( 'cmb_meta_boxes', 'cmb_pp' );
 function cmb_pp( array $meta_boxes ) {
@@ -652,6 +657,26 @@ function ss_modify_num_activity($query)
 }
  
 add_action('pre_get_posts', 'ss_modify_num_activity');
+
+/****** Exclude galleries *******/
+function exclude_gallery( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 
+          'tax_query', array(
+            array(
+              'taxonomy' => 'post_format',
+              'field' => 'slug',
+              'terms' => array( 'post-format-gallery' ),
+              'operator' => 'NOT IN'
+            ),
+          )
+        );
+    }
+}
+add_action( 'pre_get_posts', 'exclude_gallery' );
+
+
+
 
 
 

@@ -4439,7 +4439,8 @@ a.menu-button:hover {
     font-style: italic;
     margin: 0.25em 0 0.5em; }
   .topwidget .btn, .topwidget .btn-light-line {
-    display: block; }
+    display: block;
+    white-space: normal; }
 
 @media only screen and (min-width: 768px) {
   .topill {
@@ -5101,7 +5102,7 @@ a.menu-button:hover {
       border-radius: 15px; }
   .package-item .package-head {
     position: relative;
-    background-color: #414040;
+    background-color: #3f4e76;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px; }
     @media only screen and (min-width: 768px) { }
@@ -5543,61 +5544,61 @@ a.menu-button:hover {
     .single-format-gallery .post .addcont.full {
       width: calc(100%); }
 
-.single-post {
+.single-post, .single-accomodation {
   background-size: cover; }
-  .single-post .post {
+  .single-post .post, .single-post .accomodation, .single-accomodation .post, .single-accomodation .accomodation {
     padding: 0 0 6em;
     background-color: #f3f3f3;
     background-color: rgba(243, 243, 243, 0.95); }
     @media only screen and (min-width: 768px) {
-      .single-post .post {
+      .single-post .post, .single-post .accomodation, .single-accomodation .post, .single-accomodation .accomodation {
         max-width: 75%; } }
     @media only screen and (min-width: 1024px) {
-      .single-post .post {
+      .single-post .post, .single-post .accomodation, .single-accomodation .post, .single-accomodation .accomodation {
         max-width: 768px;
         font-size: 1.25em;
         line-height: 1.4em; } }
     @media only screen and (min-width: 1280px) {
-      .single-post .post {
+      .single-post .post, .single-post .accomodation, .single-accomodation .post, .single-accomodation .accomodation {
         max-width: 1024px;
         font-size: 1.333em;
         line-height: 1.4em; } }
-    .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont {
+    .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont, .single-post .accomodation header, .single-post .accomodation .entry-content, .single-post .accomodation .entry-footer, .single-post .accomodation .addcont, .single-accomodation .post header, .single-accomodation .post .entry-content, .single-accomodation .post .entry-footer, .single-accomodation .post .addcont, .single-accomodation .accomodation header, .single-accomodation .accomodation .entry-content, .single-accomodation .accomodation .entry-footer, .single-accomodation .accomodation .addcont {
       margin: 0 auto;
       max-width: 768px;
       padding: 0 1em; }
-      .single-post .post header:before, .single-post .post header:after, .single-post .post .entry-content:before, .single-post .post .entry-content:after, .single-post .post .entry-footer:before, .single-post .post .entry-footer:after, .single-post .post .addcont:before, .single-post .post .addcont:after {
+      .single-post .post header:before, .single-post .post header:after, .single-post .post .entry-content:before, .single-post .post .entry-content:after, .single-post .post .entry-footer:before, .single-post .post .entry-footer:after, .single-post .post .addcont:before, .single-post .post .addcont:after, .single-post .accomodation header:before, .single-post .accomodation header:after, .single-post .accomodation .entry-content:before, .single-post .accomodation .entry-content:after, .single-post .accomodation .entry-footer:before, .single-post .accomodation .entry-footer:after, .single-post .accomodation .addcont:before, .single-post .accomodation .addcont:after, .single-accomodation .post header:before, .single-accomodation .post header:after, .single-accomodation .post .entry-content:before, .single-accomodation .post .entry-content:after, .single-accomodation .post .entry-footer:before, .single-accomodation .post .entry-footer:after, .single-accomodation .post .addcont:before, .single-accomodation .post .addcont:after, .single-accomodation .accomodation header:before, .single-accomodation .accomodation header:after, .single-accomodation .accomodation .entry-content:before, .single-accomodation .accomodation .entry-content:after, .single-accomodation .accomodation .entry-footer:before, .single-accomodation .accomodation .entry-footer:after, .single-accomodation .accomodation .addcont:before, .single-accomodation .accomodation .addcont:after {
         content: " ";
         display: table; }
-      .single-post .post header:after, .single-post .post .entry-content:after, .single-post .post .entry-footer:after, .single-post .post .addcont:after {
+      .single-post .post header:after, .single-post .post .entry-content:after, .single-post .post .entry-footer:after, .single-post .post .addcont:after, .single-post .accomodation header:after, .single-post .accomodation .entry-content:after, .single-post .accomodation .entry-footer:after, .single-post .accomodation .addcont:after, .single-accomodation .post header:after, .single-accomodation .post .entry-content:after, .single-accomodation .post .entry-footer:after, .single-accomodation .post .addcont:after, .single-accomodation .accomodation header:after, .single-accomodation .accomodation .entry-content:after, .single-accomodation .accomodation .entry-footer:after, .single-accomodation .accomodation .addcont:after {
         clear: both; }
       @media only screen and (min-width: 768px) {
-        .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont {
+        .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont, .single-post .accomodation header, .single-post .accomodation .entry-content, .single-post .accomodation .entry-footer, .single-post .accomodation .addcont, .single-accomodation .post header, .single-accomodation .post .entry-content, .single-accomodation .post .entry-footer, .single-accomodation .post .addcont, .single-accomodation .accomodation header, .single-accomodation .accomodation .entry-content, .single-accomodation .accomodation .entry-footer, .single-accomodation .accomodation .addcont {
           padding: 0 2em; } }
       @media only screen and (min-width: 1024px) {
-        .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont {
+        .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont, .single-post .accomodation header, .single-post .accomodation .entry-content, .single-post .accomodation .entry-footer, .single-post .accomodation .addcont, .single-accomodation .post header, .single-accomodation .post .entry-content, .single-accomodation .post .entry-footer, .single-accomodation .post .addcont, .single-accomodation .accomodation header, .single-accomodation .accomodation .entry-content, .single-accomodation .accomodation .entry-footer, .single-accomodation .accomodation .addcont {
           padding: 0 4em; } }
       @media only screen and (min-width: 1280px) {
-        .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont {
+        .single-post .post header, .single-post .post .entry-content, .single-post .post .entry-footer, .single-post .post .addcont, .single-post .accomodation header, .single-post .accomodation .entry-content, .single-post .accomodation .entry-footer, .single-post .accomodation .addcont, .single-accomodation .post header, .single-accomodation .post .entry-content, .single-accomodation .post .entry-footer, .single-accomodation .post .addcont, .single-accomodation .accomodation header, .single-accomodation .accomodation .entry-content, .single-accomodation .accomodation .entry-footer, .single-accomodation .accomodation .addcont {
           padding: 0 0; } }
     @media only screen and (min-width: 768px) { }
     @media only screen and (min-width: 1024px) { }
-    .single-post .post .entry-figure {
+    .single-post .post .entry-figure, .single-post .accomodation .entry-figure, .single-accomodation .post .entry-figure, .single-accomodation .accomodation .entry-figure {
       border-top: 1px solid #e6e6e6;
       border-bottom: 1px solid #e6e6e6; }
-      .single-post .post .entry-figure:before, .single-post .post .entry-figure:after {
+      .single-post .post .entry-figure:before, .single-post .post .entry-figure:after, .single-post .accomodation .entry-figure:before, .single-post .accomodation .entry-figure:after, .single-accomodation .post .entry-figure:before, .single-accomodation .post .entry-figure:after, .single-accomodation .accomodation .entry-figure:before, .single-accomodation .accomodation .entry-figure:after {
         content: " ";
         display: table; }
-      .single-post .post .entry-figure:after {
+      .single-post .post .entry-figure:after, .single-post .accomodation .entry-figure:after, .single-accomodation .post .entry-figure:after, .single-accomodation .accomodation .entry-figure:after {
         clear: both; }
       @media only screen and (min-width: 768px) {
-        .single-post .post .entry-figure {
+        .single-post .post .entry-figure, .single-post .accomodation .entry-figure, .single-accomodation .post .entry-figure, .single-accomodation .accomodation .entry-figure {
           display: none; } }
-      .single-post .post .entry-figure img {
+      .single-post .post .entry-figure img, .single-post .accomodation .entry-figure img, .single-accomodation .post .entry-figure img, .single-accomodation .accomodation .entry-figure img {
         border-style: solid;
         border-color: #414040;
         border-width: 10px 0; }
-    .single-post .post .entry-title {
+    .single-post .post .entry-title, .single-post .accomodation .entry-title, .single-accomodation .post .entry-title, .single-accomodation .accomodation .entry-title {
       font-weight: 900;
       font-style: italic;
       font-size: 4em;
@@ -5927,6 +5928,11 @@ input[type="date"] {
 
 .gallery {
   margin: 0 -0.333em; }
+  .gallery:before, .gallery:after {
+    content: " ";
+    display: table; }
+  .gallery:after {
+    clear: both; }
   .gallery .thumbi {
     position: relative;
     width: 50%;
