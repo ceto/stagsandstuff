@@ -26,16 +26,16 @@
               <p>Mark the activity, at the bottom right corner to add it to custom built package. Click enquire when it's done</p>
               <a href="<?php echo get_permalink(104); ?>" class="btn">Enquire custom package</a>
             </aside>
-          <?php elseif (is_tax('package-category')): ?>
-            <h1 class="hero-text">
-              Program Packages in Budapest<small>Browse our packages</small>
-            </h1>
-            <aside class="topwidget">
-              <h3>Need more customized weekends?</h3>
-              <p>Check out the best activities and choose the programs for your unique needs</p>
-              <a href="?activity-category=all-activities" class="btn">See our activities</a>
-            </aside>
-          <?php endif; ?>
+          <?php elseif (is_tax('package-category') || is_tax('package-tag') ): ?>
+              <h1 class="hero-text">
+                Program Packages in Budapest<small>Browse our packages</small>
+              </h1>
+              <aside class="topwidget">
+                <h3>Need more customized weekends?</h3>
+                <p>Check out the best activities and choose the programs for your unique needs</p>
+                <a href="?activity-category=all-activities" class="btn">See our activities</a>
+              </aside>
+           <?php endif; ?>
 
         <?php endif; ?>
 

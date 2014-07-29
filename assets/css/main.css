@@ -3650,7 +3650,7 @@ blockquote {
         .nav-main .nav a:hover, .nav-main .nav a:focus {
           color: #fff;
           background-color: #414040; } }
-  .nav-main .nav .active a {
+  .nav-main .nav .active a, .nav-main .nav .current-activity-ancestor a, .nav-main .nav .current-package-ancestor {
     color: #fff;
     background-color: #2ab0e1; }
   .nav-main .nav li.telcsi a {
