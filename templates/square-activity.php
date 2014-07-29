@@ -15,9 +15,9 @@
   >
     <figure class="activity-thumb">
       <?php if (has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail('tiny43');  ?>
+        <?php the_post_thumbnail('small43');  ?>
       <?php else: ?>
-        <?php $w=rand(320,330); $h=round($w/4*3); ?>
+        <?php $w=rand(480,360); $h=round($w/4*3); ?>
         <img src="http://lorempixel.com/<?php echo $w ?>/<?php echo $h ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="" >
       <?php endif; ?>
     </figure>

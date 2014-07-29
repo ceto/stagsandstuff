@@ -19,12 +19,12 @@
 
           <?php if (is_tax('activity-category')): ?>
             <h1 class="hero-text">
-              Activities in Budapest<small>Browse and mark your favourites</small>
+              Build Your Own Package<small>Select activities to organize a unique weekend in Budapest</small>
             </h1>
             <aside class="topwidget">
-              <h3>Build Your Own Package</h3>
-              <p>We offer the best activities in the city.  Mark your favourites to create a custom built package</p>
-              <a href="<?php echo get_permalink(104); ?>" class="btn">Enquire selected activities</a>
+              <h3><i class="ion-android-information"></i> Collect your favourites</h3>
+              <p>Mark the activity, at the bottom right corner to add it to custom built package. Click enquire when it's done</p>
+              <a href="<?php echo get_permalink(104); ?>" class="btn">Enquire custom package</a>
             </aside>
           <?php elseif (is_tax('package-category')): ?>
             <h1 class="hero-text">

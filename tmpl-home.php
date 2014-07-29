@@ -22,8 +22,8 @@ Template Name: Home Template
       <strong>add your details</strong> and we send you the offer in the <strong>next 24 hours.</strong></p>
       <h3>Would you like to create your own <strong>program package?</strong> You can do it!</h3>
       <ol>
-        <li>Browse among <strong><a href="#" title="Browse activities">our activities</a></strong> and <strong>mark activities</strong> you want!</li>
-        <li>After collecting whished activities, <strong>click</strong> to our <em>Build you own package</em> button on the right hand side and let your journey begin!</li>
+        <li>Browse among <strong><a href="?activity-category=all-activities" title="Browse activities">our activities</a></strong> and <strong>mark activities</strong> you want!</li>
+        <li>After collecting whished activities, <strong>click</strong> to our <em>Enquire custom package</em> button on the right hand side and let your journey begin!</li>
         <li><strong>Check up on</strong> selected items, <strong>choose the hostel</strong> you’d like to be accomodated and <strong>send the form</strong> to us with all your datas.</li>
         <li>We send you <strong>our offer</strong> in the next 24 hours.</li>
       </ol>

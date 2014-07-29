@@ -54,7 +54,7 @@
         </h1>
         <div class="tag-list"><?php echo $termlinks; ?></div>
         <div class="actblock">
-          <a data-toggle="collapse" data-target="#package-enquire" href="#nav-main" class="btn"><small>Party is starting here</small>Enquire</a>
+          <a data-toggle="collapse" data-target="#package-enquire" href="#nav-main" class="btn"><small>Party is starting here</small>Enquire for <?php the_title();  ?></a>
         </div>
         <div class="minihero-lead">
           <?php the_content(); ?>

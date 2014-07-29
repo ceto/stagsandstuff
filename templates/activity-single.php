@@ -115,10 +115,8 @@
 
               </form>
               <?php if (!in_array($post->ID, $_SESSION['actList']) ) : ?>
-                    Click to add 
                   <?php else: ?>
-                    Click to remove
-                  <?php endif; ?>
+              <?php endif; ?>
               
               <?php if (isset($_GET['msg'])): ?>
                 <!--div class="msg">
@@ -132,19 +130,19 @@
           <div class="activity-metablock">
             <?php if (get_post_meta( $post->ID, '_meta_gtk', TRUE ) != '') : ?>
               <div class="activity-gtk">
-                <h2><i class="icon-271"></i> Good to know</h2>
+                <h2><i class="ion-ios7-lightbulb"></i> Good to know</h2>
                 <?php echo get_post_meta( $post->ID, '_meta_gtk', TRUE ); ?>
               </div>
             <?php endif; ?>
             <?php if (get_post_meta( $post->ID, '_meta_time', TRUE ) != '') : ?>
               <div class="activity-time">
-                <h2><i class="icon-016"></i> Time</h2>
+                <h2><i class="ion-android-data"></i> Time</h2>
                 <?php echo get_post_meta( $post->ID, '_meta_time', TRUE ); ?>
               </div>
             <?php endif; ?>
             <?php if (get_post_meta( $post->ID, '_meta_guide', TRUE ) != '') : ?>
               <div class="activity-guide">
-                <h2><i class="icon-029"></i> Guide</h2>
+                <h2><i class="ion-umbrella"></i> Guide</h2>
                 <?php echo get_post_meta( $post->ID, '_meta_guide', TRUE ); ?>
               </div>
             <?php endif; ?>
@@ -163,8 +161,8 @@
     </div><!-- /.tab-pane -->
     <div class="tab-pane fade" id="packpanel">
       <div class="pack-lead">
-        <h2>Activity is available in package only</h2>
-        <p>Ide kellene egy ütős felszólítás leaddel. Miszerint az aktivitás a csomagban elérhető, és a kedves delikvens válassza ki a számára legmegfelelőbb csomagot a lenti listából</p>
+        <h2>Enquire in Package</h2>
+        <p>This activity is available in the folowing packages</p>
       </div>
       <section class="containing-packages">
         <?php 

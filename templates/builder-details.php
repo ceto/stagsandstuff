@@ -1,9 +1,45 @@
 <div class="details-wrap">
     <div id="startpanel" class="brokielso">
-      <h2 class="ctitle">Enquire Wished Activities</h2>
+      <h2 class="ctitle">Enquire Custom Package</h2>
+
+
+      <div id="firstpanel" class="broki">
+        <?php 
+          global $itercsi; 
+          $the_activity=new WP_Query( array(
+            'post_type' => array('activity' ),
+            'posts_per_page' => -1
+          ));
+
+          $nop=count($_SESSION['actList']);
+          $fele=round($nop / 2);
+          $itercsi=0;
+        ?>
+      <h3 class="csubtitle">You have selected <?php echo $nop ?> activities</h3>
+      <?php if ($nop>0): ?>
+        <div id="#activity-chooser" class="activity-chooser">
+          <div class="col-half col-first">
+            <?php while ($itercsi < $fele)  : $the_activity->the_post(); ?>
+              <?php get_template_part('templates/listitem','activity' ); ?>
+            <?php endwhile; ?>
+          </div>
+          <div class="col-half col-second">
+            <?php while ( $the_activity->have_posts() ) : $the_activity->the_post(); ?>
+              <?php get_template_part('templates/listitem','activity' ); ?>
+            <?php endwhile; ?>
+          </div>
+        </div>
+      <?php endif ?>
+      <p class="broki-helper">
+        Need more? <a href="?activity-category=all-activities"> Browse activities</a>
+      </p>
+
+
+    </div><!-- /.tab-pane -->
    
-      <hr>
+
          <h3 class="csubtitle">Add your details</h3>
+               <hr>
 
     <div class="leftfields">
       <div class="items">
@@ -59,39 +95,7 @@
       </div>
     </div><!-- /.tab-pane -->
 
-    <div id="firstpanel" class="broki">
-        <?php 
-          global $itercsi; 
-          $the_activity=new WP_Query( array(
-            'post_type' => array('activity' ),
-            'posts_per_page' => -1
-          ));
 
-          $nop=count($_SESSION['actList']);
-          $fele=round($nop / 2);
-          $itercsi=0;
-        ?>
-      <h3 class="csubtitle">You have selected <?php echo $nop ?> activities</h3>
-      <?php if ($nop>0): ?>
-        <div id="#activity-chooser" class="activity-chooser">
-          <div class="col-half col-first">
-            <?php while ($itercsi < $fele)  : $the_activity->the_post(); ?>
-              <?php get_template_part('templates/listitem','activity' ); ?>
-            <?php endwhile; ?>
-          </div>
-          <div class="col-half col-second">
-            <?php while ( $the_activity->have_posts() ) : $the_activity->the_post(); ?>
-              <?php get_template_part('templates/listitem','activity' ); ?>
-            <?php endwhile; ?>
-          </div>
-        </div>
-      <?php endif ?>
-      <p class="broki-helper">
-        Need more? <a href="?activity-category=all-activities"> Browse all activities</a>
-      </p>
-
-
-    </div><!-- /.tab-pane -->
 
 
 

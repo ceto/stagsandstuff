@@ -4157,6 +4157,8 @@ a.menu-button:hover {
       position: absolute;
       top: 4em;
       right: 0; } }
+  .minihero .actblock .btn, .minihero .actblock .btn-light-line {
+    white-space: normal; }
 
 .minihero-lead {
   margin: 2em 0;
@@ -4646,6 +4648,9 @@ a.menu-button:hover {
     color: rgba(105, 101, 101, 0.25); }
   @media only screen and (min-width: 768px) {
     .activity-item {
+      margin: 2em 0.5em; } }
+  @media only screen and (min-width: 1024px) {
+    .activity-item {
       margin: 2em auto; } }
   .activity-item .activity-thumb {
     text-align: center;
@@ -4753,9 +4758,10 @@ a.menu-button:hover {
 .activity-mini {
   font: normal 16px/24px 'Alegreya Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: inline-block;
+  vertical-align: top;
   background-color: #2ab0e1;
   padding: 10px;
-  margin: 4% 2%;
+  margin: 30px 2%;
   border-radius: 20px;
   position: relative;
   margin-bottom: 1px;
@@ -4772,13 +4778,15 @@ a.menu-button:hover {
     background-color: #f23b55; }
   @media only screen and (min-width: 480px) {
     .activity-mini {
-      width: 46%; } }
-  @media only screen and (min-width: 1024px) {
+      width: 45%; } }
+  @media only screen and (min-width: 768px) {
     .activity-mini {
-      width: 28.875%; } }
+      width: 28.875%;
+      margin: 30px 2%; } }
   @media only screen and (min-width: 1280px) {
     .activity-mini {
-      width: 20.875%; } }
+      width: 20.875%;
+      margin: 30px 2%; } }
   @media only screen and (min-width: 1600px) {
     .activity-mini {
       width: 16%; } }
@@ -4874,7 +4882,8 @@ a.menu-button:hover {
       color: #696565; }
       .activity-content .activity-metablock h2 i {
         color: #008A96;
-        font-size: 133.333%; }
+        font-size: 120%;
+        margin-right: 0.125em; }
   .activity-content .activity-gtk {
     margin-bottom: 2em; }
   .activity-content .activity-time {
@@ -4969,7 +4978,7 @@ a.menu-button:hover {
     line-height: 1.125em; }
     @media only screen and (min-width: 1024px) {
       .pack-lead h2 {
-        width: 30%;
+        width: 50%;
         float: left; } }
   .pack-lead p {
     font-size: 1.25em;
@@ -4979,14 +4988,13 @@ a.menu-button:hover {
     margin: 0; }
     @media only screen and (min-width: 1024px) {
       .pack-lead p {
-        width: 70%;
+        width: 50%;
         float: left;
         padding: 3.5em 0 0 1em; } }
 
 /*********** Related an Similar acitvites section *********/
 .related-activities {
   margin: 0 auto 80px auto;
-  max-width: 1280px;
   font-size: 0;
   text-align: center; }
   .related-activities:before, .related-activities:after {
@@ -6123,6 +6131,9 @@ input[type="date"] {
     .activity-listitem .activity-pic img {
       border-radius: 20px;
       border: 10px solid #f3f3f3; }
+  .activity-listitem .act-katt {
+    right: 20px;
+    bottom: 20px; }
 
 .details-wrap {
   font-size: 1.25em;

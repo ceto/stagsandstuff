@@ -28,9 +28,11 @@
 
 
   @include breakpoint($s2){
+    margin:2em 0.5em;
+  }
+  @include breakpoint($s3){
     margin:2em auto;
   }
-  
   .activity-thumb {
     text-align: center;
     position:relative;
@@ -155,10 +157,11 @@
 .activity-mini {
   font: normal 16px/24px $sans-serif;
   display:inline-block;
+  vertical-align: top;
   //overflow:hidden;
   background-color: $cyan;
   padding:10px;
-  margin:4% 2%;
+  margin:30px 2%;
   border-radius:20px; 
   position:relative;
   margin-bottom:1px;
@@ -191,13 +194,15 @@
 
 
   @include breakpoint($s1){
-    width:46%;
+    width:45%;
   }
-  @include breakpoint($s3){
+  @include breakpoint($s2){
     width:28.875%;
+    margin:30px 2%;
   }
   @include breakpoint($s4){
     width:20.875%;
+     margin:30px 2%;
   }
   @include breakpoint($s5){
     width:16%;
@@ -329,7 +334,8 @@
 
       i{
         color:$green;
-        font-size: 133.333%;
+        font-size: 120%;
+        margin-right: 0.125em;
       }
     }
   }
@@ -456,7 +462,7 @@
     font-size:2em;
     line-height: 1.125em;
     @include breakpoint($s3){
-      width:30%;
+      width:50%;
       float:left;
     }
   }
@@ -467,7 +473,7 @@
     font-style: italic;
     margin:0;
     @include breakpoint($s3){
-      width:70%;
+      width:50%;
       float:left;
       padding: 3.5em 0 0 1em;
     }
@@ -478,7 +484,7 @@
 .related-activities {
   @include clearfix();
   margin:0 auto 80px auto;
-  max-width: $s4;
+  //max-width: $s3;
   //padding:0.5em;
   font-size:0;
   text-align: center; 

@@ -26,17 +26,19 @@
         <figure class="activity-pic">
           <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <?php if (has_post_thumbnail() ) : ?>
-              <?php the_post_thumbnail('tiny43');  ?>
+              <?php the_post_thumbnail('small43');  ?>
             <?php else: ?>
               <?php $w=rand(320,330); $h=round($w/4*3); ?>
               <img src="http://lorempixel.com/<?php echo $w ?>/<?php echo $h ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="" >
             <?php endif; ?>
           </a>
         </figure>
+
         <div class="activity-desc">
           <?php the_excerpt(); ?>
         </div>
         <a href="<?php the_permalink(); ?>" class="btn activity-detbtn">More details</a>
+                  <?php get_template_part('templates/act','katt'); ?>
       </div><!-- /.adatai -->
   </div><!-- /#activity-## -->
 <?php endif ?>
