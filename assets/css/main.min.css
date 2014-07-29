@@ -4470,7 +4470,7 @@ a.menu-button:hover {
     font-variant: normal;
     font-size: 66.666%;
     line-height: 1;
-    color: #696565; }
+    color: #5a6583; }
 
 .topwidget {
   background-color: #f3f3f3;
@@ -4856,7 +4856,8 @@ a.menu-button:hover {
   border-radius: 20px; }
   .activity-content h2 {
     margin: 0.25em 0 0 0;
-    font-size: 1.75em; }
+    font-size: 1.75em;
+    color: #5a6583; }
     .activity-content h2 strong {
       font-weight: 900;
       color: #2ab0e1;
@@ -4879,9 +4880,9 @@ a.menu-button:hover {
       margin: 0;
       font-size: 1.5em;
       font-variant: normal;
-      color: #696565; }
+      color: #5a6583; }
       .activity-content .activity-metablock h2 i {
-        color: #008A96;
+        color: #2ab0e1;
         font-size: 120%;
         margin-right: 0.125em; }
   .activity-content .activity-gtk {
@@ -5179,7 +5180,7 @@ a.menu-button:hover {
       border-radius: 15px; }
   .package-item .package-head {
     position: relative;
-    background-color: #3f4e76;
+    background-color: #5a6583;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px; }
     @media only screen and (min-width: 768px) { }
@@ -5832,6 +5833,8 @@ a.menu-button:hover {
   line-height: 1em;
   color: #fff;
   text-align: center; }
+  .csubtitle span {
+    color: #f23b55; }
 
 @media only screen and (min-width: 768px) {
   .leftfields {
@@ -6088,6 +6091,8 @@ input[type="date"] {
     display: table; }
   .activity-listitem:after {
     clear: both; }
+  .activity-listitem.checked {
+    background-color: #f23b55; }
   .activity-listitem:hover, .activity-listitem:focus {
     background-color: #696565; }
   @media only screen and (min-width: 480px) {
@@ -6109,7 +6114,8 @@ input[type="date"] {
     left: 0.5em;
     top: 1.25em; }
   .activity-listitem .activity-title {
-    float: left; }
+    float: left;
+    margin-left: 5px; }
   .activity-listitem .switcher {
     font-size: 2em;
     line-height: 1em;
@@ -6132,8 +6138,8 @@ input[type="date"] {
       border-radius: 20px;
       border: 10px solid #f3f3f3; }
   .activity-listitem .act-katt {
-    right: 20px;
-    bottom: 20px; }
+    left: 10px;
+    top: 20px; }
 
 .details-wrap {
   font-size: 1.25em;

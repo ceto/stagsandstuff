@@ -1,6 +1,6 @@
 <div id="package-enquire" class="package-enquire collapse">
   <div class="panel-body">
-    <a class="panel-close" href="#" data-toggle="collapse" data-target="#package-enquire"><i class="icon-057"></i></a>
+    <a class="panel-close" href="#" data-toggle="collapse" data-target="#package-enquire"><i class="ion-close-circled"></i></a>
     <h2 class="ctitle">Enquire for <?php the_title(); ?></h2>
     <h3 class="csubtitle">Add your details here</h3>
      <hr>

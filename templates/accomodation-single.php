@@ -53,7 +53,7 @@
         <?php echo  do_shortcode( get_post_meta($post->ID, '_meta_gal', true) );  ?>
   
       <p>
-      <a href="<?php echo  get_post_meta($post->ID, '_meta_siteurl', true);  ?>" target="blank" class="btn accomodation-detbtn">Visit Site</a>
+      <a href="<?php echo  get_post_meta($post->ID, '_meta_siteurl', true);  ?>" target="blank" class="btn accomodation-detbtn">Visit Site <i class="ion-forward"></i></a>
       </p>
 
       </div>

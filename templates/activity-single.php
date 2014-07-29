@@ -99,7 +99,7 @@
 
           <div class="act-fejcsi">
             <div class="act-cont">
-              <h2><strong><?php the_title();  ?></strong> - What To Except</h2>
+              <h2><strong><?php the_title();  ?></strong><br> What To Except</h2>
               <?php the_content(); ?></div>
             <div class="activity-addfavour">
               <form action="<?php echo get_stylesheet_directory_uri(); ?>/session-helper.php" method="post">

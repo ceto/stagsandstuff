@@ -1,4 +1,4 @@
-<?php if (in_array($post->ID, $_SESSION['actList'])): ?>
+<?php if (in_array($post->ID, $_SESSION['actList']) || TRUE  ): ?>
 <?php
   global $itercsi; 
   $itercsi++;
@@ -13,8 +13,9 @@
     );
     foreach ( $nagytermlist as $term ) { $termik[] = $term->slug; }
   ?>
-  <div id="activity-<?php echo $post->ID; ?>" <?php post_class( join(" ", $termik ).' activity-listitem' ); ?>  >
+  <div id="activity-<?php echo $post->ID; ?>" <?php post_class( join(" ", $termik ).(in_array($post->ID, $_SESSION['actList'])?' activity-listitem checked':' activity-listitem') ); ?>  >
       <div class="feje">
+        <?php get_template_part('templates/act','katt'); ?>
         <!-- <input type="checkbox" <?php echo in_array($post->ID, $_SESSION['actList'])?'checked="checked"':''; ?> value="<?php echo $post->ID; ?>"> -->
         <h3 class="activity-title">
           <?php the_title(); ?>
@@ -38,7 +39,7 @@
           <?php the_excerpt(); ?>
         </div>
         <a href="<?php the_permalink(); ?>" class="btn activity-detbtn">More details</a>
-                  <?php get_template_part('templates/act','katt'); ?>
+
       </div><!-- /.adatai -->
   </div><!-- /#activity-## -->
 <?php endif ?>

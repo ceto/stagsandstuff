@@ -19,21 +19,21 @@
 
           <?php if (is_tax('activity-category')): ?>
             <h1 class="hero-text">
-              Build Your Own Package<small>Select activities to organize a unique weekend in Budapest</small>
+              Activities in Budapest<small>Build your own package selecting activities</small>
             </h1>
             <aside class="topwidget">
               <h3><i class="ion-android-information"></i> Collect your favourites</h3>
               <p>Mark the activity, at the bottom right corner to add it to custom built package. Click enquire when it's done</p>
-              <a href="<?php echo get_permalink(104); ?>" class="btn">Enquire custom package</a>
+              <a href="<?php echo get_permalink(104); ?>" class="btn"><small><i class="ion-briefcase"></i></small>Enquire activities</a>
             </aside>
           <?php elseif (is_tax('package-category') || is_tax('package-tag') ): ?>
               <h1 class="hero-text">
-                Program Packages in Budapest<small>Browse our packages</small>
+                Program Packages in Budapest<small>Choose one of our prebuilt packages</small>
               </h1>
               <aside class="topwidget">
                 <h3>Need more customized weekends?</h3>
-                <p>Check out the best activities and choose the programs for your unique needs</p>
-                <a href="?activity-category=all-activities" class="btn">See our activities</a>
+                <p>Build your own package. Check out the best activities and choose the programs for your unique needs</p>
+                <a href="?activity-category=all-activities" class="btn">Browse Activities</a>
               </aside>
            <?php endif; ?>
 

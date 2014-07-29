@@ -11,11 +11,14 @@
             'posts_per_page' => -1
           ));
 
-          $nop=count($_SESSION['actList']);
+          $nopi=count($_SESSION['actList']);
+          
+          $nop=$the_activity->found_posts;
+          
           $fele=round($nop / 2);
           $itercsi=0;
         ?>
-      <h3 class="csubtitle">You have selected <?php echo $nop ?> activities</h3>
+      <h3 class="csubtitle">You have selected <span><?php echo $nopi ?></span> activities</h3>
       <?php if ($nop>0): ?>
         <div id="#activity-chooser" class="activity-chooser">
           <div class="col-half col-first">

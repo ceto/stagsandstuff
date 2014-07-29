@@ -9,11 +9,11 @@
       <section class="widget">
         <div class="gombsor">
           <h3>Also can be found</h3>
-          <a href="#" class="share-face"><i class="icon-091"></i><br /><span>Facebook</span></a>
-          <a href="#" class="share-gplus"><i class="icon-103"></i><br /><span>Google Plus</span></a>
-          <a href="#" class="share-twitter"><i class="icon-094"></i><br /><span>Twitter</span></a>
-          <a href="tel:0036302767512" class="call-phone"><i class="icon-023"></i><br /><span>00.36.30.276.7512</span></a>
-          <a href="#" class="share-like"><i class="icon-211"></i><br /><span>Like It</span></a>
+          <a href="#" class="share-face"><i class="ion-social-facebook"></i><br /><span>Facebook</span></a>
+          <a href="#" class="share-gplus"><i class="ion-social-googleplus"></i><br /><span>Google Plus</span></a>
+          <a href="#" class="share-twitter"><i class="ion-social-twitter"></i><br /><span>Twitter</span></a>
+          <a href="tel:0036302767512" class="call-phone"><i class="ion-iphone"></i><br /><span>00.36.30.276.7512</span></a>
+          <a href="#" class="share-like"><i class="ion-thumbsup"></i><br /><span>Like It</span></a>
         </div>
         </section>
 
