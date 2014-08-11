@@ -82,11 +82,11 @@
   @include clearfix();
   font-size: 1.25em;
   line-height: 1.4;
-  background-color:$gray-dark;
-  color:$gray-light; 
-  padding:2em 1em;
-  border-radius:20px;
+  //background-color:$gray-dark;
+  color:$gray-superlight;
+  //padding:2em 1em;
+  //border-radius:20px;
   label {
-     color:$gray-light; 
+     color:#fff; 
   }
 }
